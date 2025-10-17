@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+header{
+    background-color: rgb(116, 155, 155);
+
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(132, 181, 165);
+}
+
+li{
+    margin: 0 15px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(225, 225, 225);
+    text-decoration: underline;
+}
+
+main{
+    padding: 20px;
+}
+
+img{
+    height: 50vh;
+    margin: 0 auto;
+    border-radius: 16px;
+}

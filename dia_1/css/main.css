@@ -1,0 +1,57 @@
+h1{
+    color: orange;
+    font-size: 25px;
+}
+
+h2{
+    color: green;
+    font-size: 22px;
+
+}
+
+h3{
+    color: yellow;
+    font-size: 20px;
+
+}
+
+h4{
+    color: red;
+    font-size: 18px;
+
+}
+
+h5{
+    color: purple;
+    font-size: 16px;
+
+}
+
+h6{
+    color: orange;
+    font-size: 14px;
+
+}
+p{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 16px;
+    color: blueviolet;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.red{
+    color: red;
+}
+
+a{
+    color: darkblue;
+    text-decoration: none;
+}
+
+img{
+    width: 300px;
+}

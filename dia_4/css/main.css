@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.inline-test {
+    display: inline;
+    background-color: aqua;
+}
+
+span {
+    display: inline;
+    background-color: blueviolet;
+}
+
+.divtest1 {
+    background-color: lightcoral;
+}
+
+.divtest2 {
+    background-color: rgb(255, 0, 0);
+    display: none;
+}
+
+.divtest3 {
+    background-color: coral;
+}
+
+.divtest4 {
+    background-color: rgb(174, 129, 215);
+    border: 1px solid black;
+    height: 50px;
+    width: 70px;
+    display: inline-block;
+}
+
+.divtest5 {
+    background-color: rgb(16, 139, 146);
+    border: 1px solid black;
+    height: 30px;
+    width: 130px;
+    display: inline-block;
+}
+
+.divtest6 {
+    background-color: rgb(166, 99, 133);
+    border: 1px solid black;
+    height: 40px;
+    width: 200px;
+    display: inline-block;
+}
+
+/* De aquí para abajo, la web */
+h1 {
+    background-color: rgb(199, 77, 77);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: rgb(199, 77, 77);
+    height: 75px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+main{
+    height: calc(100vh-125px) auto;
+}
+
+section {
+    text-align: center;
+}
+
+h2{
+    margin: 20px;
+}
+
+.logo {
+    width: 50vw;
+}
+
+.divpersonajes {
+    display: inline-block;
+    margin: 40px;
+}
+
+.personajes {
+    height: 25vh;
+    display: block;
+    margin: 0 auto
+}
+
+footer {
+    height: 50px;
+    background-color: rgb(130, 130, 130);
+    color: white;
+    display: flex;
+    justify-content: center;
+}

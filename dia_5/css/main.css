@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    padding: 20px;
+}
+
+.logo{
+    height: 127.6px;
+    float: left;
+    margin-left: 50px;
+    position: absolute;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+li{
+    margin: 0 15px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.a-h2{
+    color: black;
+    margin: 20px;
+}
+
+main{
+    justify-content: start;
+}
+
+.proyectos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.flex-img{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.img{
+    padding: 20px;
+    height: 250px;
+}
+
+p{
+    max-width: 650px;
+}
+
+.project-name{
+    text-align: center;
+}
+
+footer {
+    height: 50px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}

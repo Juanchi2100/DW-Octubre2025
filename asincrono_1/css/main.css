@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* HEADER Metodologia BEM */
+.header{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 32.5px 31px;
+}
+.header__img{}
+.header__a{}
+.header__nav{}
+.header__ul{
+    display: flex;
+}
+.header__li{
+    list-style: none;
+}
+.header__a--nav{
+    text-decoration: none;
+    font-style: normal;
+    font-size: 12px;
+    padding: 0 20px;
+    color: black;
+}
+
+.header__a--nav:hover{
+    text-decoration: none;
+    font-size: 12px;
+    font-style: normal;
+    padding: 0 20px;
+    color: rgb(119, 135, 91);
+}
+
+.header__a--nav-active{
+    color: rgb(119, 135, 91);
+    font-size: 12px;
+    text-decoration: none;
+    font-style: normal;
+    padding: 0 20px;
+}
+
+.header__div--sidemenubutton{
+    width: 18px;
+}
+
+/* MAIN Metodologia BEM */
+
+
+/* FOOTER Metodologia BEM */
+
+.footer__div--top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 61px;
+    padding-top: 87px;
+}
+.footer__img{
+    height: 33px;
+    margin-bottom: 26px;
+}
+.footer__div--p{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(132, 132, 132);
+    font-size: 13px;
+    font-style: normal;
+}
+.footer__div--p-content{
+    color: rgb(132, 132, 132);
+    font-size: 15px;
+}
+.footer__div--bottom{
+    padding: 28.2px 0;
+}
+.footer__ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.footer__div--a{
+    text-decoration: none;
+    color: rgb(132, 132, 132);
+}

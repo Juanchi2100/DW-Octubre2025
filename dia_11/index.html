@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog de Diseño</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__h1">Blog de Diseño</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li class="header__li">Inicio</li>
+                <li class="header__li">Proyectos</li>
+                <li class="header__li">Contacto</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <aside class="main__aside">
+            <h2 class="aside__h2">Recursos Recomendados</h2>
+                <ul class="aside__ul">
+                    <li class="aside__li">Leyes de la UX</li>
+                    <li class="aside__li">Guía de accesibilidad web</li>
+                    <li class="aside__li">Tendencias de UI 2025</li>
+                </ul>
+        </aside>
+        <section class="main__section">
+            <h2 class="section__h2">Últimos artículos</h2>
+            <!-- Debería este div tener un role="main" ??? -->
+            <div class="div__articles">
+                <article class="section__article">
+                    <h3 class="article__h3">Diseño Centrado en el Usuario</h3>
+                    <figure class="section__figure">
+                        <picture class="figure__picture">
+                            <source srcset="./images/Diseno-Web-Centrado-en-el-Usuario.webp" type="image/webp">
+                            <source srcset="./images/Diseno-Web-Centrado-en-el-Usuario.jpg" type="image/jpg"> 
+                            <img src="./images/Diseno-Web-Centrado-en-el-Usuario.jpg" alt="Equipo trabajando en un wireframe de diseño centrado en el usuario" class="picture__img">
+                        </picture>
+                        <figcaption class="figure__figcaption">
+                            Equipo trabajando en un wireframe de diseño centrado en el usuario
+                        </figcaption>
+                    </figure>
+                    <p class="article__p">En este artículo exploraremos cómo el <mark>diseño centrado en el usuario</mark> mejora la experiencia y la fidelización</p>
+                    <div>
+                        <blockquote class="article__quote">"El diseño no es solo cómo se ve, si no cómo funciona."</blockquote><cite class="article__cite">Steve Jobs</cite>
+                        <time datetime="2025-05-06" class="article__time">6 de mayo de 2025</time>
+                    </div>
+                    <button class="article__button">Leer más</button>
+                </article>
+                <article class="section__article">
+                    <h3 class="article__h3">Color y Emoción en la interfaz</h3>
+                    <figure class="section__figure">
+                        <picture class="figure__picture">
+                            <source srcset="./images/Thumbnail---La-Psicolog-a-del-Color-en-el-Dise-o-de-Interfaces.webp" type="image/webp">
+                            <source srcset="./images/Thumbnail---La-Psicolog-a-del-Color-en-el-Dise-o-de-Interfaces.png" type="image/jpg"> 
+                            <img src="./images/Thumbnail---La-Psicolog-a-del-Color-en-el-Dise-o-de-Interfaces.png" alt="Desarrollo de un app con colores" class="picture__img">
+                        </picture>
+                        <figcaption class="figure__figcaption">
+                            La importancia de los colores en las emociones de una interfaz
+                        </figcaption>
+                    </figure>
+                    <p class="article__p">En este artículo exploraremos cómo el <mark>diseño y maquetación de colores</mark> afecta las emociones del usuario al usar la interfaz.</p>
+                    <div>
+                        <blockquote class="article__quote">"Los colores, al igual que los rasgos, siguen los cambios de las emociones"</blockquote><cite class="article__cite">John Paul Caponigro</cite>
+                        <time datetime="2025-10-29" class="article__time">29 de octubre de 2025</time>
+                    </div>
+                    <button class="article__button">Leer más</button>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Blog de Diseño de Juan. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

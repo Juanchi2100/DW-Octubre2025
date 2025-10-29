@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Special Gothic", sans-serif;
+
+}
+
+.header {
+    background-color: #222;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.header__h1{
+    font-size: 1.5em;
+    padding-bottom: 0.5rem;
+}
+
+.header__ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header__li{
+    padding: 0 1rem;    
+}
+
+.header__li:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.main{
+    display: flex;
+}
+
+.main__section{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.main__aside{
+    width: 40%;
+    min-width: 12.5rem;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    font-style: italic;
+    color: #29627e;
+}
+
+.aside__ul{
+    list-style: none;
+}
+
+.aside__li:hover{
+    text-decoration: underline;
+    font-weight: bold
+}
+
+.div__articles{
+    display: flex;
+}
+
+.section__article{
+    border: #222 solid;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 30%;
+    min-width: 15.625rem;
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article__h3{
+    padding-bottom: 0.5rem;
+}
+
+.article__time{
+    color: #585858;
+    font-size: small;
+    display: block;
+    padding-top: .5rem;
+}
+
+.section__figure{
+    padding-bottom: 0.5rem;
+}
+
+.picture__img{
+    width: 100%;
+    border-radius: 0.5rem;
+    min-height: 8.75rem;
+}
+
+.figure__figcaption {
+  background-color: #222222;
+  color: white;
+  font: 0.75em sans-serif;
+  padding: 0.125rem;
+  text-align: center;
+}
+
+.article__p{
+    padding-bottom: 0.5rem;
+}
+
+.article__button{
+  background-color: #337fc5;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  margin-top: 0.5rem;
+}
+
+.article__button:hover{
+    background-color: #245d92;
+}

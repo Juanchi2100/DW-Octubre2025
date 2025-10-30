@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Special Gothic", sans-serif;
+}
+
+body{
+    min-height: 100%;
+    height: 300vh;
+}
+
+.header__nav{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+}
+
+.header__ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.header__li{
+    padding: 20px;
+    color: white;
+}
+
+.main{
+    min-height: 100vh;
+    padding-top: 60.8px;
+}
+
+.main__stickyheader{
+    background-color: red;
+    position: sticky;
+    top: 100px;
+}
+
+.absolute__div1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+}
+
+.divpadre{
+    width: 600px;
+    height: 600px;
+    background-color: green;
+    position: relative;
+    margin-top: 100px;
+}
+
+.absolute__div2{
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    aspect-ratio: 1 / 1;
+    width: 100px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+/* Nivel 1 -------------
+
+.relative{
+    border: solid black 2px;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    background-color: beige;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+.absolute{
+    border: solid black 2px;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    background-color: rgb(110, 137, 255);
+    position: absolute;
+    top: 0;
+    right: 0;
+}*/

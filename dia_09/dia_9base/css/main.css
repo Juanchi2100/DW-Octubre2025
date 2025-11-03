@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.main__div--nivel1{
+    border: 2px solid black;
+    background-color: chocolate;
+    width: 20em;
+    height: 20em;
+}
+
+/* ------------- Nivel 2-a ------------- */
+
+.main__div--nivel2-a{
+    height: 50vh;
+    width: 50vw;
+}
+
+@media (max-width: 480px){
+    .main__div--nivel2-a{
+        background-color: red;
+    }
+}
+@media (min-width:481px) and (max-width: 780px){
+    .main__div--nivel2-a{
+        background-color: yellow;
+    }
+}
+@media (min-width:781px) and (max-width: 1200px){
+    .main__div--nivel2-a{
+        background-color: green;
+    }
+}
+@media (min-width:1201px){
+    .main__div--nivel2-a{
+        background-color: blue;
+    }
+}
+
+/* ------------- Nivel 2-b ------------- */
+
+.main__div--nivel2-b{
+    height: 50vw;
+    width: 50vw;
+    border: 2px solid black;
+    background-color: red;
+}
+
+@media print{
+    .main__div--nivel2-b{
+        background-color: green;
+    }
+}
+
+
+/* ------------- Nivel 3 - container ------------- */
+
+.main__div--container{
+    border: 2px solid black;
+    background-color: chocolate;
+    width: 50vw;
+    container-type: inline-size;
+}
+
+.container__content{
+    display: flex;
+    width: 100%;
+
+}
+
+.container__p{
+    margin: 20px;
+    font-size: clamp(1rem, 2vw, 3rem);
+    margin: max(1rem, 2%);
+    padding: min(1rem, 5vw);
+}
+
+@container (max-width: 400px){
+    .container__content{
+        flex-direction: column;
+    }   
+}

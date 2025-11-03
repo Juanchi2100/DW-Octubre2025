@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.main__div--card{
+    display: flex;
+    width: 50%;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    padding: 1%;
+    container-type: inline-size;
+}
+
+.main__div--card_img{
+    background-color: black;
+    width: 15%;
+    border-radius: 100%;
+}
+
+.main__div--card_content{
+    margin-left: 1vw;
+}
+
+@container (min-width: 400px){
+    .main__div--card{
+        flex-direction: column;
+    }   
+}

@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Bellota";
+    src: url(../fonts/Bellota-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: center;
+}
+
+.header__ul{
+    display:flex;
+    list-style: none;
+    margin: 1rem;
+}
+
+.header__li{
+    margin: 0 1rem
+}
+
+.main__h1{
+    font-size: calc(2vw + 10px); /* El tamaño del width responde al tamaño de la ventana del navegador*/
+    font-family: "Bellota";
+}
+
+.main__div{
+    width: 50vw;
+    font-size: 20px;
+    padding: calc(2rem + 5px);
+}
+
+.main__h2--1{
+    font-size: 5vw;
+    font-family: "Inter";
+    font-weight: 100;
+}
+
+.h2__span{
+    font-size: 5vw;
+    font-family: "Inter";
+    font-weight: 400;
+}
+
+.main__h3{
+    font-size: 2vw;
+}
+
+.main__div--p{
+    font-size: 2em;
+}
+
+.main__p{
+    max-width: 60vh;
+    line-height: 1.6em;
+    font-family: "Bellota";
+}

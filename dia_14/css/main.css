@@ -3,6 +3,60 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.body{
+    margin: 20px;
+    height: 500vh;
+}
+
+.body__h2{
+    font-size: 50px;
+}
+
+.nivel1{
+    height: 100vh;
+}
+
+.section{
+    margin: 24px 0;
+}
+
+
+.enlace-1{
+    padding: 20px;
+    border: solid 3px black;
+    max-width: 300px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.enlace-1:hover{
+    box-shadow: 5px 10px #626262;
+    transition: 0.5s;
+}
+
+.enlace-1__a{
+    text-decoration: none;
+    color: crimson;
+    padding: 0 30px;
+    font-weight: 600;
+    padding: 8px 16px;
+}
+
+.enlace-1__a:hover{
+    text-decoration: underline;
+    font-weight: 900;
+    background-color: red;
+    color: white;
+    border-radius: 1000px;
 }
 
 .h2__p{
@@ -12,4 +66,20 @@
     color: white;
     text-wrap: wrap;
     hyphens: auto;
+    padding: 16px;
+    border-radius: 8px;
+    border: solid 3px rgb(255, 255, 255);
+}
+
+.h2__p:hover{
+    max-width: 400px;
+    text-wrap: balance;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-wrap: wrap;
+    hyphens: auto;
+    padding: 16px;
+    border-radius: 8px;
+    border: solid 3px black;
+    transition: 0.3s;
 }

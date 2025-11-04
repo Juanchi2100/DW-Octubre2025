@@ -109,14 +109,22 @@
   background-color: rgb(255, 255, 255);
   padding: 80px 60px 30px 60px;
   text-align: center;
-  display: none;
 }
 
 /* .sidemenu en display:none para que no se vea por mientras, no se como hacer que funcione on-click. Me imagino que debe ser Java?*/
 
+.sidemenu__button--close{
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    position: absolute;
+    background: none;
+    top: 30px;
+    right: 20px;
+}
+
 .sidemenu__button--close img{
   width: 100%;
-
 }
 
 .sidemenu > img{

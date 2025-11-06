@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    height: 100vh;
+}
+
+.header {
+    background: #2A7B9B;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.header__h1{
+    font-size: 1.5em;
+    padding-bottom: 0.5rem;
+}
+
+.header__ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header__li{
+    padding: 0 1rem;  
+}
+
+.header__li--a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.header__li--a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.25s ease, left 0.25s ease;
+}
+
+.header__li--a:hover::after,
+.header__li--a:focus-visible::after{
+    width: 100%;
+    left: 0;
+}
+
+/* -- .header__li--a:hover::after
+Se activa cuando el usuario pasa el cursor sobre el enlace.
+El pseudo-elemento ::after (generalmente una línea o fondo decorativo) se muestra o cambia su estilo en ese momento.
+
+.header__li--a:focus-visible::after
+Se activa cuando el enlace tiene el foco (por ejemplo, al navegar con el teclado con la tecla Tab) y el foco es visible según las reglas del navegador.
+Esto mejora la accesibilidad, ya que muestra la misma animación o marca visual que el hover, pero para usuarios que no usan ratón. -- */
+
+.main__nivel1{
+    height: calc(100vh - 106.4px);
+    padding: 40px;
+    scroll-snap-align: end;
+}
+
+.main__niveln{
+    height: 100vh ;
+    padding: 40px;
+    scroll-snap-align: start;
+}
+
+.main__h2{
+    font-size: 60px;
+    padding: 0 0 1.5rem 0;
+}
+
+/* -- TABLA 1 -- */
+
+.main__table1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    color: #dc143c;
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 20px;
+}
+
+.box{
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;   
+}
+
+.box:hover{
+    box-shadow: 5px 5px #978450;
+    transition: 0.5s;
+}
+
+/* -- TABLA 2 -- */
+
+.box-a{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-b{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-c{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-d{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-d{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-e{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-f{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* ---- TABLA 3 ---- */
+
+.box-a1{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-b1{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-c1{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-d1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-e1{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-f1{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* ---- TABLA 4 ---- */
+
+.box-a11{
+    grid-area: 1/2/2/3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-b11{
+    grid-area: 2/2/3/3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-c11{
+    grid-area: 2/3/3/4;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-d11{
+    grid-area: 1/1/2/2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-e11{
+    grid-area: 2/1/3/2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-f11{
+    grid-area: 1/3/2/4;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* ---- TABLA 5 ---- */
+
+.box-a111{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-b111{
+    grid-row: 1/3;
+    grid-column: 3/4;    
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-c111{
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-d111{
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* ---- TABLA 6 ---- */
+
+.box-a1111{
+    grid-column: 1/3;
+    grid-row: 1;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-b1111{
+    grid-column: 3/4;
+    grid-row: 1/3;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-c1111{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-d1111{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.box-e1111{
+    grid-column: 4;
+    grid-row: 1/3;
+    background-color: #14DBB4;
+    border-radius: 8px;
+    padding: 20px;
+}

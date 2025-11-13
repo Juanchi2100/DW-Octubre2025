@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Día 20</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <header class="header">
+        <h1 class="header__h1">Día 20 - Formularios</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li class="header__li"><a href="#nivel1" class="header__li--a">Nivel 1</a></li>
+                <li class="header__li"><a href="#nivel2" class="header__li--a">Nivel 2</a></li>
+                <li class="header__li"><a href="#nivel3" class="header__li--a">Nivel 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section">
+            <h2 class="section__h2">Nivel 1</h2>
+            <article class="section__article">
+                <form method="post" action="url/de/envio" enctype="multipart/form-data" class="form__container">
+                    <h3 class="section__h3">Formulario de Contacto</h3>
+                    <div class="form__group">
+                        <label for="label__name" class="form__label">Nombre</label>
+                        <input name="nombre" type="text" id="label__name" class="form__label--input" placeholder="Nombre" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="label__email" class="form__label">Email</label>
+                        <input name="email" type="email" id="label__email" class="form__label--input" placeholder="ejemplo@tucorreo.com" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="label__telefono" class="form__label">Telefono</label>
+                        <input name="telefono" type="tel" id="label__telefono" class="form__label--input" placeholder="XXXX-XXXX" pattern="[0-9]{4}-[0-9]{4}" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="label__text" class="form__label">Mensaje</label>
+                        <textarea name="Mensaje" id="label__text" class="form__label--input" placeholder="Escribe tu mensaje aquí" required></textarea>
+                    </div>
+                    <button type="submit" class="form__button">Enviar</button>
+                </form>
+                <form method="post" action="url/de/envio" enctype="multipart/form-data" class="form__container">
+                    <h3 class="section__h3">Registro de Usuario</h3>
+                    <div class="form__group">
+                        <label for="label__name" class="form__label">Nombre</label>
+                        <input name="nombre" type="text" id="label__name" class="form__label--input" placeholder="Nombre" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="label__user" class="form__label">Nombre de Usuario</label>
+                        <input name="usuario" type="text" id="label__user" class="form__label--input" placeholder="Usuario" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="label__email" class="form__label">Email</label>
+                        <input name="email" type="email" id="label__email" class="form__label--input" placeholder="ejemplo@tucorreo.com" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="label__re-email" class="form__label">Repetir Email</label>
+                        <input name="re-email" type="email" id="label__re-email" class="form__label--input" placeholder="ejemplo@tucorreo.com" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="label__nacimiento" class="form__label">Fecha de Nacimiento</label>
+                        <input name="nacimiento" type="date" id="label__nacimiento" class="form__label--input" required>
+                    </div>
+                    <button type="submit" class="form__button">Registrar</button>
+                </form>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -13,13 +13,6 @@
 <body class="body">
     <header class="header">
         <h1 class="header__h1">Día 20 - Formularios</h1>
-        <nav class="header__nav">
-            <ul class="header__ul">
-                <li class="header__li"><a href="#nivel1" class="header__li--a">Nivel 1</a></li>
-                <li class="header__li"><a href="#nivel2" class="header__li--a">Nivel 2</a></li>
-                <li class="header__li"><a href="#nivel3" class="header__li--a">Nivel 3</a></li>
-            </ul>
-        </nav>
     </header>
     <main class="main">
         <section class="section">
@@ -28,12 +21,19 @@
                 <form method="post" action="url/de/envio" enctype="multipart/form-data" class="form__container">
                     <h3 class="section__h3">Formulario de Contacto</h3>
                     <div class="form__group">
-                        <label for="label__name" class="form__label">Nombre</label>
-                        <input name="nombre" type="text" id="label__name" class="form__label--input" placeholder="Nombre" required>
+                        <label for="label__name--contacto" class="form__label">Nombre</label>
+                        <input name="nombre" type="text" id="label__name--contacto" class="form__label--input" placeholder="Nombre" required list="nombres">
+                        <datalist id="nombres">
+                            <option value="Juan">
+                            <option value="Gustavo">
+                            <option value="Manuel">
+                            <option value="Marina">
+                            <option value="Andrea">
+                        </datalist>
                     </div>
                     <div class="form__group">
-                        <label for="label__email" class="form__label">Email</label>
-                        <input name="email" type="email" id="label__email" class="form__label--input" placeholder="ejemplo@tucorreo.com" required>
+                        <label for="label__email--contacto" class="form__label">Email</label>
+                        <input name="email" type="email" id="label__email--contacto" class="form__label--input" placeholder="ejemplo@tucorreo.com" required>
                     </div>
                     <div class="form__group">
                         <label for="label__telefono" class="form__label">Telefono</label>
@@ -45,19 +45,19 @@
                     </div>
                     <button type="submit" class="form__button">Enviar</button>
                 </form>
-                <form method="post" action="url/de/envio" enctype="multipart/form-data" class="form__container">
+                <form method="get" action="url/de/envio" enctype="multipart/form-data" class="form__container">
                     <h3 class="section__h3">Registro de Usuario</h3>
                     <div class="form__group">
-                        <label for="label__name" class="form__label">Nombre</label>
-                        <input name="nombre" type="text" id="label__name" class="form__label--input" placeholder="Nombre" required>
+                        <label for="label__name--registro" class="form__label">Nombre</label>
+                        <input name="nombre" type="text" id="label__name--registro" class="form__label--input" placeholder="Nombre" required>
                     </div>
                     <div class="form__group">
-                        <label for="label__user" class="form__label">Nombre de Usuario</label>
-                        <input name="usuario" type="text" id="label__user" class="form__label--input" placeholder="Usuario" required>
+                        <label for="label__user--registro" class="form__label">Nombre de Usuario</label>
+                        <input name="usuario" type="text" id="label__user--registro" class="form__label--input" placeholder="Usuario" required>
                     </div>
                     <div class="form__group">
-                        <label for="label__email" class="form__label">Email</label>
-                        <input name="email" type="email" id="label__email" class="form__label--input" placeholder="ejemplo@tucorreo.com" required>
+                        <label for="label__email--registro" class="form__label">Email</label>
+                        <input name="email" type="email" id="label__email--registro" class="form__label--input" placeholder="ejemplo@tucorreo.com" required>
                     </div>
                     <div class="form__group">
                         <label for="label__re-email" class="form__label">Repetir Email</label>
@@ -68,6 +68,18 @@
                         <input name="nacimiento" type="date" id="label__nacimiento" class="form__label--input" required>
                     </div>
                     <button type="submit" class="form__button">Registrar</button>
+                </form>
+                <form method="post" action="url/de/envio" enctype="multipart/form-data" class="form__container">
+                    <h3 class="section__h3">Log in de Usuario</h3>
+                    <div class="form__group">
+                        <label for="label__user--login" class="form__label">Nombre de Usuario</label>
+                        <input type="text" name="usuario" id="label__user--login" class="form__label--input" placeholder="Usuario" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="label__contraseña" class="form__label">Contraseña</label>
+                        <input type="password" name="contraseña" id="label__contraseña" class="form__label--input" required minlength="8">
+                    </div>
+                    <button type="submit" class="form__button">Iniciar Sesión</button>
                 </form>
             </article>
         </section>

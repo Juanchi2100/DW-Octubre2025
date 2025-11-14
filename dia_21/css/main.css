@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    background-color: #212121;
+}
+
+/* --------- HEADER ---------*/
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border-bottom: solid 0.05rem rgb(90, 90, 90);
+    padding: 20px;
+    font-family: "Roboto Condensed", sans-serif;}
+
+.header__img{
+    height: 2.5rem;
+}
+
+.header__h1{
+    color: white;
+    margin: 0 1rem;
+}
+
+.header__form--container{
+    display: flex;
+    align-items: center;
+    background-color: #454545;
+    padding: 8px 0;
+    border-radius: 4px;
+    width: max-content;
+    transition: 0.3s ease;
+    margin: 0 0 0 16px;
+}
+
+.header__form--container:focus-within{
+    background-color: #616161;
+    border: solid 1px #cecece;
+}
+
+.form__group{
+    display: flex;
+}
+
+.form__label{
+    width: 18rem;
+    background-color: #454545;
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    transition: 0.3s ease;
+}
+
+.form__label:focus{
+    outline: none;
+    background-color: #616161;
+}
+
+.form__label::placeholder{
+    color: rgb(198, 198, 198);
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.form__group--img{
+    height: 1.25rem;
+    margin: 0 0.5rem;
+}
+
+.nav__ul{
+    list-style: none;
+    display: flex;
+    margin: 0 1rem;
+}
+
+.nav__li--a{
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.nav__li--a-active{
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.nav__li--a-active::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.nav__li--a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.25s ease, left 0.25s ease;
+}
+
+.nav__li--a:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+.header__buttons{
+    display: flex;
+    gap: 1rem;
+    height: 2.5rem;
+    margin: 0 1.25rem;
+}
+
+.header__button--login{
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.header__button--registrar{
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #454545;
+    color: white;
+    font-size: 1em;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.header__button--login:hover{
+    background-color: #2e2e2e;
+}
+
+.header__button--registrar:hover{
+    background-color: #5d5d5d;
+}
+
+/* --------- BODY ---------*/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Noticias Arquitectónicas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/compass.svg">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" title="Noticias Arquitectónicas" aria-label="Regersar a Página de Inicio"><img src="images/compass.svg" alt="Logo de Noticias Arquitectónicas" class="header__img"></a>
+        <h1 class="header__h1">Noticias Arquitectónicas</h1>
+        <form method="get" action="url/de/envio" enctype="multipart/form-data" class="header__form--container">
+            <div class="form__group">
+                <img src="images/search.svg" alt="Icono de Búsqueda" class="form__group--img">
+                <label for="label__search"></label>
+                <input name="search" type="text" id="label__search" class="form__label" placeholder="Buscar" required>
+            </div>
+        </form>
+        <nav class="header__nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a href="eventos.html" class="nav__li--a-active">Eventos</a></li>
+                <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a">Ultima Hora</a></li>
+                <li class="nav__li"><a href="categorias.html" class="nav__li--a">Categorías</a></li>
+            </ul>
+        </nav>
+        <div class="header__buttons">
+            <a class="header__button--login" href="login.html">Iniciar sesión</a>
+            <a class="header__button--registrar" href="registro.html">Crear una cuenta</a>
+        </div>
+    </header>
+    <main></main>
+</body>
+</html>

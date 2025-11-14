@@ -195,7 +195,24 @@ Esto mejora la accesibilidad, ya que muestra la misma animación o marca visual 
     animation: translate-animation 2s linear infinite alternate;
 }
 
+.article__div--container{
+    height: 300px;
+    width: 100vw;
+    overflow-y: scroll;
+    scroll-timeline: --scroll-timeline y;
+    position: relative;
+}
 
+.article__div--scroll{
+    background-color: deeppink;
+    width: 100px;
+    height: 100px;
+    animation-name: rotateAnimation;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-timeline: --square-timeline;
+    position: absolute;
+    top: 0;
+}
 
 /* ------- Animaciones Keyframes ------- */
 

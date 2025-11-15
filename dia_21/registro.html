@@ -25,9 +25,9 @@
         </form>
         <nav class="header__nav">
             <ul class="nav__ul">
-                <li class="nav__li"><a href="eventos.html" class="nav__li--a">Eventos</a></li>
-                <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a">Ultima Hora</a></li>
                 <li class="nav__li"><a href="categorias.html" class="nav__li--a">Categorías</a></li>
+                <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a">Ultima Hora</a></li>
+                <li class="nav__li"><a href="contacto.html" class="nav__li--a">Contacto</a></li>
             </ul>
         </nav>
         <div class="header__buttons">
@@ -35,6 +35,31 @@
             <a class="header__button--registrar" href="registro.html">Crear una cuenta</a>
         </div>
     </header>
-    <main></main>
+    <main class="main__login">
+        <form method="get" action="url/de/envío" class="main__form">
+            <h2 class="form__h2">Crear una Cuenta</h2>
+            <div class="form__div">
+                <label for="label__email--register" class="form__label">Correo Electrónico</label>
+                <input type="email" name="email" id="label__email--register" placeholder="tu@correo.com" class="form__input" required>
+            </div>
+            <div class="form__div">
+                <label for="label__reemail--register" class="form__label">Repite el correo electrónico</label>
+                <input type="email" name="email" id="label__reemail--register" placeholder="tu@correo.com" class="form__input" required>
+            </div>
+            <div class="form__div">
+                <label for="label__contraseña--register" class="form__label">Contraseña</label>
+                <input type="password" name="contraseña" id="label__contraseña--register" minlength="8" class="form__input" required>
+            </div>
+            <div class="form__div">
+                <label for="label__recontraseña--register" class="form__label">Repite la contraseña</label>
+                <input type="password" name="contraseña" id="label__recontraseña--register" minlength="8" class="form__input" required>
+            </div>
+            <div class="form__div">
+                <label for="label__nacimiento" class="form__label">Fecha de Nacimiento</label>
+                <input type="date" name="nacimiento" id="label__nacimiento" class="form__input" required style="color: #c8c8c8;">
+            </div>
+            <input type="submit" value="Registrarte" class="form__button">
+        </form>
+    </main>
 </body>
 </html>

@@ -25,9 +25,9 @@
         </form>
         <nav class="header__nav">
             <ul class="nav__ul">
-                <li class="nav__li"><a href="eventos.html" class="nav__li--a">Eventos</a></li>
-                <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a">Ultima Hora</a></li>
                 <li class="nav__li"><a href="categorias.html" class="nav__li--a">Categorías</a></li>
+                <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a">Ultima Hora</a></li>
+                <li class="nav__li"><a href="contacto.html" class="nav__li--a">Contacto</a></li>
             </ul>
         </nav>
         <div class="header__buttons">
@@ -35,6 +35,24 @@
             <a class="header__button--registrar" href="registro.html">Crear una cuenta</a>
         </div>
     </header>
-    <main></main>
+    <main class="main__login">
+        <form method="get" action="url/de/envío" class="main__form">
+            <h2 class="form__h2">Iniciar Sesión</h2>
+            <div class="form__div">
+                <label for="label__email--login" class="form__label">Correo Electrónico</label>
+                <input type="email" name="email" id="label__email--login" placeholder="tu@correo.com" class="form__input" required>
+            </div>
+            <div class="form__div">
+                <label for="label__contraseña--login" class="form__label">Contraseña</label>
+                <input type="password" name="contraseña" id="label__contraseña--login" minlength="8" class="form__input" required>
+            </div>
+            <a href="" class="form__a">¿Olvidaste tu contraseña?</a>
+            <input type="submit" value="Iniciar Sesión" class="form__button">
+            <div class="form__div--registro">
+                <p class="form__p">¿No tienes una cuenta?</p>
+                <a href="registro.html" class="form__a">Regístrate</a>
+            </div>
+        </form>
+    </main>
 </body>
 </html>

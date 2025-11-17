@@ -15,9 +15,10 @@ html{
 
 .header{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: fit-content;
     background-color: #212121;
     border-bottom: solid 0.05rem rgb(90, 90, 90);
     padding: 20px;
@@ -25,6 +26,30 @@ html{
     position: sticky;
     top: 0;
     z-index: 99;
+}
+
+.header__div-main{
+    display: flex;
+    margin: 0 0 16px 0;
+}
+
+.header__div-categorias{
+    display: flex;
+    color: white;
+    gap: 1.5rem;
+}
+
+.header__div-categorias-p{
+    background-color: #3b3b3b;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}   
+
+.header__div-categorias-p:hover{
+    background-color: #454545;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
 .header__img{
@@ -77,6 +102,11 @@ html{
 .form__group--img{
     height: 1.25rem;
     margin: 0 0.5rem;
+}
+
+.header__nav{
+    display: flex;
+    align-items: center;
 }
 
 .nav__ul{
@@ -182,7 +212,8 @@ html{
     max-width: 18.75rem;
     color: white;
     position: sticky;
-    top: 110px;
+    align-self: baseline;
+    top: 8rem;    
 }
 
 .main__aside--div{
@@ -236,6 +267,24 @@ html{
 
 .article__header--time{
     font-size: .875rem;
+}
+
+.article__div{
+    display: flex;
+    gap: 1rem;
+}
+
+.article__div-p{
+    background-color: #3b3b3b;
+    margin: 0.5rem 0 0 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.article__div-p:hover{
+    background-color: #454545;
+    cursor: pointer;
 }
 
 .article__figure{
@@ -299,7 +348,7 @@ html{
     font-family: "Source Sans 3", sans-serif;
     display: flex;
     justify-content: center;
-    margin: 9rem auto;
+    margin: 4rem auto;
     gap: 3rem;
 }
 
@@ -308,9 +357,11 @@ html{
     flex-direction: column;
     align-items: center;
     background-color: #454545;
+    margin: 4rem auto;
     padding: 2rem 1rem;
     border-radius: 0.5rem;
     font-family: "Roboto Condensed", sans-serif;
+    width: fit-content;
 }
 
 .form__h2{
@@ -325,10 +376,23 @@ html{
     margin: 0.5rem 0;
 }
 
+.form__div--checkbox{
+    display: flex;
+    gap: 0.5rem;
+    margin: 8px 0 0 0;
+}
+
 .form__input{
     background-color: #5d5d5d;
     height: 2rem;
     border-radius: 4px;
+}
+
+.form__input--mensaje{
+    background-color: #5d5d5d;
+    height: 2rem;
+    border-radius: 4px;
+    resize: vertical;
 }
 
 .form__input:focus{
@@ -354,7 +418,7 @@ html{
 .form__button{
     width: 100%;
     height: 2rem;
-    margin: 2rem 0 0.5rem 0;
+    margin: 1.5rem 0 0.5rem 0;
     border-radius: 4px;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: bolder;
@@ -375,6 +439,41 @@ html{
 
 .form__p{
     color: white;
+}
+
+/* --------- Ultimas Noticias ---------*/
+
+
+.main__card{
+    display: flex;
+}
+
+.article__figure--card{
+    margin: 0 1rem 0 0;
+    width: 600px;
+}
+
+.figure__img--card{
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.article__header--h2-card{
+    color: white;
+    text-decoration: none;
+}
+
+.article__header--h2-card:hover{
+    color: #b6b6b6;
+}
+
+.article__div{
+    height: 200px;
+}
+
+.article__div--p{
+    text-overflow: ellipsis;
 }
 
 /* --------- Footer ---------*/

@@ -14,25 +14,36 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" title="Noticias Arquitectónicas" aria-label="Regersar a Página de Inicio"><img src="images/compass.svg" alt="Logo de Noticias Arquitectónicas" class="header__img"></a>
-        <h1 class="header__h1">Noticias Arquitectónicas</h1>
-        <form method="get" action="url/de/envio" enctype="multipart/form-data" class="header__form--container">
-            <div class="form__group">
-                <img src="images/search.svg" alt="Icono de Búsqueda" class="form__group--img">
-                <label for="label__search"></label>
-                <input name="search" type="text" id="label__search" class="form__label" placeholder="Buscar" required>
+        <div class="header__div-main">
+            <a href="index.html" title="Noticias Arquitectónicas" aria-label="Regersar a Página de Inicio"><img src="images/compass.svg" alt="Logo de Noticias Arquitectónicas" class="header__img"></a>
+            <h1 class="header__h1">Noticias Arquitectónicas</h1>
+            <form method="get" action="url/de/envio" enctype="multipart/form-data" class="header__form--container">
+                <div class="form__group">
+                    <img src="images/search.svg" alt="Icono de Búsqueda" class="form__group--img">
+                    <label for="label__search"></label>
+                    <input name="search" type="text" id="label__search" class="form__label" placeholder="Buscar" required>
+                </div>
+            </form>
+            <nav class="header__nav">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="categorias.html" class="nav__li--a">Categorías</a></li>
+                    <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a">Ultima Hora</a></li>
+                    <li class="nav__li"><a href="contacto.html" class="nav__li--a">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header__buttons">
+                <a class="header__button--login" href="login.html" title="Iniciar Sesión">Iniciar sesión</a>
+                <a class="header__button--registrar" href="registro.html" title="Crear una cuenta">Crear una cuenta</a>
             </div>
-        </form>
-        <nav class="header__nav">
-            <ul class="nav__ul">
-                <li class="nav__li"><a href="categorias.html" class="nav__li--a">Categorías</a></li>
-                <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a">Ultima Hora</a></li>
-                <li class="nav__li"><a href="contacto.html" class="nav__li--a">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="header__buttons">
-            <a class="header__button--login" href="login.html">Iniciar sesión</a>
-            <a class="header__button--registrar" href="registro.html">Crear una cuenta</a>
+        </div>
+        <div class="header__div-categorias">
+            <p class="header__div-categorias-p">Urbanismo</p>
+            <p class="header__div-categorias-p">Vivienda</p>
+            <p class="header__div-categorias-p">Arquitectura Temporal</p>
+            <p class="header__div-categorias-p">Bienal</p>
+            <p class="header__div-categorias-p">Edificios Religiosos</p>
+            <p class="header__div-categorias-p">Plan Maestro</p>
+            <p class="header__div-categorias-p">Pabellón</p>
         </div>
     </header>
     <main class="main">
@@ -40,6 +51,11 @@
             <article class="main__article">
                 <header class="article__header">
                     <h2 class="article__h2">OMA presenta proyecto de reurbanización de laderas en Busan, Corea del Sur</h2>
+                    <div class="article__div">
+                        <p class="article__div-p">Urbanismo</p>
+                        <p class="article__div-p">Plan Maestro</p>
+                        <p class="article__div-p">Vivienda</p>
+                    </div>
                 </header>
                 <figure class="article__figure">
                     <picture class="figure__picture">
@@ -54,7 +70,7 @@
                     <picture class="figure__picture">
                         <source srcset="images/OMA_1.webp" type="image/webp">
                         <source srcset="images/OMA_1.jpg" type="image/jpg">
-                        <img src="images/OMA_1.jpg" alt="Image of the Busan Sloping Houses" class="figure__img">
+                        <img src="images/OMA_1.jpg" alt="Image of the Busan Sloping Houses" class="figure__img" loading="lazy">
                     </picture>
                 </figure>
                 <p class="article__p">Las laderas de Busan, históricamente un refugio para poblaciones desplazadas durante la guerra coreana, se convirtieron en hogar de asentamientos informales hechos con materiales recuperados. Estas comunidades se adaptaron al terreno empinado y formaron barrios densos y resilientes que han sido fundamentales para la identidad urbana de la ciudad. Sin embargo, a medida que estas áreas han envejecido y enfrentado desafíos relacionados con la infraestructura y la capacidad, son cada vez más reemplazadas por desarrollos de grandes alturas. Estas nuevas estructuras priorizan la eficiencia espacial y las comodidades modernas, pero plantean preguntas sobre la interrupción de la topografía original y la eliminación de las redes informales impulsadas por la comunidad que alguna vez prosperaron en las laderas.</p>
@@ -62,7 +78,7 @@
                     <picture class="figure__picture">
                         <source srcset="images/OMA_2.webp" type="image/webp">
                         <source srcset="images/OMA_2.jpg" type="image/jpg">
-                        <img src="images/OMA_2.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img">
+                        <img src="images/OMA_2.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img" loading="lazy">
                     </picture>
                 </figure>
                 <p class="article__p">La propuesta de OMA se centra en dos sitios contrastantes: Yeongju, ubicado en el centro de la ciudad, y Anchang, situado entre crestas boscosas. Sus contextos diferentes brindan una oportunidad para probar una estrategia de reurbanización reproducible que media entre la trama fina de los asentamientos informales y la gran escala de las propiedades modernas. Una característica clave del diseño es su énfasis en la circulación como un elemento organizador principal. Una red peatonal conecta nodos públicos, paradas de autobús, estaciones de monorriel, escuelas, mercados, parques y monumentos culturales, asegurando que la vida cotidiana fluya a través de las laderas. Este marco revela "barrios de bolsillo" naturales moldeados por la pendiente, el acceso, la adyacencia y las vistas.</p>
@@ -70,7 +86,7 @@
                     <picture class="figure__picture">
                         <source srcset="images/OMA_3.webp" type="image/webp">
                         <source srcset="images/OMA_3.jpg" type="image/jpg">
-                        <img src="images/OMA_3.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img">
+                        <img src="images/OMA_3.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img" loading="lazy">
                     </picture>
                 </figure>
                 <p class="article__p">Dentro de estos clústeres, OMA negocia intercambios espaciales clave: retención de laderas versus acceso vehicular, vistas versus luz natural, vestíbulos compartidos versus entradas granulares. Cuatro tipologías de vivienda emergen de este proceso: vivienda en terraza, villas urbanas, viviendas en fila y torres, cada una de las cuales se prueba por su adaptabilidad a la ladera, acceso solar, orientación y proximidad a espacios públicos. La composición resultante coloca torres en puntos altos, villas en nodos centrales, casas en fila a lo largo de las crestas y terrazas incrustadas en áreas más empinadas.</p>
@@ -78,7 +94,7 @@
                     <picture class="figure__picture">
                         <source srcset="images/OMA_4.webp" type="image/webp">
                         <source srcset="images/OMA_4.jpg" type="image/jpg">
-                        <img src="images/OMA_4.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img">
+                        <img src="images/OMA_4.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img" loading="lazy">
                     </picture>
                 </figure>
                 <p class="article__p">En lugar de proponer un modelo urbano uniforme, la estrategia de OMA sugiere un enfoque sensible al contexto que resulta en un mosaico de zonas interrelacionadas. A través de la planificación de escaleras, entradas, terrazas y pequeñas plazas, el diseño tiene como objetivo transformar la circulación en espacios comunitarios, manteniendo la conectividad social e informal que definió a las comunidades originales de la ladera.</p>
@@ -86,14 +102,14 @@
                     <picture class="figure__picture">
                         <source srcset="images/OMA_5.webp" type="image/webp">
                         <source srcset="images/OMA_5.jpg" type="image/jpg">
-                        <img src="images/OMA_5.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img">
+                        <img src="images/OMA_5.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img" loading="lazy">
                     </picture>
                 </figure>
                 <figure class="article__figure">
                     <picture class="figure__picture">
                         <source srcset="images/OMA_6.webp" type="image/webp">
                         <source srcset="images/OMA_6.jpg" type="image/jpg">
-                        <img src="images/OMA_6.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img">
+                        <img src="images/OMA_6.jpg" alt="Render de las nuevas Sloping Houses de Busan" class="figure__img" loading="lazy">
                     </picture>
                 </figure>
                 <footer class="article__footer">

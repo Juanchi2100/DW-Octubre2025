@@ -14,27 +14,56 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" title="Noticias Arquitectónicas" aria-label="Regersar a Página de Inicio"><img src="images/compass.svg" alt="Logo de Noticias Arquitectónicas" class="header__img"></a>
-        <h1 class="header__h1">Noticias Arquitectónicas</h1>
-        <form method="get" action="url/de/envio" enctype="multipart/form-data" class="header__form--container">
-            <div class="form__group">
-                <img src="images/search.svg" alt="Icono de Búsqueda" class="form__group--img">
-                <label for="label__search"></label>
-                <input name="search" type="text" id="label__search" class="form__label" placeholder="Buscar" required>
+        <div class="header__div-main">
+            <a href="index.html" title="Noticias Arquitectónicas" aria-label="Regersar a Página de Inicio"><img src="images/compass.svg" alt="Logo de Noticias Arquitectónicas" class="header__img"></a>
+            <h1 class="header__h1">Noticias Arquitectónicas</h1>
+            <form method="get" action="url/de/envio" enctype="multipart/form-data" class="header__form--container">
+                <div class="form__group">
+                    <img src="images/search.svg" alt="Icono de Búsqueda" class="form__group--img">
+                    <label for="label__search"></label>
+                    <input name="search" type="text" id="label__search" class="form__label" placeholder="Buscar" required>
+                </div>
+            </form>
+            <nav class="header__nav">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="categorias.html" class="nav__li--a">Categorías</a></li>
+                    <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a-active">Ultima Hora</a></li>
+                    <li class="nav__li"><a href="contacto.html" class="nav__li--a">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header__buttons">
+                <a class="header__button--login" href="login.html" title="Iniciar Sesión">Iniciar sesión</a>
+                <a class="header__button--registrar" href="registro.html" title="Crear una cuenta">Crear una cuenta</a>
             </div>
-        </form>
-        <nav class="header__nav">
-            <ul class="nav__ul">
-                <li class="nav__li"><a href="categorias.html" class="nav__li--a">Categorías</a></li>
-                <li class="nav__li"><a href="ultima-hora.html" class="nav__li--a-active">Ultima Hora</a></li>
-                <li class="nav__li"><a href="contacto.html" class="nav__li--a">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="header__buttons">
-            <a class="header__button--login" href="login.html">Iniciar sesión</a>
-            <a class="header__button--registrar" href="registro.html">Crear una cuenta</a>
+        </div>
+        <div class="header__div-categorias">
+            <p class="header__div-categorias-p">Urbanismo</p>
+            <p class="header__div-categorias-p">Vivienda</p>
+            <p class="header__div-categorias-p">Arquitectura Temporal</p>
+            <p class="header__div-categorias-p">Bienal</p>
+            <p class="header__div-categorias-p">Edificios Religiosos</p>
+            <p class="header__div-categorias-p">Plan Maestro</p>
+            <p class="header__div-categorias-p">Pabellón</p>
         </div>
     </header>
-    <main></main>
+    <main class="main">
+        <section class="main__section">
+            <article class="main__card">
+                <figure class="article__figure--card">
+                    <picture>
+                        <source srcset="images/MVRD_construccion_campus.webp" type="image/webp">
+                        <source srcset="images/MVRD_construccion_campus.jpg" type="image/jpg">
+                        <img src="images/MVRD_construccion_campus.jpg" alt="Render del Campus de Inteligencia Artificial del Parque de Innovación por MVRDV" class="figure__img--card">
+                    </picture>
+                </figure>
+                <div>
+                    <h2 class="article__header--h2-card">MVRDV inicia la construcción del Campus de Inteligencia Artificial del Parque de Innovación en Heilbronn, Alemania</h2>
+                    <div class="article__div">
+                        <p class="article__div--p">La construcción ha comenzado en el Campus de Inteligencia Artificial del Parque de Innovación (IPAI) en Heilbronn, Alemania, diseñado por la firma de arquitectura Holandesa MVRDV. Desarrollado por el Konsortium IPAI, que incluye al Estado de Baden-Württemberg, la Fundación Dieter Schwarz, Schwarz Gruppe y la Ciudad de Heilbronn, el campus de 30 hectáreas está concebido como un centro internacional para más de 5,000 profesionales que avanzan en soluciones innovadoras y responsables de IA. Centrado en principios de apertura, colaboración y sostenibilidad, el proyecto busca integrar espacios de trabajo, espacios públicos e instalaciones de investigación, estableciendo un entorno donde la tecnología y la interacción humana coexistan.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

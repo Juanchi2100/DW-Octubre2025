@@ -209,7 +209,8 @@ html{
 
 .main__h2{
     color: white;
-    margin: 24px 0 0 0;
+    font-size: 36px;
+    margin: 20px 0 0 0;
 }
 
 .main__aside{

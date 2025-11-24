@@ -207,6 +207,11 @@ html{
     gap: 3rem;
 }
 
+.main__h2{
+    color: white;
+    margin: 24px 0 0 0;
+}
+
 .main__aside{
     margin: 1rem 0;
     max-width: 18.75rem;

@@ -38,3 +38,4 @@ nuevoArray.forEach((cadaElemento) =>{
 //Nivel 3 - Métodos de Orden Superior y Deconstrucción
 console.log(arrayMascotas.some(buscarNombre => buscarNombre.includes("L"))); //Buscando todos los nombres a ver si alguno tiene la letra L
 console.log(arrayMascotas.find(buscarNombre => buscarNombre.includes("L"))); //Debe tirar el primer nombre con L que encuentre, en este caso, Luna.
+

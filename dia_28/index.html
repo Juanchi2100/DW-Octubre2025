@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Día 28</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__h1">Día 27 - Funciones</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li class="header__li"><a href="index.html" class="header__li--a">Nivel 1 - 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section__cards">
+            <article class="card">
+                <h3>1. click</h3>
+                <div class="meta">Target: elementos interactivos (botón, enlace, etc.)</div>
+                <p class="desc">Se dispara cuando el usuario presiona y suelta el botón principal del ratón sobre un
+                    elemento. Es el evento más usado para acciones de usuario (ej. ejecutar una función al pulsar un
+                    botón).</p>
+            </article>
+            <article class="card">
+                <h3>2. dblclick</h3>
+                <div class="meta">Target: elementos</div>
+                <p class="desc">Se activa cuando el usuario hace doble clic. Útil para acciones que deben requerir doble
+                    confirmación. No recomendado para interfaces táctiles.</p>
+            </article>
+            <article class="card">
+                <h3>3. mouseover</h3>
+                <div class="meta">Target: elemento que recibe el puntero</div>
+                <p class="desc">Cuando el cursor entra en el área de un elemento. A diferencia de <span
+                        class="kbd">mouseenter</span>, <span class="kbd">mouseover</span> burbujea (se propaga a
+                    ancestros).</p>
+            </article>
+            <article class="card">
+                <h3>4. mouseout</h3>
+                <div class="meta">Target: elemento que pierde el puntero</div>
+                <p class="desc">Se dispara cuando el cursor abandona un elemento. Útil para ocultar tooltips o revertir
+                    estilos aplicados en <span class="kbd">mouseover</span>.</p>
+            </article>
+            <article class="card">
+                <h3>5. mousemove</h3>
+                <div class="meta">Target: elemento</div>
+                <p class="desc">Se ejecuta continuamente mientras el ratón se mueve dentro del elemento. Úsalo con
+                    precaución por rendimiento; para rastrear la posición del cursor o animaciones finas.</p>
+            </article>
+            <article class="card">
+                <h3>6. mousedown / mouseup</h3>
+                <div class="meta">Target: elemento</div>
+                <p class="desc"><span class="kbd">mousedown</span> ocurre cuando el botón del ratón se presiona; <span
+                        class="kbd">mouseup</span> cuando se suelta. Útiles para detectar arrastres o acciones que
+                    dependen del tiempo de pulsación.</p>
+            </article>
+            <article class="card">
+                <h3>7. contextmenu</h3>
+                <div class="meta">Target: elemento</div>
+                <p class="desc">Se dispara al intentar abrir el menú contextual (clic derecho). Puedes prevenirlo con
+                    <span class="kbd">event.preventDefault()</span> para crear menús personalizados.</p>
+            </article>
+            <article class="card">
+                <h3>8. keydown</h3>
+                <div class="meta">Target: elemento con foco (documento o input)</div>
+                <p class="desc">Ocurre cuando se presiona una tecla. Devuelve información como <span
+                        class="kbd">event.key</span>. Ideal para atajos de teclado o validar entradas. Se dispara
+                    repetidamente si la tecla se mantiene pulsada.</p>
+            </article>
+            <article class="card">
+                <h3>9. keyup</h3>
+                <div class="meta">Target: elemento con foco</div>
+                <p class="desc">Se dispara al soltar la tecla. Útil para acciones tras completar la pulsación (ej.
+                    validar al terminar de escribir).</p>
+            </article>
+            <article class="card">
+                <h3>10. keypress</h3>
+                <div class="meta">Target: elemento con foco</div>
+                <p class="desc">Evento histórico para teclas imprimibles; está deprecado en favor de <span
+                        class="kbd">keydown</span>/<span class="kbd">keyup</span>. Evita usarlo en código nuevo.</p>
+            </article>
+            <article class="card">
+                <h3>11. input</h3>
+                <div class="meta">Target: campos de formulario</div>
+                <p class="desc">Se ejecuta cuando cambia el valor de un <span class="kbd">input</span>, <span
+                        class="kbd">textarea</span> o elemento editable. Ideal para validación en tiempo real y
+                    autocompletar.</p>
+            </article>
+            <article class="card">
+                <h3>12. change</h3>
+                <div class="meta">Target: campos de formulario</div>
+                <p class="desc">Se dispara cuando el valor del campo cambia y el control pierde foco (o tras selección,
+                    en selects). Útil para acciones que deben ocurrir tras confirmar la edición.</p>
+            </article>
+            <article class="card">
+                <h3>13. submit</h3>
+                <div class="meta">Target: &lt;form&gt;</div>
+                <p class="desc">Ocurre cuando se envía un formulario. Puedes usar event.preventDefault() para
+                    interceptar el envío y procesar datos vía JS (fetch/AJAX).</p>
+            </article>
+            <article class="card">
+                <h3>14. focus</h3>
+                <div class="meta">Target: elementos enfocables (inputs, botones)</div>
+                <p class="desc">Se disparar cuando un elemento recibe foco. No burbujea; para capturarlo en ancestros,
+                    usa focusin.</p>
+            </article>
+            <article class="card">
+                <h3>15. blur</h3>
+                <div class="meta">Target: elementos enfocables</div>
+                <p class="desc">El evento inverso de focus: ocurre al perder el foco. Útil para validación al salir del
+                    campo.</p>
+            </article>
+        </section>
+        <section class="section__buttons">
+            <h2>buttons</h2>
+            <div>
+                <button class="button">Botón 1</button>
+                <button class="button">Botón 2</button>
+                <button class="button">Botón 3</button>
+                <button class="button">Botón 4</button>
+                <button class="button">Botón 5</button>
+            </div>
+            <h2>divs</h2>
+            <div class="div__padre">
+                <div class="section__div"></div>
+                <div class="section__div"></div>
+                <div class="section__div"></div>
+                <div class="section__div"></div>
+                <div class="section__div"></div>
+            </div>
+            <button id="button" class="button__div">Cambiar Colores de los Divs</button>
+        </section>
+    </main>
+    </div>
+</body>
+
+</html> 

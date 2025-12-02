@@ -34,10 +34,7 @@ function cuadradoVacio(){
     for(let fila = 0; fila < 5; fila++){
         let linea = "";
         for(let col = 0; col < 5; col++){
-            if(fila === 0 || fila === 4){           //condiciones para la primera y última fila que sean completas
-                linea += "* ";
-            }
-            else if(col === 0 || col === 4){        //condiciones para que la primera y última columna sean llenas
+            if(fila === 0 || fila === 4 || col === 0 || col === 4){ 
                 linea += "* ";
             }
             else{
@@ -80,3 +77,31 @@ mensaje();
 
 //Nivel 3.2 - setInterval
 console.log("|-------Nivel 3.2-------|");
+
+function hora(){
+    setInterval(() => {
+        let now = new Date;
+        console.log(now.toUTCString())
+    }, 1000)
+}
+
+hora();
+
+//Nivel 3.3 - Contador
+console.log("|-------Nivel 3.3-------|");
+
+function contador(){
+    let interval; 
+    let count = 0; 
+    interval = setInterval(() => {
+        if(count < 10){
+            count++;
+            console.log(count);
+        }
+        else{
+            clearInterval(interval)
+        }
+    }, 1000)
+}
+
+contador();

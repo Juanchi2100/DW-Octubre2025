@@ -56,15 +56,45 @@ function randomizer(){
 
 shuffleButton.addEventListener("click", randomizer);
 
-//Nivel 3 - Formulario interactivo y selección múltiple
+//Nivel 3 - Calculadora
 
-const resultadoButton = document.getElementById("resultado");
-let input1 = "";
-let input2 = "";
-let operacion = "";
-let resultado = "";
+const resultadoButton = document.getElementById("igual");
+const resultado = document.getElementById("resultado");
 
-function calculate(){
-    if(input1 ==="" || input2 ==="") return;
-    if(input1 !=="" && input2 !=="")
+function calcular(){
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    const operacionInput = document.getElementById("operacion");
+
+    let valueInput1 = parseFloat(input1.value);
+    let valueInput2 = parseFloat(input2.value);
+    let operacion = operacionInput.value;
+
+    if (isNaN(valueInput1) || isNaN(valueInput2)){
+        return "Ingresa valores válidos";
+    }
+    let resp;
+    
+    switch(operacion){
+        case "+":
+            resp = valueInput1 + valueInput2;
+            break;
+        case "-":
+            resp = valueInput1 - valueInput2;
+            break;
+        case "*":
+            resp = valueInput1 * valueInput2;
+            break;
+        case "/":
+            resp = valueInput1 / valueInput2;
+            break;
+        default:
+            resp = "Operación no válida";
+    }
+    return resp;                                  //??????????
 }
+
+resultadoButton.addEventListener("click",() => {
+    resultado.textContent = calcular();
+});
+

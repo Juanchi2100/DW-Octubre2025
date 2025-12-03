@@ -38,7 +38,7 @@ locationButton.addEventListener("click", () => {
     }
 });
 
-//Nivel 2 - Interacción básica con el DOM y BOM
+//Nivel 2 - Interación básica con el DOM y BOM
 
 const shuffleButton = document.getElementById("shuffle");
 

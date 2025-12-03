@@ -182,3 +182,68 @@ body{
 .main__div{
     text-align: center;
 }
+
+.div__task{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 50px;
+}
+
+.ul__task{
+    list-style: circle;
+}
+
+.li__task:hover{
+    cursor: pointer;
+}
+
+/* Nivesl 2.2 */
+
+.products{
+    display:grid;
+    gap:1rem;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.product-card{
+  background:var(--card);
+  padding:1rem;
+  border-radius:8px;
+  box-shadow:var(--shadow);
+  border:1px solid rgb(15,23,42);
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+}
+
+.product-card__header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+
+.product-card__title{font-weight:600;
+    font-size:1rem
+}
+
+.product-card__price{font-size:0.95rem;
+    color:var(--muted);
+    font-weight:700
+}
+
+.product-card__body{
+    font-size:.9rem;
+    color:#374151
+}
+
+.boton__eliminar{
+    background-color: #ffffff;
+    font-weight:600;
+    width: fit-content;
+    padding: 4px 8px;
+    cursor: pointer;
+    height: 24px;
+    border-radius: 8px;
+}

@@ -36,3 +36,44 @@ function cambiarBoton(){
 }
 
 cambiarBoton(); 
+
+//Nivel 2.1 - Lista de Tareas
+
+const tasks = document.querySelectorAll(".li__task");
+
+tasks.forEach(li => li.addEventListener("click", () =>{
+    if(li.style.textDecoration !== "line-through"){
+        li.style.textDecoration = "line-through";
+    }
+    else{
+        li.style.textDecoration = "none";
+    }
+}));
+
+//Nivel 2.2 y 2.3 - Productos y eliminar
+
+const products = document.querySelectorAll(".product-card");
+const botonesEliminar = document.querySelectorAll(".boton__eliminar");
+
+const priceComparacionHigh = 100;
+const priceComparacionMedium = 50;
+
+products.forEach(product => {
+    const priceRaw = product.dataset.price;     //string - "data-price" en el HTML
+    const price = parseFloat(priceRaw) || 0;    //convertir a número
+
+    if (price > priceComparacionHigh){
+        product.style.backgroundColor = "#e3a76eff";
+    }
+    else if(price > priceComparacionMedium){
+        product.style.backgroundColor = "#eaec7eff"
+    }
+    else{
+        product.style.backgroundColor = "#90e876ff"
+    }
+});
+
+botonesEliminar.forEach(botonEliminar => botonEliminar.addEventListener("click", (e) =>{
+    const card = e.target.closest(".product-card");
+    if (card) card.style.display = "none";
+}))

@@ -77,3 +77,70 @@ botonesEliminar.forEach(botonEliminar => botonEliminar.addEventListener("click",
     const card = e.target.closest(".product-card");
     if (card) card.style.display = "none";
 }))
+
+//Nivel 3.1 - Lista Dinámica
+
+const lista = document.getElementById("lista-personas");
+
+const personas = [
+    {nombre: "Ana", edad: 32},
+    {nombre: "Juan", edad: 25},
+    {nombre: "Andrea", edad: 28},
+    {nombre: "Claudia", edad: 23}
+];
+
+personas.forEach(persona => {
+    const li = document.createElement("li");
+    li.textContent = persona.nombre + " - " + persona.edad + " años."
+    lista.appendChild(li);
+});
+
+//Nivel 3.2 - Galería de Imágenes
+
+const galeria = document.getElementById("galeria");
+
+const imagenes = [
+    "https://images.hdqwalls.com/download/one-piece-5k-ne-360x640.jpg",
+    "https://cdn.alsgp0.fds.api.mi-img.com/middle.community.micommunitybr.bkt/6bde57afd4d3efaf6afdc9bbfcd462a1",
+    "https://images3.alphacoders.com/132/thumb-1920-1326111.jpeg",
+    "https://images5.alphacoders.com/133/thumb-1920-1335737.jpeg",
+    "https://images7.alphacoders.com/133/thumb-1920-1331473.png"
+];
+
+imagenes.forEach(url => {
+    const img = document.createElement("img");
+    img.src = url;
+    img.alt = "Imagen de galería";
+    img.style.width = "250px";
+    img.style.aspectRatio = "1 / 1";
+    img.style.objectFit = "cover";
+    img.style.margin = "25px"
+    galeria.appendChild(img);
+})
+
+//Nivel 3.3 - Tabla Dinámica
+
+const tbody = document.getElementById("tabla-body");
+
+const datos = [
+    {nombre: "Ana", email: "ana.a@gmail.com", rol: "CEO"},
+    {nombre: "Juan", email: "juan.b@gmail.com", rol: "CFO"},
+    {nombre: "Andrea", email: "andrea.m@gmail.com", rol: "Jefa Administrativa"},
+    {nombre: "Claudia", email: "claudia.p@gmail.com", rol: "Jefa de Marketing"}
+];
+
+datos.forEach(dato => {
+    const thNombre = document.createElement("th");
+    const tdEmail = document.createElement("td");
+    const tdRol = document.createElement("td");
+    const tr = document.createElement("tr");
+
+    thNombre.textContent = dato.nombre
+    tdEmail.textContent = dato.email
+    tdRol.textContent = dato.rol
+
+    tbody.appendChild(tr);
+    tr.appendChild(thNombre);
+    tr.appendChild(tdEmail);
+    tr.appendChild(tdRol);
+});

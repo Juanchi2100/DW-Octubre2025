@@ -53,11 +53,9 @@ function toggleAnimation(animation){
 function handlerToggleAnimation(){
     console.log(divAnimado)
     if(divAnimado.style.animationName === "scale"){
-        console.log(333)
         divAnimado.style.animationName = "rotate"
     }
     else{
-        console.log(444)
         divAnimado.style.animationName = "scale"
     }
 }

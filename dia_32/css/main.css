@@ -150,6 +150,39 @@ body{
     animation-iteration-count: infinite;
 }
 
+.div__nivel2-2{
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    background-color: blue;
+    margin: 30px;
+    display: block;
+}
+
+.div__nivel2-3{
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    background-color: blue;
+    margin: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.div__grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.grid{
+    background-color: white;
+    aspect-ratio: 1 / 1;
+    width: 100px;
+    text-align: center;
+}
+
 @keyframes rotate{
     100% {transform: rotate(180deg);}
 }

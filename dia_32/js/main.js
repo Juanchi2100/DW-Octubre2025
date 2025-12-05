@@ -126,6 +126,3 @@ function handlerToggleAleatorio(){
 }
 
 botonColor.addEventListener("click", handlerToggleAleatorio);
-
-//Nivel 3.3 - Desplazamiento
-

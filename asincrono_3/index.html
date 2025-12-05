@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>APIs - Asincrono 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="fonts/Minecraft.ttf">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+
+</head>
+<body>
+    <main class="main">
+        <h1 class="main__h1">Learning APIs</h1>
+        <section class="main__section">
+            <article class="main__article">
+                <h2 class="article__h2">PokeAPI - Pokedex</h2>
+                <div class="article__form">
+                    <form action="" method="get" class="div__form" onsubmit="return false">
+                        <div class="form__div">
+                            <label for="pokeName" class="form__label">Nombre del Pokemon: </label>
+                            <input type="text" name="nombre" id="pokeName" class="form__input" placeholder="PokeName">
+                        </div>
+                        <div class="form__div">
+                            <label for="pokeID" class="form__label">ID del Pokemon: </label>
+                            <input type="text" name="id" id="pokeID" class="form__input" placeholder="PokeID">
+                        </div>
+                        <button class="form__submit">Submit</button>
+                    </form>
+                    <div class="section__div--result">
+                        <p class="div__p" id="pNombre"></p>
+                        <p class="div__p" id="pId"></p>
+                        <p class="div__p" id="pWeight"></p>
+                        <p class="div__p" id="pHeight"></p>
+                        <p class="div__p" id="pClass"></p>
+                        <img src="" alt="Pokemon Sprite" class="div__img" id="imgSprite">
+                    </div>
+                </div>
+            </article>
+            <article class="main__article">
+                <h2 class="article__h2">FakeStore</h2>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

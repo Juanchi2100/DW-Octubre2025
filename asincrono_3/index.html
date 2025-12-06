@@ -38,11 +38,54 @@
                         <p class="div__p" id="pHeight"></p>
                         <p class="div__p" id="pClass"></p>
                         <img src="" alt="Pokemon Sprite" class="div__img" id="imgSprite">
+                        <img src="" alt="Pokemon Shiny Sprite" class="div__img" id="imgSpriteShiny">
                     </div>
                 </div>
             </article>
             <article class="main__article">
-                <h2 class="article__h2">FakeStore</h2>
+                <h2 class="article__h2">D&D 5e SRD API - Dungeons and Dragons</h2>
+                <div class="article__form">
+                    <form action="" method="get" class="div__form" onsubmit="return false">
+                        <div class="form__div">
+                            <label for="razaDD" class="form__label">Nombre de la raza: </label>
+                            <input type="text" name="raza" id="razaDD" class="form__input" list="option-races" placeholder="Ingrese aquí la raza">
+                            <datalist id="option-races">
+                                <option value="Dragonborn"></option>
+                                <option value="Dwarf"></option>
+                                <option value="Elf"></option>
+                                <option value="Gnome"></option>
+                                <option value="Half-elf"></option>
+                                <option value="Half-orc"></option>
+                                <option value="Halfling"></option>
+                                <option value="Human"></option>
+                                <option value="Tiefling"></option>
+                            </datalist>
+                        </div>
+                        <button class="form__submit" id="buttonSearchRace">Search</button>
+                    </form>
+                    <div class="section__div--result" id="resultadosDD">
+                        <p class="div__p" id="pAlignment"></p>
+                        <p class="div__p" id="pSize"></p>
+                        <p class="div__p" id="pSpeed"></p>
+                        <p class="div__p" id="pLanguages"></p>
+                        <p class="div__p" id="pLangDesc"></p>
+                    </div>
+                </div>
+            </article>
+            <article class="main__article">
+                <h2 class="article__h2">FakeStoreAPI - Store </h2>
+                <div class="article__form">
+                    <select name="categories" id="categories-select" class="select__category">
+                        <option value="">--Por favor seleccione una categoría--</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="jewelery">Jewelery</option>
+                        <option value="men's clothing">Men's Clothing</option>
+                        <option value="women's clothing">Women's Clothing</option>
+                    </select>
+                    <button class="form__submit" id="buttonSearchProduct">Buscar</button>
+                </div>
+                <div class="section__div--result" id="resultadosStore">
+                </div>
             </article>
         </section>
     </main>

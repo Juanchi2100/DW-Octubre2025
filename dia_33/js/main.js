@@ -35,20 +35,37 @@ btnChangeWidth.addEventListener("click", handlerToggleChangeWidth);
 //Nivel 1.4
 
 const btnAñadirDiv = document.getElementById("button1.4");
-const divCounter = document.querySelector("div__counter");
+const divCounter = document.getElementById("divCounter");
 const divMain = document.getElementById("mainDiv");
+const divContainer = document.getElementById("divContainer");
 
 function rndNum(number){
     return Math.floor(Math.random() * number);
 } 
 
+let count = 0;
+
+function countIncrease(){
+    count ++;
+    return count; 
+}
+
 function handlerToggleAddDiv(){
-    const rndCol = `rgb(${rndNum(255)}, ${rndNum(255)}, ${rndNum(255)})`;    let div = document.createElement("div")
-    div.classList.add("div__div--square");
-    div.style.backgroundColor = rndCol; 
-    divMain.appendChild(div);
-    
-    divCounter.classList.toggle("div__counter--active");
+
+    const currentNum = countIncrease();
+
+    const rndCol = `rgb(${rndNum(255)}, ${rndNum(255)}, ${rndNum(255)})`;    
+
+    const divColor = document.createElement("div");
+    divColor.classList.add("div__div--square");
+    divColor.style.backgroundColor = rndCol;
+
+    divContainer.appendChild(divColor);
+
+    divCounter.classList.add("div__counter--active");
+    divCounter.textContent = currentNum;
 }
 
 btnAñadirDiv.addEventListener("click", handlerToggleAddDiv);
+
+//Nivel 2.1

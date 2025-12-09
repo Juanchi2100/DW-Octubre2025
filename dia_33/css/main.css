@@ -114,6 +114,7 @@ body{
     border-radius: 0.75rem;
     width: 200px;
     height: 100px;
+    animation: easewith 1s ease;
 }
 
 .div__counter{
@@ -142,9 +143,16 @@ body{
     float: left;
 }
 
-
+.div__container{
+    display: flex;
+    width: 50%;
+}
 
 @keyframes scale{
     50% {transform: scale(75%);}
     100% {transform: scale(100%);}
+}
+
+@keyframes easewith {
+    100%
 }

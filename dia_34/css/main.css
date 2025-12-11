@@ -69,6 +69,7 @@ ul{
 
 .nav li ul li{
     position: relative;
+    background-color: white;
 }
 
 .nav li ul li ul{
@@ -88,18 +89,18 @@ ul{
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
     padding: 20px;
     justify-content: center;
 }
 
 .gallery img{
-    width: 150px;
-    height: 100px;
+    width: 275px;
+    height: 200px;
     object-fit: cover;
     cursor: pointer;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    border-radius: 16px;
+    box-shadow: #0000004a 5px 5px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -118,12 +119,12 @@ ul{
     transition: opacity 0.3s ease;
 }
 
-#lightbox-active{
+#lightbox.active{
     visibility: visible;
     opacity: 1;
 }
 
-#light-box #lightbox-backdrop{
+#lightbox #lightbox-backdrop{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -148,7 +149,7 @@ ul{
     transition: color 0.2s;
 }
 
-#lightbox #lightbox.close:hover{
+#lightbox #lightbox-close:hover{
     color: #ff4444;
 }
 

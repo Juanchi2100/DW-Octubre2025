@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    height: 100vh;
+}
+
+.header {
+    background: #EEAECA;
+    background: linear-gradient(90deg,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.header__h1{
+    font-size: 1.5em;
+    padding-bottom: 0.5rem;
+}
+
+.header__ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header__li{
+    padding: 0 1rem;  
+}
+
+.header__li--a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.header__li--a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.25s ease, left 0.25s ease;
+}
+
+.header__li--a:hover::after,
+.header__li--a:focus-visible::after{
+    width: 100%;
+    left: 0;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carrusel SPLIDE*/
+
+
+.splide{
+    width: 50%;
+    height: 500px;
+}
+
+.splide__track{
+    width: 100%;
+    height: 500px;
+}
+
+.splide__slide{
+    height: 100%;
+    object-fit: cover;
+    place-items: center;
+}
+
+/* Slider Propio */
+
+.my-slides {
+    display: none;
+}
+
+.img-slider {
+    vertical-align: middle;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    aspect-ratio: 1 / 1;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from{
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Carrusel Propio
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+
+.carrouselr-container{
+    height: 300px;
+    width: 100vw;
+    background-color: #3f4141;
+    box-shadow: 5px 5px 8px gray inset;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.carrouselr-container .btn{
+    position: absolute;
+    top: calc(50% - 10px);
+    height: 30px;
+    aspect-ratio: 1 / 1;
+    border-left: 8px solid red;
+    border-top: 8px solid red;
+    cursor: pointer;
+}
+
+.carrouselr-container .btn:hover{
+    transform: scale(1.2);
+}
+
+.carrouselr-container .btn.inactive{
+    border-color: rgb(153, 121, 126);
+}
+
+.carrouselr-container .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 10px;
+}
+
+.carrouselr-container .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 10px;
+}
+
+.carrouselr-container .carrouselr {
+    display: flex;
+    width: 1000%;
+    height: 100%;
+    transition: all .5s;
+}
+
+.carrouselr-container .carrouselr .carrousel {
+    height: 90%;
+    margin: auto 10px;
+    background-color: #c6c6c6;
+    box-shadow: 2px 2px 4px 2px white, -2px -2px, 4px 2px white;
+
+}*/

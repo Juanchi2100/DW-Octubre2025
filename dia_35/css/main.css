@@ -72,8 +72,9 @@ body{
 
 
 .splide{
-    width: 50%;
+    width: 40%;
     height: 500px;
+    margin: 20px 0 50px 0;
 }
 
 .splide__track{
@@ -83,8 +84,8 @@ body{
 
 .splide__slide{
     height: 100%;
-    object-fit: cover;
-    place-items: center;
+    object-fit: contain;
+    place-items: bottom;
 }
 
 /* Slider Propio */
@@ -93,7 +94,7 @@ body{
     display: none;
 }
 
-.img-slider {
+img {
     vertical-align: middle;
 }
 

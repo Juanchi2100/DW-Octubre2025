@@ -10,39 +10,32 @@
     margin: 1rem;
 }
 
-.main__div{
+.acordeon{
     background-color: #ccc;
-    width: fit-content;
-    padding: 1rem;
+    width: 40%;
+    max-width: 120em;
+    padding: 2rem;
     border-radius: 0.5rem;
 	box-shadow: 5px 5px 10px #b0b0b0, -5px -5px 10px #fcfcfc;
-
 }
 
-.div__bloque--activo{
+.acordeon .bloque{
     background-color: #e8e8e8;
     margin: 0 0 0.5rem 0;
     padding: 1rem;
     border-radius: 0.5rem;
 	box-shadow: 10px 10px 20px #b0b0b0, -10px -10px 20px #fcfcfc;
+    border: #b0b0b0 solid 3px;
 }
 
-.div__bloque{
-    background-color: #e8e8e8;
-    margin: 0 0 0.5rem 0;
-    padding: 1rem;
-    border-radius: 0.5rem;
-	box-shadow: 10px 10px 20px #b0b0b0, -10px -10px 20px #fcfcfc;
-}
-
-.div__h2{
+.acordeon .h2{
     background-color: #ccc;
     padding: 0.25rem;
     border-radius: 0.5rem;
 	box-shadow: 5px 5px 10px #b0b0b0, -5px -5px 10px #fcfcfc;
 }
 
-.div__h2:hover{
+.acordeon .h2:hover{
     background-color: #ccc;
     padding: 0.25rem;
     border-radius: 0.5rem;
@@ -50,7 +43,14 @@
     cursor: pointer;
 }
 
-.div__contenido{
-    padding: 1rem 0 0 0;
+.acordeon .contenido{
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
 
+.acordeon .bloque.activo .contenido{
+    height: fit-content;
+    padding: .5rem 0;
 }

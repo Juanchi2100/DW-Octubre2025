@@ -29,53 +29,64 @@
         <section class="splide" aria-labelledby="Splide Basic HTML Example">
             <h2 id="carousel-heading" class="carousel__h2">Splide Drag Free Snap Carousel</h2>
             <div class="splide__track">
-		        <div class="splide__list">
-			        <img src="images/images.jpg" alt="Gato Programador" class="splide__slide">
-			        <img src="images/img1.jpg" alt="Programador Confundido" class="splide__slide">
-			        <img src="images/img2.jpg" alt="Programador Cansado"class="splide__slide">
+                <div class="splide__list">
+                    <img src="images/images.jpg" alt="Gato Programador" class="splide__slide">
+                    <img src="images/img1.jpg" alt="Programador Confundido" class="splide__slide">
+                    <img src="images/img2.jpg" alt="Programador Cansado"class="splide__slide">
                     <img src="images/img4.png" alt="Gato en Teclado"class="splide__slide">
-			        <img src="images/img5.jpg" alt="Gato en Computador"class="splide__slide">
-			        <img src="images/img6.png" alt="Gato"class="splide__slide">
+                    <img src="images/img5.jpg" alt="Gato en Computador"class="splide__slide">
+                    <img src="images/img6.png" alt="Gato"class="splide__slide">
                 </div>
             </div>
         </section>
-        <section class="slideshow-container">
+
+        <!--Slider Personal-->
+        <div class="slideshow-container">
             <div class="my-slides fade">
-                <img src="images/img6.jpg" alt="Gato Chiquito" class="img-slider">
+                <img src="images/img6.png" alt="Gato Chiquito" style="width: 100%;">
             </div>
             <div class="my-slides fade">
-                <img src="images/images.jpg" alt="Gato Programador" class="img-slider">
+                <img src="images/images.jpg" alt="Gato Programador" style="width: 100%;">
             </div>
             <div class="my-slides fade">
-                <img src="images/img2.jpg" alt="Programador Cansado" class="img-slider">
+                <img src="images/img2.jpg" alt="Programador Cansado" style="width: 100%;">
             </div>
             <div class="my-slides fade">
-                <img src="images/img4.png" alt="Gato en Computador" class="img-slider">
+                <img src="images/img4.png" alt="Gato en Computador" style="width: 100%;">
             </div>
             <div class="my-slides fade">
-                <img src="images/img5.jpg" alt="Gato en Teclado">
+                <img src="images/img5.jpg" alt="Gato en Teclado" style="width: 100%;">
             </div>
             <div class="my-slides fade">
-                <img src="images/img1.jpg" alt="Programador Confundido">
+                <img src="images/img1.jpg" alt="Programador Confundido" style="width: 100%;">
+            </div>
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+        <div style="text-align:center">
+            <button class="dot" onclick="currentSlide(1)"></button>
+            <button class="dot" onclick="currentSlide(2)"></button>
+            <button class="dot" onclick="currentSlide(3)"></button>
+            <button class="dot" onclick="currentSlide(4)"></button>
+            <button class="dot" onclick="currentSlide(5)"></button>
+            <button class="dot" onclick="currentSlide(6)"></button>
+        </div>
+
+        <!--Carrusel Personal-->
+        <section id="container" class="container">
+            <div id="carrouselr-container" class="carrouselr-container">
+                <button onclick="carrouselRight()" class="btn"></button>
+                <div id="carrouselr" class="carrouselr">
+                    <img src="images/img6.jpg" alt="Gato Chiquito" class="carrousel">
+                    <img src="images/images.jpg" alt="Gato Programador" class="carrousel">
+                    <img src="images/img2.jpg" alt="Programador Cansado" class="carrousel">
+                    <img src="images/img4.png" alt="Gato en Computador" class="carrousel">
+                    <img src="images/img5.jpg" alt="Gato en Teclado">
+                </div>
+                <button onclick="carrouselLeft()" class="btn"></button>
             </div>
         </section>
     </main>
 </body>
 
 </html>
-
-
-
-<!--CARROUSEL PROPIO <section id="container" class="container">
-    <div id="carrouselr-container" class="carrouselr-container">
-        <button onclick="carrouselRight()" class="btn"></button>
-        <div id="carrouselr" class="carrouselr">
-            <img src="images/img6.jpg" alt="Gato Chiquito" class="carrousel">
-            <img src="images/images.jpg" alt="Gato Programador" class="carrousel">
-            <img src="images/img2.jpg" alt="Programador Cansado" class="carrousel">
-            <img src="images/img4.png" alt="Gato en Computador" class="carrousel">
-            <img src="images/img5.jpg" alt="Gato en Teclado">
-        </div>
-        <button onclick="carrouselLeft()" class="btn"></button>
-    </div>
-</section>-->

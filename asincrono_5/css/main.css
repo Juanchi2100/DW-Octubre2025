@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 200px 150px 200px 100px;
+    align-content: center;
+}
+
+.main__div{
+    display: flex;
+    align-items: baseline;
+    margin: 0.5rem 0.75rem 0.5rem 0;
+    gap: 0.5rem;
+    color: white;
+}
+
+.main__div:hover{
+    cursor: pointer;
+}
+
+.main__div.desactivado{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.main__div .h2{
+    font-family: "DM Sans", sans-serif;
+    font-size: 5rem;
+}
+
+.main__div .p{
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+
+.main__div .img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: left;
+    z-index: -1;
+    opacity: 0;
+}
+
+.main__div .img.activado{
+    opacity: 1;
+}

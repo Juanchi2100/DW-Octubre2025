@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Día 36</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__h1">Día 36 - Tabs</h1>
+        <nav class="header__nav">
+            <ul class="header__ul" role="tablist">
+                <li id="menu-1"><button role="tab" aria-selected="true" class="tab-button active">menu 1</button></li>
+                <li id="menu-2"><button role="tab" aria-selected="false" class="tab-button">menu 2</button></li>
+                <li id="menu-3"><button role="tab" aria-selected="false" class="tab-button">menu 3</button></li>
+                <li id="menu-4"><button role="tab" aria-selected="false" class="tab-button">menu 4</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div role="tabpanel" class="contenido visible" id="div-1">
+            <h2 class="div__h2">Nivel 1 - Flip Cards</h2>
+            <div class="contenedor">
+                <div class="tarjeta">
+                    <div class="tarjeta__inner">
+                        <div class="tarjeta__delante">La Vida era más Corta</div>
+                        <div class="tarjeta__detras">
+                            <img src="images/lavidaeramascorta.jpg" alt="Portada de Album - La Vida Era Más Corta">
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta__inner">
+                        <div class="tarjeta__delante">Dtmf</div>
+                        <div class="tarjeta__detras">
+                            <img src="images/dtmf.png" alt="Portada de Album - Dtmf">
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta__inner">
+                        <div class="tarjeta__delante">El Madrileño</div>
+                        <div class="tarjeta__detras">
+                            <img src="images/madrileno.jpg" alt="Portada de Album - El Madrileño">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" hidden class="contenido" id="div-2">
+            <h2 class="div__h2">Nivel 2 - Video</h2>
+            <video class="video" autoplay>
+                <source src="videos/navidad.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div role="tabpanel" hidden class="contenido" id="div-3">
+            <h2>Nivel 3 - Random Number</h2>
+        </div>
+        <div role="tabpanel" hidden class="contenido" id="div-4">
+            <h2>Nivel 4 - Snake</h2>
+        </div>
+    </main>
+</body>
+
+</html>

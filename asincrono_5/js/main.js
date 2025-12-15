@@ -1,23 +1,21 @@
 const containers = document.querySelectorAll(".main__div");
-const images = document.querySelectorAll(".img");
 
-containers.forEach((container, index) => {
-    container.addEventListener("mouseenter", () => {
-        images.forEach((image, otroindex) => {
-            if(otroindex !== index){
-                image.classList.remove("activado");
-                container.classList.add("desactivado")
-            }
-            else{
-                image.classList.add("activado");
-                container.classList.add("activado");
-            }
-        });
-    });
-    container.addEventListener("mouseleave", () => {
-        images.forEach((image) => {
-            image.classList.remove("activado");
-            containers[i].classList.remove("desactivado");
-        })
-    })
+function activado(e){
+    e.target.querySelector(".img").classList.add("activado");
+    containers.forEach((cont) => cont.classList.add("desactivado"));
+    e.target.classList.remove("desactivado");
+}
+
+function desactivado(e){
+    e.target.querySelector(".img").classList.remove("activado");
+    e.target.forEach((cont) => cont.classList.remove("desactivado"));
+}
+
+containers.forEach((container) => {
+    container.addEventListener("mouseenter", activado);
+    container.addEventListener("mouseleave", desactivado);
 });
+
+//FALTA
+    //QUE CUANDO MOUSELEAVE --> TODOS REGRESEN A ACTIVO
+    //QUE SEA RESPONSIVE

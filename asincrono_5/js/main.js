@@ -1,19 +1,23 @@
 const containers = document.querySelectorAll(".main__div");
 const images = document.querySelectorAll(".img");
 
-containers.forEach((container, i) => {
-    container.addEventListener("hover", () => {
-        images.forEach((image, i) => {
-            image.classList.remove("activado");
-        })
-        images.classList.add("activado");
-        container.classList.add("")
+containers.forEach((container, index) => {
+    container.addEventListener("mouseenter", () => {
+        images.forEach((image, otroindex) => {
+            if(otroindex !== index){
+                image.classList.remove("activado");
+                container.classList.add("desactivado")
+            }
+            else{
+                image.classList.add("activado");
+                container.classList.add("activado");
+            }
+        });
     });
-})
-
-
-//pseudocódigo
-
-//Quiero recorrer toda la lista de containers y agregarle un eventlistener a cada container
-// al container que esté hovered, se le mantiene su class, mientras que al resto .desactivado
-// display la img de fondo de ese container. 
+    container.addEventListener("mouseleave", () => {
+        images.forEach((image) => {
+            image.classList.remove("activado");
+            containers[i].classList.remove("desactivado");
+        })
+    })
+});

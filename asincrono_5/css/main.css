@@ -25,10 +25,11 @@ body{
     margin: 0.5rem 0.75rem 0.5rem 0;
     gap: 0.5rem;
     color: white;
+    transition: all .5s ease;
 }
 
-.main__div:hover{
-    cursor: pointer;
+.main__div.activado{
+    color: white;
 }
 
 .main__div.desactivado{
@@ -54,6 +55,7 @@ body{
     object-fit: cover;
     object-position: left;
     z-index: -1;
+    transition: all .5s ease;
     opacity: 0;
 }
 

@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    height: 100vh;
+}
+
+.header {
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);    color: #fff;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.header__h1{
+    font-size: 1.5em;
+    padding-bottom: 0.5rem;
+}
+
+.header__ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header__li{
+    padding: 0 1rem;  
+}
+
+.header__li--a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.header__li--a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.25s ease, left 0.25s ease;
+}
+
+.header__li--a:hover::after,
+.header__li--a:focus-visible::after{
+    width: 100%;
+    left: 0;
+}
+
+/* -- Body -- */
+
+.main__section{
+    margin: 30px;
+}
+
+.section__div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__div:nth-child(2){
+    background-image: url("../images/1.jpg");
+}
+
+.section__div:nth-child(3){
+    height: 10vh;
+}
+
+.section__div:nth-child(4){
+    background-image: url("../images/2.webp");
+}
+
+.section__div:empty{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* -- NIVEL 2 -- */
+
+.container{
+    margin: 10em auto;
+    height: 10em;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+.square1{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #efefef;
+    border-radius: 100%;
+    box-shadow: inset -10px -5px 0px 0px rgba(178, 190, 195, .3);
+}
+
+.square1::before{
+    content: "";
+    width: 10px;
+    height: 150px;
+    position: relative;
+    background-color: #ff7300;
+    display: block;
+    z-index: 1;
+    top: 10rem;
+    left: calc(5rem - 5px);
+}
+
+.eyeball{
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    background-color: #000;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.iris{
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    background-color: #635fe6;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: inset -10px -5px 0px rgba(1, 47, 67, 0.2);
+}
+
+.section__div--img{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

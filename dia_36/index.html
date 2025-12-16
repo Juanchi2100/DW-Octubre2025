@@ -18,15 +18,15 @@
         <h1 class="header__h1">Día 36 - Tabs</h1>
         <nav class="header__nav">
             <ul class="header__ul" role="tablist">
-                <li id="menu-1"><button role="tab" aria-selected="true" class="tab-button active">menu 1</button></li>
-                <li id="menu-2"><button role="tab" aria-selected="false" class="tab-button">menu 2</button></li>
-                <li id="menu-3"><button role="tab" aria-selected="false" class="tab-button">menu 3</button></li>
-                <li id="menu-4"><button role="tab" aria-selected="false" class="tab-button">menu 4</button></li>
+                <li><button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" class="tab-button active">menu 1</button></li>
+                <li><button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" class="tab-button">menu 2</button></li>
+                <li><button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" class="tab-button">menu 3</button></li>
+                <li><button role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4" class="tab-button">menu 4</button></li>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <div role="tabpanel" class="contenido visible" id="div-1">
+        <section role="tabpanel" aria-labelledby="tab-1" class="contenido visible" id="panel-1">
             <h2 class="div__h2">Nivel 1 - Flip Cards</h2>
             <div class="contenedor">
                 <div class="tarjeta">
@@ -54,19 +54,19 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div role="tabpanel" hidden class="contenido" id="div-2">
+        </section>
+        <section role="tabpanel" aria-labelledby="tab-2" class="contenido" id="panel-2">
             <h2 class="div__h2">Nivel 2 - Video</h2>
-            <video class="video" autoplay>
+            <video class="video" autoplay muted loop>
                 <source src="videos/navidad.mp4" type="video/mp4">
             </video>
-        </div>
-        <div role="tabpanel" hidden class="contenido" id="div-3">
+        </section>
+        <section role="tabpanel" aria-labelledby="tab-3" class="contenido" id="panel-3">
             <h2>Nivel 3 - Random Number</h2>
-        </div>
-        <div role="tabpanel" hidden class="contenido" id="div-4">
+        </section>
+        <section role="tabpanel" aria-labelledby="tab-4" class="contenido" id="panel-4">
             <h2>Nivel 4 - Snake</h2>
-        </div>
+        </section>
     </main>
 </body>
 

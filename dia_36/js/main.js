@@ -3,9 +3,11 @@ const contents = document.querySelectorAll(".contenido");
 
 function hiddenAndShow(iCurrent) {
     tabsButton.forEach((btn, i) => {
-        btn.classList.toggle("visible", i === iCurrent);
-        btn.classList.toggle("active", i === iCurrent);
-        contents[i].classList.toggle("visible", i === iCurrent);
+        const isActive = i === iCurrent;
+
+        btn.classList.toggle("active", isActive);
+        btn.setAttribute("aria-selected", isActive)
+        contents[i].classList.toggle("visible", isActive);
     });
 }
 

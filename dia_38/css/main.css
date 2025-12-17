@@ -96,3 +96,50 @@ body{
     cursor: pointer;
     padding: 8px 10px;
 }
+
+.article__form{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.form__input{
+    font-family: 'Clash Display', sans-serif;
+    background-color: #e3e3e3;
+    height: 1.5rem;
+    border-radius: 4px;
+    padding: 0 0 0 0.5rem;
+}
+
+.form__input:focus{
+    outline: none;
+}
+
+.form__input::placeholder{
+    font-family: 'Clash Display', sans-serif;
+    color: #585858;
+}
+
+.form__submit{
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 600;
+    height: 2rem;
+    margin: 0 0 1rem 0;
+    padding: 0 2rem;
+    border-radius: 0.5rem;
+    background-color: rgb(118, 135, 228);
+    color: white;
+}
+
+.section__div--result{
+    background-color: #e3e3e3;
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: none;
+    width: fit-content;
+    margin: 0 0 2rem 0;
+}
+
+.div__p{
+    padding: 0 0 0.5rem 0;
+}

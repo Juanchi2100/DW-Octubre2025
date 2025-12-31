@@ -18,7 +18,10 @@ body{
 }
 
 .main{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
 }
 
 /* --------- HEADER ---------*/
@@ -95,6 +98,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+    text-decoration: none;
 }
 
 /* Casilla de la imagen de perfil*/
@@ -277,3 +282,47 @@ body{
 
 /* Anular gap visual entre las dos piezas */
 .main__toolkit--top  { margin-right: -1.25rem; } /* compensa el gap */
+
+/* --------- Sobre mí ---------*/
+
+.main__div--intro{
+    display: flex;
+    gap: 8.5rem;
+}
+
+.picture__img--intro{
+    width: 20vw;
+    aspect-ratio: 4 / 5;
+    border-radius: 1.5rem;
+}
+
+.article__about{
+    display: flex;
+    flex-direction: column;
+}
+
+.article__h2{
+    color: var(--clr-main);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 3.5rem 0;
+}
+
+.article__div{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.article__h3{
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0 0 3rem 0;
+}
+
+.article__p{
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+}

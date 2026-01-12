@@ -23,15 +23,14 @@
             </ul>
         </nav>
     </header>
-    <main class="main">
-        <section>
-            <h2 class="section__h2">¡hablemos!</h2>
-            <h3 class="article__h3">Si tienes un proyecto en mente, una idea por ordenar o simplemente darle forma a algo que todavía está en proceso, este es el punto de partida. Hablemos de cómo transformarlos en una experiencia clara, funcional y con sentido.</h3>
-            <span>juanburgos.design@gmail.com</span>
-            <div class="general__links--icons">
-                <a href="" class="links__icon--bg">
-                    <img src="images/icons/logo_email.svg" alt="Email Icon" class="links__icon--logo">
-                </a>
+    <main class="main--contact">
+        <section class="main__section--contact">
+            <h3 class="article__h3">¡hablemos!</h3>
+            <p class="article__p">Si tienes un proyecto en mente, una idea por ordenar o simplemente darle forma a algo que todavía está en proceso, este es el punto de partida. Hablemos de cómo transformarlos en una experiencia clara, funcional y con sentido.</p>
+            <div class="section__div--email-container" title="Haz click para copiar" id="emailCopyContainer">
+                <span class="div__span--email" id="emailCopy">juanburgos.design@gmail.com</span>
+            </div>
+            <div class="contact__links">
                 <a href="https://www.instagram.com/juanburgos.design?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" class="links__icon--bg">
                     <img src="images/icons/logo_instagram.svg" alt="Instagram Logo" class="links__icon--logo" loading="lazy">
                 </a>
@@ -43,8 +42,8 @@
                 </a>
             </div>
         </section>
-        <section>
-            <form method="post" action="https://formspree.io/f/xjggvypb" enctype="multipart/form-data" class="main__form">
+        <div class="main__section--form">
+            <form method="post" action="url/de/envío" enctype="multipart/form-data" class="main__form">
                 <div class="form__div">
                     <label for="label__nombre" class="form__label">Nombre</label>
                     <input type="text" name="nombre" id="label__nombre" class="form__input" required>
@@ -62,9 +61,9 @@
                     <textarea name="mensaje" id="label__mensaje" class="form__input--mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
                 </div>
                 <input type="hidden" name="origen" value="Contacto Portafolio">
-                <button type="submit">Enviar</button>
+                <button type="submit" class="form__submit">Enviar</button>
             </form>
-        </section>
+        </div>
     </main>
 </body>
 </html>

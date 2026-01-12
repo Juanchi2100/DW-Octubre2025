@@ -1,7 +1,11 @@
 
 :root{
     --clr-bg:#242424;
+    --clr-bgopacity: #4b4b4ba4;
     --clr-main:#FF7262;
+    --clr-secondary:#bb4e41;
+    --clr-hover:#ff9185;
+    --clr-confirm: #4CAF50;
 }
 
 *{
@@ -169,7 +173,13 @@ body{
     font-size: 1.5rem;
     border-radius: 5rem;
     color: var(--clr-main);
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
+}
+
+.general__button:hover{
+    text-decoration: underline;
 }
 
 /* Contenedor de los links externos */
@@ -194,6 +204,29 @@ body{
 .links__icon--logo{
     width: 1.75rem;
     aspect-ratio: 1 / 1;
+}
+
+/* --- Estado Normal --- */
+/*Por Defecto, el email es visible*/
+.icon-original{
+    display: block;
+}
+/*Por defecto, el gancho está oculto*/
+.icon-success{
+    display: none;
+}
+
+/* --- Estado COPIADO ---*/
+/*Ocultar icono de email*/
+.links__icon--bg.copiado .icon-original {
+    display: none;
+}
+
+/*Mostrar el icono del gancho */
+.links__icon--bg.copiado .icon-success {
+    display: block;
+    /* animación de entrada */
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Casilla de proyectos destacados */
@@ -372,4 +405,146 @@ body{
     width: 20vw;
     aspect-ratio: 3 / 5;
     border-radius: 1.5rem;
+}
+
+/* --------- CONTACTO ---------*/
+
+.main--contact{
+    display: flex;
+}
+
+.main__section--contact{
+    width: 70%;
+}
+
+.main__section--contact .article__h3{
+    color: var(--clr-main);
+}
+
+.main__section--contact .article__p{
+    margin: 0 0 2rem 0;
+}
+
+.section__div--email-container{
+    padding: 1rem 1.5rem;
+    margin: 0 0 3rem 0;
+    background-color: white;
+    border-radius: 200rem;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.div__span--email{
+    color: var(--clr-main);
+    font-weight: bolder;
+}
+
+/*ClassList para cambiar el color al copiar el email*/
+.div__span--email.copiado{
+    color: var(--clr-confirm);
+}
+
+.section__div--email-container:hover{
+    background-color: var(--clr-main);
+}
+
+.section__div--email-container:hover .div__span--email{
+    color: white;
+}
+
+.contact__links{
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* -- Sección de Formulario --*/
+.main__section--form{
+    width: 30%;
+    background-color: var(--clr-bgopacity);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.main__form{
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.form__div{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__label{
+    color: white;
+    font-size: 2rem;
+}
+
+.form__input{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0 0.75rem 0;
+}
+
+.form__input--mensaje{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    resize: vertical;
+}
+
+/* -- Botón de Enviar -- */
+.form__submit{
+    background-color: var(--clr-secondary);
+    border: solid transparent;
+    border-radius: 1rem;
+    border-width: 0 0 0.25rem;
+    color: white;
+    cursor: pointer;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.25rem;
+    margin: 1.5rem 0;
+    padding: .8125rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateZ(0);
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.form__submit:after {
+    background-clip: padding-box;
+    background-color: var(--clr-main);
+    border: solid transparent;
+    border-radius: 1rem;
+    border-width: 0 0 0.25rem;
+    bottom: -0.25rem;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.form__submit:active {
+    border-width: 0.25rem 0 0;
+    background: none;
+}
+
+.form__submit:hover:after {
+    background-color: var(--clr-hover);
+}
+
+/* --------- ANIMACIONES ---------*/
+/* Animación para el Gancho de la Página de Inicio*/
+@keyframes popIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
 }

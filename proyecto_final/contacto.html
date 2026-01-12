@@ -24,7 +24,47 @@
         </nav>
     </header>
     <main class="main">
-
+        <section>
+            <h2 class="section__h2">¡hablemos!</h2>
+            <h3 class="article__h3">Si tienes un proyecto en mente, una idea por ordenar o simplemente darle forma a algo que todavía está en proceso, este es el punto de partida. Hablemos de cómo transformarlos en una experiencia clara, funcional y con sentido.</h3>
+            <span>juanburgos.design@gmail.com</span>
+            <div class="general__links--icons">
+                <a href="" class="links__icon--bg">
+                    <img src="images/icons/logo_email.svg" alt="Email Icon" class="links__icon--logo">
+                </a>
+                <a href="https://www.instagram.com/juanburgos.design?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" class="links__icon--bg">
+                    <img src="images/icons/logo_instagram.svg" alt="Instagram Logo" class="links__icon--logo" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/juanburgospty/" target="_blank" rel="noreferrer" class="links__icon--bg">
+                    <img src="images/icons/logo_linkedin.svg" alt="Linkedin Logo" class="links__icon--logo" loading="lazy">
+                </a>
+                <a href="https://www.behance.net/juanburgospty" target="_blank" rel="noreferrer" class="links__icon--bg">
+                    <img src="images/icons/logo_behance.svg" alt="Behance Logo" class="links__icon--logo" loading="lazy">
+                </a>
+            </div>
+        </section>
+        <section>
+            <form method="post" action="https://formspree.io/f/xjggvypb" enctype="multipart/form-data" class="main__form">
+                <div class="form__div">
+                    <label for="label__nombre" class="form__label">Nombre</label>
+                    <input type="text" name="nombre" id="label__nombre" class="form__input" required>
+                </div>
+                <div class="form__div">
+                    <label for="label__apellido" class="form__label">Apellido</label>
+                    <input type="text" name="apellido" id="label__apellido" class="form__input" required>
+                </div>
+                <div class="form__div">
+                    <label for="label__email--contacto" class="form__label">Email</label>
+                    <input type="email" name="email" id="label__email--contacto" class="form__input" required>
+                </div>
+                <div class="form__div">
+                    <label for="label__mensaje" class="form__label">Mensaje</label>
+                    <textarea name="mensaje" id="label__mensaje" class="form__input--mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+                <input type="hidden" name="origen" value="Contacto Portafolio">
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
 </body>
 </html>

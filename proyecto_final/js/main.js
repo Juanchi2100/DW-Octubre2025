@@ -1,6 +1,5 @@
 
-//Página Principal INDEX
-
+// --- INDEX ---
 //Copiar email al clipboard desde el icono
 const btnEmail = document.getElementById("btnCopyEmail");
 
@@ -33,33 +32,47 @@ if (btnEmail) {
     btnEmail.addEventListener("click", handlerCopyEmail);
 }
 
-//Página de Contacto
-
+// --- CONTACTO ---
 //Copiar email al clipboard
 const emailSpan = document.getElementById("emailCopy");
-const emailContainer = document.getElementById("emailCopyContainer")
+const emailContainer = document.getElementById("emailCopyContainer");
 
-function handlerCopiarEmail() {
-    //Guardar el correo inicial
-    const email = emailSpan.innerText;
+// Revisar si los elementos existen en la página
+if (emailContainer && emailSpan) {
 
-    //Validación.
-    if (email === "¡Copiado!") return;
+    function handlerCopiarEmail() {
+        // Guardar el correo inicial
+        const email = emailSpan.innerText;
 
-    //Copiar al clipboard
-    navigator.clipboard.writeText(email)
-        .then(() => {
-            //Exito => se cambia el texto
-            emailSpan.innerText = "¡Copiado!";
-            emailSpan.classList.add("copiado");
+        // Validación de clicks
+        if (email === "¡Copiado!") return;
 
-            //Restaurar el texto original luego de 2.5s
-            setTimeout(() => {
-                emailSpan.innerText = email;
-                emailSpan.classList.remove("copiado");
-            }, 2500);
-    }).catch(err => {console.error("Error al copiar: ", err)});
-};
+        // Copiar al clipboard
+        navigator.clipboard.writeText(email)
+            .then(() => {
+                // Feedback visual
+                emailSpan.innerText = "¡Copiado!";
+                emailSpan.classList.add("copiado");
 
-//EventListener para copiar el correo.
-emailContainer.addEventListener("click", handlerCopiarEmail);
+                // Restaurar correo inicial
+                setTimeout(() => {
+                    emailSpan.innerText = email;
+                    emailSpan.classList.remove("copiado");
+                }, 2500);
+            })
+            .catch(err => {
+                console.error("Error al copiar: ", err);
+            });
+    }
+
+    // Event Listener (Seguro porque ya verificamos que emailContainer existe)
+    emailContainer.addEventListener("click", handlerCopiarEmail);
+}
+
+
+// --- LEGAL ---
+const yearSpan = document.getElementById("year");
+//Intenta cambiar el texto sólo si el elemento existe en la página
+if (yearSpan) {
+    yearSpan.innerText = new Date().getFullYear();
+}

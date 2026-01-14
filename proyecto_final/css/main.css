@@ -87,8 +87,8 @@ body{
 
 .main--landing{
     display: grid;
-    /*altura siendo el total de la altura menos el header, su margin bottom y los paddings arriba y abajo del body */
-    height: calc(100vh - 11.5625rem); 
+    /*altura siendo el total de la altura menos el header, su margin bottom, el footer y los paddings arriba y abajo del body */
+    height: calc(100vh - 13rem); 
     gap: 1.25rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -104,6 +104,7 @@ body{
     align-items: center;
     color: black;
     text-decoration: none;
+    overflow: hidden;
 }
 
 /* Casilla de la imagen de perfil*/
@@ -198,6 +199,7 @@ body{
     width: 3.125rem;
     aspect-ratio: 1 / 1;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 /* ícono de links de redes */
@@ -248,10 +250,38 @@ body{
 /* Casilla de propuesta de valor */
 .main__value{ 
     grid-row: 3 / 6; 
-    grid-column: 4 / 5; 
+    grid-column: 4 / 5;
+    display: flex;
+    flex-direction: column; 
+    cursor: pointer;
+}
+
+.value__h2{
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.value__p{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(1.25rem);
+    transition: 
+        max-height 0.5s ease,
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.main__value:hover .value__p{
+    max-height: 18.75rem;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main__value:hover .value__h2{
+    transform: translateY(-1rem);
 }
 
 /* Casilla Sobre Mí */
@@ -540,6 +570,260 @@ body{
 
 .form__submit:hover:after {
     background-color: var(--clr-hover);
+}
+
+/* --------- PROYECTOS ---------*/
+
+.main--proyectos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main__div--header{
+    width: 30rem;
+    margin: 0 0 1rem 0;
+}
+
+.main__proyectos--return{
+    text-decoration: none;
+    color: white;
+}
+
+.main__proyectos--return:hover{
+    color: var(--clr-main)
+}
+
+.main__a--proyect-card{
+    text-decoration: none;
+}
+
+.main__h1--proyectos{
+    color: var(--clr-main);
+    font-size: 3rem;
+}
+
+.main__section--proyectos{
+    cursor: pointer;
+}
+
+.section__h2--proyectos{
+    color: white;
+    margin: 0 0 0.5rem 0;
+}
+
+.main__section--proyectos:hover .section__h2--proyectos{
+    color: var(--clr-main);
+    transition: color 0.3s ease;
+}
+
+.section__picture--proyectos{
+    aspect-ratio: 4 / 5;
+    width: 30rem;
+    overflow: hidden;
+    margin: 0 0 1rem 0;
+    display: block;
+    border-radius: 1rem;
+}
+
+.picture__img--proyectos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.main__section--proyectos:hover .picture__img--proyectos{
+    transform: scale(1.02);
+}
+
+/* --------- PROYECTOS - TEATRO LA ESTACIÓN ---------*/
+.proyectos__section--header{
+    margin: 0 0 1rem 0;
+}
+
+.section__h1--proyectos{
+    color: var(--clr-main);
+    font-size: 3rem;
+}
+
+.section__h2--proyectos{
+    color: white;
+}
+
+.section__h3--proyectos{
+    color: white;
+}
+
+.main__section--proyectos:hover .section__h3--proyectos{
+    color: var(--clr-main);
+    transition: color 0.3s ease;
+}
+
+.proyectos__section--categorias{
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 50vw;
+}
+
+.section__div--categoria{
+    margin: 0.5rem 3rem 2rem 3rem;
+}
+
+.proyectos__section--content{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    color: white;
+}
+
+.section__picture--content{
+    text-align: center;
+}
+
+.picture__img--proyecto{
+    aspect-ratio: 4 / 5;
+    width: 35rem;
+    margin: 0 0 1rem 0;
+    border-radius: 1rem;
+}
+
+.content__p{
+    width: fit-content;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.content__img{
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.section__div--images{
+    display: flex;
+    gap: 1rem;
+    width: 80vw;
+    margin: 2rem 0 2rem -15vw;
+}
+
+.section__div--images picture{
+    flex: 1;
+    min-width: 0;
+}
+
+.section__div--images img{
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.proyectos__section--footer{
+    width: 70vw;
+    margin: 2rem 0 3rem 0;
+}
+
+.proyectos__section--otros{
+    display: flex;
+    flex-direction: column;
+}
+
+.section__article--otros{
+    display: flex;
+    gap: 2rem;
+}
+
+.section__footer--info{
+    display: flex;
+    gap: 1rem;
+}
+
+.mapa-iframe{
+    width: 100%;
+    height: 400px;
+    border-radius: 1rem;
+    border: none;
+}
+
+.video-container {
+    width: 100%; 
+    margin-top: 2rem;
+}
+
+.video-player {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem; 
+    display: block;
+}
+
+/* --------- LEGAL ---------*/
+.main--legal{
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+.legal__h1{
+    font-size: 2.5rem;
+    margin: 0.75rem 0;
+    color: white;
+}
+
+.legal__date {
+    font-style: italic;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0 0 0.5rem 0;
+}
+
+/* Secciones */
+.legal__section {
+    margin: 0 0 2.5rem 0;
+}
+
+.legal__h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--clr-main);
+}
+
+.legal__p {
+    margin: 0 0 .9375rem 0;
+    font-size: 1rem;
+}
+
+/* Listas */
+.legal__list {
+    padding: 0 0 0 1.25rem;
+    margin: 0 0 .9375rem 0;
+}
+
+.legal__item {
+    margin: 0 0 0.5rem 0;
+}
+
+/* Footer del bloque */
+.legal__footer {
+    text-align: left;
+    color: white;
+    margin: .25rem 0 0 0;
+}
+
+/* Modificador para la lista de datos personales (sin bullets, gris) */
+.legal__list--data {
+    padding: 1.25rem;
+}
+
+/* --------- FOOTER ---------*/
+.footer{
+    color: white;
+    text-align: center;
 }
 
 /* --------- ANIMACIONES ---------*/

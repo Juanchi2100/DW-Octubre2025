@@ -24,10 +24,10 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.juanburgosdesign.com/" />
-    <meta property="og:title" content="JuanBurgos Design Portafolio" />
+    <meta property="og:title" content="Juan Burgos Design Portafolio" />
     <meta property="og:description"
         content="Diseño enfocado en lo esencial: claridad, funcionalidad y experiencia humana. Explora mi portafolio de proyectos y soluciones digitales intuitivas." />
-    <meta property="og:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg" />
+    <meta property="og:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg"/>
 
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -42,9 +42,15 @@
 
 <body>
     <header class="header">
-        <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img
-                src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img"></a>
-        <nav class="header__nav">
+        <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img"></a>
+        <button id="navToggle" class="header__toggle" aria-label="Abrir menú">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <nav class="header__nav" id="navMenu">
             <ul class="header__ul">
                 <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a>
                 </li>
@@ -73,7 +79,7 @@
                 <a href="documents/CV_Juan Burgos_2025.pdf" download="CV_Juan_Burgos_2025.pdf" class="general__button"
                     title="Descargar Currículum Vitae">Descargar CV</a>
                 <div class="general__links--icons">
-                    <div data-email="juanburgosdesign@gmail.com" class="links__icon--bg" id="btnCopyEmail"
+                    <div data-email="juanburgos.design@gmail.com" class="links__icon--bg" id="btnCopyEmail"
                         title="Click para copiar email">
                         <img src="images/icons/logo_email.svg" alt="Email Icon" class="links__icon--logo icon-original">
                         <img src="images/icons/done.svg" alt="Checkmark Icon" class="links__icon--logo icon-success">

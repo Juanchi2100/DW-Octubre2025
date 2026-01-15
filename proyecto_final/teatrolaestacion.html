@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,78 +11,106 @@
     <script src="js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img"></a>
-        <nav class="header__nav">
+        <button id="navToggle" class="header__toggle" aria-label="Abrir menú">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <nav class="header__nav" id="navMenu">
             <ul class="header__ul">
-                <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a></li>
+                <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a>
+                </li>
                 <li class="header__li"><a class="li__a" href="sobre_mi.html" title="Más información">sobre mí.</a></li>
-                <li class="header__li"><a class="li__a" href="contacto.html" title="Ponte en contacto">contacto.</a></li>
+                <li class="header__li"><a class="li__a" href="contacto.html" title="Ponte en contacto">contacto.</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main class="main--proyectos">
         <section class="proyectos__section--header">
-            <a href="proyectos.html" aria-label="Regersar a Página de Proyectos" title="Regresar" class="main__proyectos--return">&#10094; Proyectos</a>
+            <a href="proyectos.html" aria-label="Regersar a Página de Proyectos" title="Regresar"
+                class="main__proyectos--return">&#10094; Proyectos</a>
             <h1 class="section__h1--proyectos">Product Design - Teatro La Estación</h1>
             <h2 class="section__h2--proyectos">Una app para acercar el teatro a la vida cotidiana.</h2>
         </section>
         <section class="proyectos__section--categorias">
-                <div class="section__div--categoria">
-                    <h5>categoría</h5>
-                    <span>UX/UI</span>
-                </div>
-                <div class="section__div--categoria">
-                    <h5>cliente</h5>
-                    <span>Teatro La Estación</span>
-                </div>
-                <div class="section__div--categoria">
-                    <h5>ubicación</h5>
-                    <span>Panamá</span>
-                </div>
-                <div class="section__div--categoria">
-                    <h5>fecha</h5>
-                    <span>abril 2025</span>
-                </div>
+            <div class="section__div--categoria">
+                <h5>categoría</h5>
+                <span>UX/UI</span>
+            </div>
+            <div class="section__div--categoria">
+                <h5>cliente</h5>
+                <span>Teatro La Estación</span>
+            </div>
+            <div class="section__div--categoria">
+                <h5>ubicación</h5>
+                <span>Panamá</span>
+            </div>
+            <div class="section__div--categoria">
+                <h5>fecha</h5>
+                <span>abril 2025</span>
+            </div>
         </section>
         <section class="proyectos__section--content">
             <picture class="section__picture--content">
                 <source srcset="images/proyectos/estacion/estacion-principal.webp" type="image/webp">
-                <img src="images/proyectos/estacion/estacion-principal.jpg" alt="Imagen Principal del Diseño de Producto Teatro La Estación" class="picture__img--proyecto">
+                <img src="images/proyectos/estacion/estacion-principal.jpg"
+                    alt="Imagen Principal del Diseño de Producto Teatro La Estación" class="picture__img--proyecto">
             </picture>
-            <p class="content__p">Desde la emoción de bajarse en La Estación, hasta la magia de sentarse en las butacas, este proyecto nació con un solo propósito: <strong>hacer del encuentro cultural algo más accesible y cercano.</strong></p>
+            <p class="content__p">Desde la emoción de bajarse en La Estación, hasta la magia de sentarse en las butacas,
+                este proyecto nació con un solo propósito: <strong>hacer del encuentro cultural algo más accesible y
+                    cercano.</strong></p>
             <div class="section__div--images">
                 <picture>
                     <source srcset="images/proyectos/estacion/intro1.webp" type="image/webp">
-                    <img src="images/proyectos/estacion/intro1.jpg" alt="Introducción, el teatro no necesita reinventarse. Solo necesita ser encontrado" loading="lazy">
+                    <img src="images/proyectos/estacion/intro1.jpg"
+                        alt="Introducción, el teatro no necesita reinventarse. Solo necesita ser encontrado"
+                        loading="lazy">
                 </picture>
                 <picture>
                     <source srcset="images/proyectos/estacion/intro2.webp" type="image/webp">
-                    <img src="images/proyectos/estacion/intro2.jpg" alt="Introducción, una app pensada para que la cultura se encuentre contigo" loading="lazy">
+                    <img src="images/proyectos/estacion/intro2.jpg"
+                        alt="Introducción, una app pensada para que la cultura se encuentre contigo" loading="lazy">
                 </picture>
                 <picture>
                     <source srcset="images/proyectos/estacion/intro3.webp" type="image/webp">
-                    <img src="images/proyectos/estacion/intro3.jpg" alt="Introducción, una app pensada para que la cultura se encuentre contigo" loading="lazy">
+                    <img src="images/proyectos/estacion/intro3.jpg"
+                        alt="Introducción, una app pensada para que la cultura se encuentre contigo" loading="lazy">
                 </picture>
             </div>
-            <p class="content__p">Aplicando el método de Design Thinking, entrevistas reales y una investigación profunda del entorno, esta propuesta de app no solo organiza funciones, también impulsa conversaciones, vínculos y comunidad.</p>
+            <p class="content__p">Aplicando el método de Design Thinking, entrevistas reales y una investigación
+                profunda del entorno, esta propuesta de app no solo organiza funciones, también impulsa conversaciones,
+                vínculos y comunidad.</p>
             <picture>
                 <source srcset="images/proyectos/estacion/mockup2.webp" type="image/webp">
-                <img src="images/proyectos/estacion/mockup2.jpg" alt="Contenido, Páginas secundarias, de compra en el bar, cliente frecuente y promociones" loading="lazy"  class="content__img">
+                <img src="images/proyectos/estacion/mockup2.jpg"
+                    alt="Contenido, Páginas secundarias, de compra en el bar, cliente frecuente y promociones"
+                    loading="lazy" class="content__img">
             </picture>
             <picture>
                 <source srcset="images/proyectos/estacion/mockup1.webp" type="image/webp">
-                <img src="images/proyectos/estacion/mockup1.jpg" alt="Contenido, Páginas de Onboarding del App del Teatro la Estación" loading="lazy" class="content__img">
+                <img src="images/proyectos/estacion/mockup1.jpg"
+                    alt="Contenido, Páginas de Onboarding del App del Teatro la Estación" loading="lazy"
+                    class="content__img">
             </picture>
             <picture>
                 <source srcset="images/proyectos/estacion/mockup3.webp" type="image/webp">
-                <img src="images/proyectos/estacion/mockup3.jpg" alt="Contenido, Páginas de selección y calendario de obras de teatro disponibles" loading="lazy"  class="content__img">
+                <img src="images/proyectos/estacion/mockup3.jpg"
+                    alt="Contenido, Páginas de selección y calendario de obras de teatro disponibles" loading="lazy"
+                    class="content__img">
             </picture>
             <div class="video-container">
-                <video controls loop preload="none" poster="images/proyectos/estacion/video-poster.jpg" playsinline class="video-player">
+                <video controls loop preload="none" poster="images/proyectos/estacion/video-poster.jpg" playsinline
+                    class="video-player">
                     <source src="videos/custom-animation.webm" type="video/webm">
                     <source src="videos/custom-animation.MP4" type="video/mp4">
                     <p>Tu navegador no soporta este video.</p>
@@ -89,15 +118,23 @@
             </div>
         </section>
         <section class="proyectos__section--footer">
-            <h2 class="section__h2--proyectos">Porque el teatro no vive solo en el escenario, vive en quienes lo habitan.</h2>
+            <h2 class="section__h2--proyectos">Porque el teatro no vive solo en el escenario, vive en quienes lo
+                habitan.</h2>
             <div class="section__footer--info">
                 <div>
                     <h3 class="section__h3--proyectos">Teatro La Estación</h3>
-                    <p class="content__p">"Teatro La Estación es una propuesta de teatro de excelencia. Con sala propia, hacemos el teatro que quisiéramos ver. Somos el lugar para brindar experiencias inolvidables.</p>
-                    <p class="content__p">Bambalinas en Teatro La Estación es nuestro sello para las producciones de teatro infantil , también forman parte de esta propuesta.</p>
-                    <p class="content__p">La Estación está conformada por  Thyrza Guerrero, Ricardo Dormoi, Stella Lauri, Isabel Burgos y Enithzabel Castrellón."</p>
+                    <p class="content__p">"Teatro La Estación es una propuesta de teatro de excelencia. Con sala propia,
+                        hacemos el teatro que quisiéramos ver. Somos el lugar para brindar experiencias inolvidables.
+                    </p>
+                    <p class="content__p">Bambalinas en Teatro La Estación es nuestro sello para las producciones de
+                        teatro infantil , también forman parte de esta propuesta.</p>
+                    <p class="content__p">La Estación está conformada por Thyrza Guerrero, Ricardo Dormoi, Stella Lauri,
+                        Isabel Burgos y Enithzabel Castrellón."</p>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.846273885283!2d-79.52627918852578!3d8.98628979103612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8faddd5cc11%3A0xd5a547bd3d068b12!2sTeatro%20La%20Estaci%C3%B3n!5e0!3m2!1ses-419!2spa!4v1768349303763!5m2!1ses-419!2spa" style="border:0;" allowfullscreen="" loading="lazy" class="mapa-iframe" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.846273885283!2d-79.52627918852578!3d8.98628979103612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8faddd5cc11%3A0xd5a547bd3d068b12!2sTeatro%20La%20Estaci%C3%B3n!5e0!3m2!1ses-419!2spa!4v1768349303763!5m2!1ses-419!2spa"
+                    style="border:0;" allowfullscreen="" loading="lazy" class="mapa-iframe"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <section class="proyectos__section--otros">
@@ -108,7 +145,9 @@
                         <h3 class="section__h3--proyectos">Página Web - Isabel Burgos</h3>
                         <picture class="section__picture--proyectos">
                             <source srcset="images/proyectos/isabel-portada.webp" type="image/webp">
-                            <img src="images/proyectos/isabel-portada.jpg" alt="Portada de Proyecto Landing Page Isabel Burgos" class="picture__img--proyectos" loading="lazy">
+                            <img src="images/proyectos/isabel-portada.jpg"
+                                alt="Portada de Proyecto Landing Page Isabel Burgos" class="picture__img--proyectos"
+                                loading="lazy">
                         </picture>
                     </section>
                 </a>
@@ -117,7 +156,8 @@
                         <h3 class="section__h3--proyectos">Identidad Visual - La Doña</h3>
                         <picture class="section__picture--proyectos">
                             <source srcset="images/proyectos/ladona-portada.webp" type="image/webp">
-                            <img src="images/proyectos/ladona-portada.jpg" alt="Portada de Proyecto Identidad Visual de La Doña" class="picture__img--proyectos" loading="lazy">
+                            <img src="images/proyectos/ladona-portada.jpg"
+                                alt="Portada de Proyecto Identidad Visual de La Doña" class="picture__img--proyectos" loading="lazy">
                         </picture>
                     </section>
                 </a>
@@ -125,7 +165,14 @@
         </section>
     </main>
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Juan Sebastián Burgos. <a href="legal.html" style="color: inherit; text-decoration: underline;">Ver Aviso Legal</a></p>
+        <p>&copy; <span id="year"></span> Juan Sebastián Burgos. <a href="legal.html" class="footer__a">Ver Aviso
+                Legal</a></p>
     </footer>
+    <div id="lightbox" class="lightbox">
+        <button id="lightboxCierre" class="lightbox__cierre">&times;</button>
+        <div class="lightbox__contenido">
+            <img id="lightboxImg" src="" alt="Imagen ampliada">
+        </div>
+    </div>
 </body>
 </html>

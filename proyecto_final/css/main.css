@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--clr-bg);
     padding: 3rem 7.5rem;
@@ -35,6 +39,15 @@ body{
     justify-content: space-between;
     align-items: center;
     margin: 0 0 2.8125rem 0;
+}
+
+.header__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--clr-main);
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 .header__img{
@@ -88,10 +101,11 @@ body{
 .main--landing{
     display: grid;
     /*altura siendo el total de la altura menos el header, su margin bottom, el footer y los paddings arriba y abajo del body */
-    height: calc(100vh - 13rem); 
+    height: calc(100vh - 13rem);
+    min-height: 37.5rem;
     gap: 1.25rem;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
 }
 
 /*Propiedades generales para las casillas*/
@@ -137,18 +151,21 @@ body{
     grid-column: 1 / 2; 
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: clamp(0.5rem, 3vh, 1.5rem);
     align-items: center;
     justify-content: space-between;
     background-color: var(--clr-main);
     color: white;
     border-radius: 1.5rem;
-    padding: 2rem 1.5rem;
+    padding: clamp(1rem, 4vh, 2rem) 1.5rem;
+    min-height: 0;
+    min-width: 0;
+    overflow-y: auto;
 }
 
 /* Descripción de perfil */
 .general__info{
-    font-size: 1.25rem;
+    font-size: clamp(0.85rem, 2.2vh, 1.25rem);
 }
 
 /* clase general para textos en bold */
@@ -161,17 +178,18 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    width: 100%;
+    gap: clamp(0.75rem, 3vh, 1.5rem);
 }
 
 /* Botón de Descargar CV */
 .general__button{
     width: 100%;
-    padding: .5rem;
+    padding: clamp(0.3rem, 1vh, 0.5rem);
     background-color: white;
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vh, 1.5rem);
     border-radius: 5rem;
     color: var(--clr-main);
     text-align: center;
@@ -186,6 +204,8 @@ body{
 /* Contenedor de los links externos */
 .general__links--icons{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
 }
 
@@ -196,7 +216,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3.125rem;
+    width: clamp(1.5rem, 6vh, 3rem);
     aspect-ratio: 1 / 1;
     border-radius: 100%;
     cursor: pointer;
@@ -204,8 +224,9 @@ body{
 
 /* ícono de links de redes */
 .links__icon--logo{
-    width: 1.75rem;
+    width: 60%;
     aspect-ratio: 1 / 1;
+    object-fit: contain;
 }
 
 /* --- Estado Normal --- */
@@ -230,13 +251,6 @@ body{
     /* animación de entrada */
     animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
-
-
-
-
-
-
 
 /* Casilla de proyectos destacados */
 .div.main__featured{ 
@@ -403,11 +417,6 @@ body{
     transform: scale(1.2);
 }
 
-
-
-
-
-
 /* Casilla de contacto */
 .main__contact{ 
     grid-row: 5 / 6; 
@@ -423,6 +432,27 @@ body{
     display: flex;
     flex-direction: column; 
     cursor: pointer;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--clr-main) transparent;
+}
+
+.main__value::-webkit-scrollbar {
+    width: 6px; /* Muy delgadita */
+}
+
+.main__value::-webkit-scrollbar-track {
+    background: transparent; /* Fondo invisible */
+}
+
+.main__value::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Gris sutil semi-transparente */
+    border-radius: 10px; /* Redondita */
+}
+
+.main__value:hover::-webkit-scrollbar-thumb {
+    background-color: var(--clr-secondary); 
 }
 
 .value__h2{
@@ -436,6 +466,7 @@ body{
     max-height: 0;
     opacity: 0;
     overflow: hidden;
+    margin: 0 0 1rem 0;
     transform: translateY(1.25rem);
     transition: 
         max-height 0.5s ease,
@@ -587,11 +618,14 @@ body{
 
 .main__div--intro{
     display: flex;
-    gap: 8.5rem;
+    gap: clamp(3rem, 5vw, 8.5rem);
+    align-items: center;
 }
 
 .picture__img--intro{
-    width: 20vw;
+    width: 35vw;
+    max-width: 30rem;
+    min-width: 25rem;
     aspect-ratio: 4 / 5;
     border-radius: 1.5rem;
 }
@@ -635,11 +669,19 @@ body{
 .main__div--img{
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
+}
+
+.main__div--img picture{
+    flex: 1;
+    min-width: 0;
+    display: block;
 }
 
 .picture__img--misc{
     aspect-ratio: 620 / 779;
-    width: 38.25rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Container */
@@ -682,6 +724,7 @@ body{
 
 .main__section--contact{
     width: 70%;
+    padding: 0 2rem 0 0;
 }
 
 .main__section--contact .article__h3{
@@ -835,8 +878,13 @@ body{
 }
 
 .main__div--header{
-    width: 30rem;
     margin: 0 0 1rem 0;
+}
+
+.main__div--header,
+.section__picture--proyectos{
+    width: 100%;
+    max-width: 30rem;
 }
 
 .main__proyectos--return{
@@ -873,7 +921,6 @@ body{
 
 .section__picture--proyectos{
     aspect-ratio: 4 / 5;
-    width: 30rem;
     overflow: hidden;
     margin: 0 0 1rem 0;
     display: block;
@@ -978,6 +1025,12 @@ body{
     margin: 2rem 0 3rem 0;
 }
 
+.proyectos__section--footer .section__h2--proyectos{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 2rem 0;
+}
+
 .proyectos__section--otros{
     display: flex;
     flex-direction: column;
@@ -1010,6 +1063,87 @@ body{
     height: auto;
     border-radius: 1rem; 
     display: block;
+}
+
+/* ===== LIGHTBOX ====== */
+.content__img, 
+.section__div--images img, 
+.picture__img--proyecto {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.content__img:hover, 
+.section__div--images img:hover,
+.picture__img--proyecto:hover {
+    filter: brightness(0.9);
+}
+
+/* Contenedor Principal */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 99;
+    
+    /* Centrado Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Estado inicial: Oculto */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    backdrop-filter: blur(.3125rem);
+}
+
+/* Estado Activo */
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+/* La Imagen dentro del Lightbox */
+.lightbox__contenido img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    
+    /* Animación de entrada */
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active .lightbox__contenido img {
+    transform: scale(1);
+}
+
+/* Botón Cerrar */
+.lightbox__cierre {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1001;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.lightbox__cierre:hover {
+    color: var(--clr-main);
 }
 
 /* --------- LEGAL ---------*/
@@ -1096,8 +1230,10 @@ body{
     100% { transform: scale(1); }
 }
 
-/* --------- MEDIA QUERIES ---------*/
-/* INDEX */
+/* =========================================
+    MEDIA QUERIES - INDEX
+========================================= */
+
 /*XL*/
 @media (max-width: 1500px) {
     
@@ -1249,6 +1385,51 @@ body{
         padding: 1.5rem; /* Padding mínimo de celular */
     }
 
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__toggle{
+        display: block;
+        z-index: 99;
+        position: relative;
+    }
+
+    .header__nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: var(--clr-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+        border-radius: 0 0 1rem 1rem;
+
+        /*estado inicial oculto*/
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 99;
+    }
+
+    .header__nav.active{
+        transform: translateY(0); /*Vuelve a su posición original*/
+    }
+
+    .header__ul{
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .li__a{
+        font-size: 2.5rem;
+        color: white;
+    }
+
     .main--landing {
         display: flex; /* Flex es más fácil para apilar 1 columna */
         flex-direction: column;
@@ -1326,5 +1507,359 @@ body{
     .tool-icon {
         width: 2.5rem;
         height: 2.5rem;
+    }
+}
+
+/* =========================================
+    MEDIA QUERIES - SOBRE MÍ
+========================================= */
+
+/* --- L (Max 1200px) --- */
+@media (max-width: 1200px) {
+    
+    .main {
+        gap: 6rem;
+    }
+    
+    .main__div--intro {
+        gap: 4rem; 
+    }
+
+    /* Ajuste de textos grandes */
+    .article__h3 { font-size: 3rem; }
+    .article__p { font-size: 1.8rem; line-height: 1.4; }
+
+    /* 3 imágenes horizontales */
+    .picture__img--misc {
+        width: 30vw;
+        height: auto;
+    }
+}
+
+/* --- MEDIUM / TABLETS (Max 900px) --- */
+/* EL CAMBIO ESTRUCTURAL: De Horizontal a Vertical */
+@media (max-width: 900px) {
+
+    /* INTRODUCCIÓN */
+    .main__div--intro {
+        flex-direction: column; /* Uno debajo del otro */
+        align-items: center; /* Centrados */
+        gap: 2rem;
+        text-align: center; /* Texto centrado se ve mejor así */
+    }
+
+    /* La foto de perfil */
+    .picture__img--intro {
+        min-width: 0;
+        width: 80%; /* Ocupa la mitad del ancho disponible */
+        max-width: 28.125rem;
+    }
+
+    /* GALERÍA DE 3 FOTOS */
+    .main__div--img {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main__div--img picture{
+        width: 100%;
+    }
+
+    .picture__img--misc {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    /* SECCIÓN COMPUESTA (Texto + Foto final) */
+    .article__about--compound {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .picture__img--content {
+        width: 60%;
+        aspect-ratio: auto;
+    }
+    
+    /* El párrafo centrado que tenía width 75% */
+    .main__section--content .article__p {
+        width: 90%;
+    }
+}
+
+/* --- SMALL / MÓVILES (Max 600px) --- */
+
+@media (max-width: 600px) {
+    .main {
+        gap: 4rem;
+    }
+
+    /* Títulos y Textos Móviles */
+    .section__h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .article__h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .article__p {
+        font-size: 1.125rem;
+    }
+    
+    /* Imágenes al 100% de ancho */
+    .picture__img--intro,
+    .picture__img--content {
+        width: 100%;
+        max-width: 21.875rem;
+    }
+
+    /* Galería: Una foto debajo de otra */
+    .main__div--img {
+        flex-direction: column;
+    }
+    
+    .picture__img--misc {
+        width: 100%; /* Foto ocupa todo el ancho */
+    }
+    
+    /* Ajuste del párrafo centrado */
+    .main__section--content .article__p {
+        width: 100%;
+        text-align: left; 
+    }
+    
+    /* Flechita de scroll más chica */
+    .main__div--icon {
+        width: 2rem;
+        margin: 2rem 0;
+    }
+}
+
+/* =========================================
+    MEDIA QUERIES - CONTACTO
+========================================= */
+/* --- L (Max 1200px) --- */
+@media (max-width: 1200px) {
+    /* Formulario */
+    .main__section--contact { width: 55%; }
+    .main__section--form { width: 40%; }
+    
+    /* Textos */
+    .article__h3 { font-size: 3rem; }
+    .article__p { font-size: 1.5rem; }
+    
+    /* Inputs y Labels */
+    .form__label { font-size: 1.5rem; }
+    .form__input { font-size: 1.25rem; }
+}
+
+/* --- M (Max 900px) --- */
+@media (max-width: 900px) {
+    /* Formulario */
+    .main--contact {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    /* SECCIÓN DE TEXTO */
+    .main__section--contact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar botón */
+        text-align: center; /* Centrar texto */
+    }
+
+    /* SECCIÓN DEL FORMULARIO */
+    .main__section--form {
+        width: 100%;
+        max-width: 37.5rem; 
+        margin: 1rem auto; /* centrar el form */
+    }
+}
+
+/* --- S (Max 600px) --- */
+@media (max-width: 600px) {
+
+    /* Títulos */
+    .article__h3 { font-size: 2.5rem; }
+    .article__p { font-size: 1.1rem; }
+
+    .div__span--email {
+        font-size: .875rem; 
+    }
+
+    .form__label { font-size: 1.1rem; } /* Tamaños de etiquetas */
+    
+    .form__input, 
+    .form__input--mensaje { 
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+/* =========================================
+    MEDIA QUERIES - PROYECTOS
+========================================= */
+
+/* --- S (Max 600px) --- */
+@media (max-width: 600px) {
+
+    .main__div--header {
+        width: 100%; /* Cambio para ajustar ancho */
+        text-align: left;
+        padding: 0 0 1rem 0;
+        border-bottom: 1px solid var(--clr-bgopacity); 
+    }
+
+    .section__picture--proyectos {
+        width: 100%; /* La imagen se adapta al ancho del celular */
+    }
+
+    /* Tipografía */
+    .main__h1--proyectos {
+        font-size: 2rem;
+    }
+
+    .section__h2--proyectos {
+        font-size: 1.25rem;
+        margin: 1rem 0 0.5rem 0;
+    }
+    
+    /* ESPACIADO ENTRE TARJETAS */
+    .main__a--proyect-card {
+        margin: 0 0 2rem 0;
+    }
+}
+
+/* =========================================
+    MEDIA QUERIES - PROYECTOS INDIVIDUALES
+========================================= */
+/* --- L (Max 1200px) --- */
+@media (max-width: 1200px) {
+
+    .proyectos__section--categorias,
+    .proyectos__section--content {
+        width: 70vw; 
+    }
+
+    /* Ajustamos el footer */
+    .proyectos__section--footer {
+        width: 80vw;
+    }
+}
+
+/* --- M (Max 900px) --- */
+@media (max-width: 900px) {
+
+    /* TEXTO */
+    .proyectos__section--categorias,
+    .proyectos__section--content {
+        width: 90vw;
+    }
+
+    /* CATEGORÍAS */
+    .proyectos__section--categorias {
+        flex-wrap: wrap; /* Si no caben, bajan */
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .section__div--categoria {
+        margin: 1rem;
+        text-align: center;
+    }
+
+    /* EL GRID DE 3 IMÁGENES */
+    .section__div--images {
+        width: 100%;
+        margin: 2rem 0; 
+        gap: 1rem;
+    }
+
+    /* FOOTER Y MAPA */
+    .proyectos__section--footer {
+        width: 90vw;
+    }
+
+    .section__footer--info {
+        flex-direction: column; /* Mapa debajo del texto */
+        gap: 2rem;
+    }
+
+    .mapa-iframe {
+        height: 300px; /* Mapa un poco más bajito */
+    }
+}
+
+/* --- S (Max 600px) --- */
+@media (max-width: 600px) {
+
+    /* TIPOGRAFÍA */
+    .section__h1--proyectos {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .section__h2--proyectos {
+        font-size: 1.25rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .picture__img--proyecto{
+        width: 100%;
+        min-width: 0;
+    }
+
+    .proyectos__section--footer .section__h2--proyectos {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem; 
+    }
+    
+    .content__p {
+        font-size: 1.2rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    /* CATEGORÍAS EN GRID 2x2 */
+    .proyectos__section--categorias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .section__div--categoria {
+        margin: 0;
+    }
+
+    /* 3 IMÁGENES APILADAS */
+    .section__div--images {
+        flex-direction: column;
+    }
+
+    /* SECCIÓN "VER MÁS PROYECTOS" */
+    .section__article--otros {
+        flex-direction: column; /* Tarjetas una debajo de otra */
+        gap: 0.5rem;
+    }
+
+    .section__picture--proyectos {
+        width: 100%;
+    }
+    
+    /* Botón regresar */
+    .main__proyectos--return {
+        margin: 0 0 0 1rem;
     }
 }

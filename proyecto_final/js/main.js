@@ -1,5 +1,83 @@
 
 // --- INDEX ---
+// Menú Hamburguesa
+const iniciarHamburguesa = () => {
+    const elementosMenu = obtenerElementosMenu();
+    if (!elementosMenu){
+        return;
+    }
+    configurarEventosMenu(elementosMenu);
+}
+//obtención de elementos
+const obtenerElementosMenu = () => {
+    const botonToggle = document.getElementById("navToggle");
+    const menuNavegacion = document.getElementById("navMenu");
+    const linksMenu = document.querySelectorAll(".li__a");
+
+    if(!botonToggle || !menuNavegacion) {
+        return null;
+    }
+    return {
+        botonToggle,
+        menuNavegacion,
+        linksMenu
+    };
+};
+
+//acciones
+const alternarMenu = (elementosMenu) => {
+    //Se agrega el class active
+    elementosMenu.menuNavegacion.classList.toggle("active");
+    //protección para 
+    const estarAbierto = elementosMenu.menuNavegacion.classList.contains("active");
+    if (estarAbierto) {
+        document.body.style.overflow = "hidden";
+        elementosMenu.botonToggle.style.color = "white";
+    } else {
+        document.body.style.overflow = "auto";
+        elementosMenu.botonToggle.style.color = "";
+    }
+};
+
+const cerrarMenu = (elementosMenu) => {
+    elementosMenu.menuNavegacion.classList.remove("active");
+    document.body.style.overflow = "auto";
+    elementosMenu.botonToggle.style.color = "";
+};
+
+//eventos
+const configurarEventosMenu = (elementosMenu) => {
+    //Click en el botón (Abrir/Cerrar)
+    elementosMenu.botonToggle.addEventListener("click", (evento) => {
+        evento.stopPropagation(); 
+        alternarMenu(elementosMenu);
+    });
+    
+    //Click en los links (Cerrar al navegar)
+    if (elementosMenu.linksMenu && elementosMenu.linksMenu.length > 0) {
+        elementosMenu.linksMenu.forEach(link => {
+            link.addEventListener("click", () => {
+                cerrarMenu(elementosMenu);
+            });
+        });
+    }
+
+    //Click fuera del menu para cerrar
+    document.addEventListener("click", (evento) => {
+        const estaAbierto = elementosMenu.menuNavegacion.classList.contains("active");
+        const clickEnMenu = elementosMenu.menuNavegacion.contains(evento.target);
+        const clickEnBoton = elementosMenu.botonToggle.contains(evento.target);
+
+        if (estaAbierto && !clickEnMenu && !clickEnBoton) {
+            cerrarMenu(elementosMenu);
+        }
+    });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    iniciarHamburguesa();
+});
+
 //Copiar email al clipboard desde el icono
 const btnEmail = document.getElementById("btnCopyEmail");
 
@@ -39,7 +117,7 @@ const dotsContainer = document.getElementById('featuredDots');
 
 if (slider && dotsContainer) {
     
-    // --- 1. GENERACIÓN DE DOTS ---
+    // --- Puntos para saber que imagen está activa ---
     const slides = slider.querySelectorAll('.carousel__item');
     slides.forEach((_, index) => {
         const dot = document.createElement('div');
@@ -49,42 +127,38 @@ if (slider && dotsContainer) {
     });
     const dots = document.querySelectorAll('.carousel__dot');
 
-    // --- 2. LOGICA DE ARRASTRE (DRAG) SIN LAG ---
+    // --- Drag ---
     let isDown = false;
     let startX;
     let scrollLeft;
-    let isDragging = false; // Bandera para diferenciar click de drag
+    let isDragging = false; 
 
     slider.addEventListener('mousedown', (e) => {
         isDown = true;
-        isDragging = false; // Aún no hemos movido, así que no es drag
-        slider.classList.add('active'); // Cambia cursor y apaga scroll-snap
+        isDragging = false;
+        slider.classList.add('active');
         
-        // Guardamos posición inicial
+        // Posición inicial
         startX = e.pageX - slider.offsetLeft;
         scrollLeft = slider.scrollLeft;
     });
 
     const stopDragging = () => {
         isDown = false;
-        slider.classList.remove('active'); // Reactiva scroll-snap y smooth scroll
-        
-        // Aquí ocurre la magia: al soltar, CSS Scroll Snap "imanta" 
-        // la imagen más cercana automáticamente. No necesitamos JS para eso.
+        slider.classList.remove('active'); 
     };
 
     slider.addEventListener('mouseleave', stopDragging);
     slider.addEventListener('mouseup', stopDragging);
 
     slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return; // Si no hay click, no hacemos nada
+        if (!isDown) return;
         
         e.preventDefault();
         
         const x = e.pageX - slider.offsetLeft;
         const walk = (x - startX) * 2;
         
-        // Si nos movimos más de 5 pixeles, lo consideramos un arrastre
         if (Math.abs(x - startX) > 5) {
             isDragging = true;
         }
@@ -92,8 +166,7 @@ if (slider && dotsContainer) {
         slider.scrollLeft = scrollLeft - walk;
     });
 
-    // --- 3. EVITAR ABRIR LINK SI SE ARRASTRÓ ---
-    // Esto es vital: si el usuario arrastró, no queremos que vaya a la página del proyecto
+    // --- SI HAY DRAG NO ARRASTRAR LINK ---
     const links = slider.querySelectorAll('a');
     links.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -109,12 +182,10 @@ if (slider && dotsContainer) {
         return false;
     });
 
-    // --- 4. ACTUALIZAR DOTS AL HACER SCROLL (INTERSECTION OBSERVER) ---
-    // Esto funciona tanto si arrastras como si usas flechas o touch
+    // --- ACTUALIZAR DOTS AL HACER SCROLL ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Encontrar el índice de la diapositiva actual
                 const index = Array.from(slides).indexOf(entry.target);
                 
                 // Actualizar clases de los dots
@@ -124,13 +195,11 @@ if (slider && dotsContainer) {
         });
     }, {
         root: slider,
-        threshold: 0.5 // Se activa cuando el 50% de la imagen es visible
+        threshold: 0.5
     });
 
     slides.forEach(slide => observer.observe(slide));
 }
-
-
 
 // --- CONTACTO ---
 //Copiar email al clipboard
@@ -165,10 +234,103 @@ if (emailContainer && emailSpan) {
             });
     }
 
-    // Event Listener (Seguro porque ya verificamos que emailContainer existe)
+    // Event Listener
     emailContainer.addEventListener("click", handlerCopiarEmail);
 }
 
+// ----- LIGHTBOX -----
+
+//funcion principal
+const iniciarLightbox = () => {
+    const elementosInterfaz = obtenerElementosInterfaz();
+    if (!elementosInterfaz){
+        return;
+    }
+    configurarEventosLightbox(elementosInterfaz);
+}
+
+//obtención de elementos
+const obtenerElementosInterfaz = () => {
+    const contenedorPrincipal = document.getElementById("lightbox");
+    const imagenGrande = document.getElementById("lightboxImg");
+    const botonCerrar = document.getElementById("lightboxCierre");
+    const listaImagenes = document.querySelectorAll(".content__img, .section__div--images img, .picture__img--proyecto");
+
+    //Si falta algún elemento
+    if(!contenedorPrincipal || !imagenGrande || !botonCerrar) {
+        return null;
+    }
+    return{
+        contenedorPrincipal, imagenGrande, botonCerrar, listaImagenes
+    };
+};
+
+//acciones
+const abrirGaleria = (elementosInterfaz, rutaImagen) => {
+    elementosInterfaz.imagenGrande.src = rutaImagen;
+    elementosInterfaz.contenedorPrincipal.classList.add("active");
+    document.body.style.overflow = "hidden";
+};
+
+const cerrarGaleria = (elementosInterfaz) => {
+    elementosInterfaz.contenedorPrincipal.classList.remove("active");
+    document.body.style.overflow = "auto";
+    //Tiempo para que se note la transición
+    setTimeout(() => {
+        if(elementosInterfaz.imagenGrande){
+            elementosInterfaz.imagenGrande.src = "";
+        }
+    }, 300);
+};
+
+//configuración de eventos
+const configurarEventosLightbox = (elementosInterfaz) => {
+    //handlers
+    const handlerClickImagen = (e) => {
+        const imagenClickeada = e.target;
+        const rutaImagen = imagenClickeada.currentSrc || imagenClickeada.src;
+
+        if (rutaImagen) {
+            abrirGaleria(elementosInterfaz, rutaImagen);
+        }
+    };
+
+    const handlerClickCerrar = (e) => {
+        e.preventDefault();
+        cerrarGaleria(elementosInterfaz);
+    };
+
+    const handlerClickFuera = (e) => {
+        if (e.target === elementosInterfaz.contenedorPrincipal) {
+            cerrarGaleria(elementosInterfaz);
+        }
+    };
+
+    const handlerEsc = (e) => {
+        const estaActivo = elementosInterfaz.contenedorPrincipal.classList.contains("active");
+        if (e.key === "Escape" && estaActivo) {
+            cerrarGaleria(elementosInterfaz);
+        }
+    };
+
+    //asignación de listeners
+    //imagenes
+    if (elementosInterfaz.listaImagenes.length > 0) {
+        elementosInterfaz.listaImagenes.forEach(imagen => {
+            imagen.addEventListener("click", handlerClickImagen);
+        });
+    }
+    //boton cerrar
+    elementosInterfaz.botonCerrar.addEventListener("click", handlerClickCerrar);
+    //fondo
+    elementosInterfaz.contenedorPrincipal.addEventListener("click", handlerClickFuera);
+    //esc
+    document.addEventListener("keydown", handlerEsc);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    iniciarLightbox();
+});
 
 // --- LEGAL ---
 const yearSpan = document.getElementById("year");

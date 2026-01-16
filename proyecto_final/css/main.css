@@ -28,9 +28,9 @@
     --clr-bg:#242424;               /* Color de fondo oscuro principal */
     --clr-bgopacity: #4b4b4ba4;     /* Fondo oscuro con transparencia para overlays */
     /*--Branding--*/
-    --clr-main:#FF7262;             /* Color primario (Coral/Naranja) */
-    --clr-secondary:#bb4e41;        /* Color secundario (Tono más oscuro del main) */
-    --clr-hover:#ff9185;            /* Color para estados hover (Más claro) */
+    --clr-main:#c44601;             /* Color primario (Coral/Naranja) */
+    --clr-secondary:#883b32;        /* Color secundario (Tono más oscuro del main) */
+    --clr-hover:#FF7262;            /* Color para estados hover (Más claro) */
     --clr-confirm: #4CAF50;         /* Color de éxito/confirmación (Verde) */
 }
 
@@ -210,7 +210,7 @@ body{
     align-items: center;
     justify-content: space-between;
     background-color: var(--clr-main);
-    color: var(--clr-bg);
+    color: white;
     border-radius: 1.5rem;
     padding: clamp(1rem, 4vh, 2rem) 1.5rem;
     min-height: 0;

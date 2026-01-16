@@ -502,63 +502,56 @@ body{
  * - value__h2 (Título)
  * - value__p (Texto oculto)
 */
-.main__value{ 
+.main__value { 
     grid-row: 3 / 6; 
     grid-column: 4 / 5;
     display: flex;
     flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    min-width: 0;
+    overflow-y: auto;   /* scroll vertical si no cabe de alto */
     cursor: pointer;
-    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
-    scrollbar-color: var(--clr-main) transparent;
+    scrollbar-color: transparent;
 }
 
-.main__value::-webkit-scrollbar {
-    width: 6px; /* Muy delgadita */
+.main__value:hover {
+    justify-content: flex-start;
 }
 
-.main__value::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.main__value::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: .625rem;
-}
-
-.main__value:hover::-webkit-scrollbar-thumb {
-    background-color: var(--clr-secondary); 
-}
-
-.value__h2{
+.value__h2 {
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
     transition: transform 0.5s ease;
+    flex-shrink: 0; 
 }
 
-.value__p{
+.main__value:hover .value__h2 {
+    transform: translateY(-0.5rem); 
+}
+
+.value__p {
+    /* Estado inicial: Oculto */
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    margin: 0 0 1rem 0;
     transform: translateY(1.25rem);
+    flex-shrink: 0;
     transition: 
         max-height 0.5s ease,
         opacity 0.5s ease,
         transform 0.5s ease;
 }
 
-/* Interacción Hover: Expansión */
-.main__value:hover .value__p{
-    max-height: 18.75rem;
+.main__value:hover .value__p {
+    max-height: 50rem; 
     opacity: 1;
     transform: translateY(0);
-}
-
-.main__value:hover .value__h2{
-    transform: translateY(-1rem);
+    margin: 0 0 1rem 0; 
 }
 
 /* Casilla Sobre Mí */
@@ -1095,14 +1088,10 @@ body{
 
 .section__div--images{
     display: flex;
+    justify-content: center;
     gap: 1rem;
     width: 80vw;
-    margin: 2rem 0 2rem -15vw;
-}
-
-.section__div--images picture{
-    flex: 1;
-    min-width: 0;
+    margin: 2rem 0;
 }
 
 .section__div--images img{
@@ -1514,6 +1503,7 @@ body{
 
     .header__nav.active{
         transform: translateY(0); /*Vuelve a su posición original*/
+        visibility: visible;
     }
 
     .header__ul{

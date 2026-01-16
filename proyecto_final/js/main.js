@@ -190,7 +190,8 @@ if (slider && dotsContainer) {
     let isDown = false;
     let startX;
     let scrollLeft;
-    let isDragging = false; 
+    let isDragging = false;
+    let animationID;
 
     // Eventos del mouse para el slider
 
@@ -203,12 +204,16 @@ if (slider && dotsContainer) {
         // Calculo de posición inicial
         startX = e.pageX - slider.offsetLeft;
         scrollLeft = slider.scrollLeft;
+
+        //Cancelación de cualquier animación pendiente anterior
+        cancelAnimationFrame(animationID);
     });
 
     // Función local para detener el arrastre.
     const stopDragging = () => {
         isDown = false;
         slider.classList.remove('active'); 
+        cancelAnimationFrame(animationID);
     };
 
     // Eventos para detener el arrastre (salir o soltar click).
@@ -230,7 +235,9 @@ if (slider && dotsContainer) {
             isDragging = true;
         }
 
-        slider.scrollLeft = scrollLeft - walk;
+        animationID = requestAnimationFrame(() => {
+            slider.scrollLeft = scrollLeft - walk;
+        })
     });
 
     // Protección de enlaces para que no se arrastren

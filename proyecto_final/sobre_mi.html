@@ -1,20 +1,54 @@
+<!--
+Descripción: Este archivo HTML contiene la página de Sobre Mí del sitio web.
+Estructura general: 
+-Encabezado con la barra de navegación
+-Contenido principal
+-Pie de página
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JB Portafolio</title>
+    <title>Sobre Mí - JB Portafolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg" href="images/favicon.svg">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="images/about-me--profile-picture.webp" as="image">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <!-- Primary Meta Tags -->
+    <title>Sobre Mí - Juan Burgos Design</title>
+    <meta name="title" content="Sobre Mí - Juan Burgos Design" />
+    <meta name="description" content="Soy Juan, UX/UI & Web Designer. Diseño experiencias digitales como quien construye un relato. ¿Conversamos?" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.juanburgosdesign.com/sobre_mi.html" />
+    <meta property="og:title" content="Sobre Mí - Juan Burgos Design" />
+    <meta property="og:description" content="Soy Juan, UX/UI & Web Designer. Diseño experiencias digitales como quien construye un relato. ¿Conversamos?" />
+    <meta property="og:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.juanburgosdesign.com/sobre_mi.html" />
+    <meta property="twitter:title" content="Sobre Mí - Juan Burgos Design" />
+    <meta property="twitter:description" content="Soy Juan, UX/UI & Web Designer. Diseño experiencias digitales como quien construye un relato. ¿Conversamos?" />
+    <meta property="twitter:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
 </head>
 <body>
+    <!--
+    Sección de Encabezado
+    Descripción: En el encabezado tendremos el ícono de la página web, y la barra de navegación que contiene 3 links. También está el menú hamburguesa que aparece en el breakpoint de los 600px
+    -->
     <header class="header">
         <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img"></a>
+        <!--Menú tipo hamburguesa para móviles-->
         <button id="navToggle" class="header__toggle" aria-label="Abrir menú">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -30,7 +64,12 @@
             </ul>
         </nav>
     </header>
+    <!--
+    Sección Principal de contenido
+    Descripción: Es la parte principal del contenido dividido en 5 secciones de información e imágenes
+    -->
     <main class="main">
+        <!--Bloque de introducción-->
         <div class="main__div--intro">
             <picture>
                 <source srcset="images/about-me--profile-picture.webp" type="image/webp">
@@ -44,7 +83,9 @@
                 </div>
             </article>
         </div>
+        <!--Icono para hacer scroll down-->
         <img src="images/icons/double-arrow-down.svg" alt="Scroll Down Icon" class="main__div--icon">
+        <!--3 imágenes para dividir la página-->
         <div class="main__div--img">
             <picture>
                 <source srcset="images/about-me--content1.webp" type="image/webp">
@@ -59,29 +100,36 @@
                 <img src="images/about-me--content3.jpg" alt="Foto de Juan Sebastián buscando discos de vinilo" class="picture__img--misc" loading="lazy">
             </picture>
         </div>
+        <!--Sección 2 de contenido, del ladrillo al pixel-->
         <section class="main__section--content">
             <h2 class="section__h2">Del ladrillo al pixel.</h2>
-            <article class="article__about">
+            <div class="article__about">
                 <p class="article__p">Descubrí que podía contar historias sin muros. Que una interfaz también puede ser una puerta. Que un flujo es un pasillo. Que un botón puede sostener la misma espectativa que una esquina bien enmarcada. Cambié de escala, no de propósito. Del ladrillo al pixel, con la misma intención de llevar a alguien de un punto A a un punto B con claridad y emoción.</p>
-            </article>
+            </div>
         </section>
+        <!--Sección 3 de contenido, hoy: diseñar cómo narrar-->
         <section class="main__section--content">
             <h2 class="section__h2">Hoy: diseñar cómo narrar.</h2>
-            <article class="article__about--compound">
+            <div class="article__about--compound">
                 <p class="article__p">Diseño experiencias digitales como quien construye un relato. Investigo para entender el contexto y lo conceptualizo. Prototipo en Figma para darle cuerpo. Herramientas visuales como Framer me permiten pasar del concepto a la acción. Y cuando la historia necesita sostenerse por dentro, entra HTML, CSS y JavaScript: programo la estructura que le da sentido al conjunto.</p>
                 <picture>
                     <source srcset="images/about-me--content.webp" type="image/webp">
                     <img src="images/about-me--content.jpg" alt="Foto de Contenido de Juan Sebastián en un puente" class="picture__img--content" loading="lazy">
                 </picture>
-            </article>
+            </div>
         </section>
+        <!--Sección 4 de contenido, conversamos-->
         <section class="main__section--content">
             <h2 class="section__h2">¿Conversamos?</h2>
-            <article class="article__about">
+            <div class="article__about">
                 <p class="article__p">Busco proyectos creativos que quieran presencia digital con intención e impacto reales. Ideas que necesiten ser contadas, que quieran hablarle a alguien y no al vacío. Diseño para acompañar, para que la tecnología no sea solo un escenario, sino un lugar narrativo donde ocurra un vínculo verdadero.</p>
-            </article>
+            </div>
         </section>
     </main>
+    <!--Sección de Footer
+    Descripción: Footer del proeycto con una etiqueta p y span para linkear el aviso legal de la página web
+    La etiqueta span vacía (<span id="year"></span>) para que el JS pueda rellenarlo con el año actual.
+    -->
     <footer class="footer">
         <p>&copy; <span id="year"></span> Juan Sebastián Burgos. <a href="legal.html" class="footer__a">Ver Aviso Legal</a></p>
     </footer>

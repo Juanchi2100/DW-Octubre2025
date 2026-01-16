@@ -1,10 +1,18 @@
+<!--
+Descripción: Este archivo HTML contiene la página del Proyecto del Teatro La Estación.
+Estructura general: 
+-Encabezado con la barra de navegación
+-Contenido principal
+-Pie de página
+-Lightbox
+-->
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JB Portafolio</title>
+    <title>UX/UI La Estación - JB Portafolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg" href="images/favicon.svg">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -13,11 +21,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
         rel="stylesheet">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="UX/UI Teatro La Estación - Juan Burgos Design" />
+    <meta name="description" content="Proyecto de UX/UI Design: app móvil para teatro independiente. Diseño centrado en el usuario, organización de contenidos y experiencia cultural digital." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.juanburgosdesign.com/teatrolaestacion.html" />
+    <meta property="og:title" content="UX/UI Teatro La Estación - Juan Burgos Design" />
+    <meta property="og:description" content="Proyecto de UX/UI Design: app móvil para teatro independiente. Diseño centrado en el usuario, organización de contenidos y experiencia cultural digital." />
+    <meta property="og:image" content="https://www.juanburgosdesign.com/images/proyectos/estacion-portada.jpg" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.juanburgosdesign.com/teatrolaestacion.html" />
+    <meta property="twitter:title" content="UX/UI Teatro La Estación - Juan Burgos Design" />
+    <meta property="twitter:description" content="Proyecto de UX/UI Design: app móvil para teatro independiente. Diseño centrado en el usuario, organización de contenidos y experiencia cultural digital." />
+    <meta property="twitter:image" content="https://www.juanburgosdesign.com/images/proyectos/estacion-portada.jpg" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
 </head>
 
 <body>
+    <!--
+    Sección de Encabezado
+    Descripción: En el encabezado tendremos el ícono de la página web, y la barra de navegación que contiene 3 links. También está el menú hamburguesa que aparece en el breakpoint de los 600px
+    -->
     <header class="header">
         <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img"></a>
+        <!--Menú tipo hamburguesa para móviles-->
         <button id="navToggle" class="header__toggle" aria-label="Abrir menú">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -27,21 +59,24 @@
         </button>
         <nav class="header__nav" id="navMenu">
             <ul class="header__ul">
-                <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a>
-                </li>
+                <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a></li>
                 <li class="header__li"><a class="li__a" href="sobre_mi.html" title="Más información">sobre mí.</a></li>
-                <li class="header__li"><a class="li__a" href="contacto.html" title="Ponte en contacto">contacto.</a>
-                </li>
+                <li class="header__li"><a class="li__a" href="contacto.html" title="Ponte en contacto">contacto.</a></li>
             </ul>
         </nav>
     </header>
+    <!--
+    Sección Principal de contenido
+    Descripción: Contenido del proyecto, dividido en 4 secciones entre textos, imagenes, headers y footer. Al final una sección de ver más proyectos.
+    -->
     <main class="main--proyectos">
+        <!--Sección de Cabecera de proyecto-->
         <section class="proyectos__section--header">
-            <a href="proyectos.html" aria-label="Regersar a Página de Proyectos" title="Regresar"
-                class="main__proyectos--return">&#10094; Proyectos</a>
-            <h1 class="section__h1--proyectos">Product Design - Teatro La Estación</h1>
-            <h2 class="section__h2--proyectos">Una app para acercar el teatro a la vida cotidiana.</h2>
+            <a href="proyectos.html" aria-label="Regersar a Página de Proyectos" title="Regresar" class="main__proyectos--return">&#10094; Proyectos</a>
+            <h1 class="section__h1--proyectos">UX/UI - Teatro La Estación</h1>
+            <h2 class="section__h2--proyectos">Un app para acercar el teatro a la vida cotidiana.</h2>
         </section>
+        <!--Categorías del Proyecto-->
         <section class="proyectos__section--categorias">
             <div class="section__div--categoria">
                 <h5>categoría</h5>
@@ -60,6 +95,7 @@
                 <span>abril 2025</span>
             </div>
         </section>
+        <!--Contenido del Proyecto-->
         <section class="proyectos__section--content">
             <picture class="section__picture--content">
                 <source srcset="images/proyectos/estacion/estacion-principal.webp" type="image/webp">
@@ -108,19 +144,22 @@
                     alt="Contenido, Páginas de selección y calendario de obras de teatro disponibles" loading="lazy"
                     class="content__img">
             </picture>
+            <!--Contenedor del video-->
             <div class="video-container">
-                <video controls loop preload="none" poster="images/proyectos/estacion/video-poster.jpg" playsinline
-                    class="video-player">
+                <!--Video: tiene preload=none para mejorar la eficiencia de la página. y loop para que se repita la animación del video. Se incluye un poster para que aparezca una imagen antes de que se reproduzca el video-->
+                <video controls loop preload="none" poster="images/proyectos/estacion/video-poster.jpg" playsinline class="video-player">
                     <source src="videos/custom-animation.webm" type="video/webm">
                     <source src="videos/custom-animation.MP4" type="video/mp4">
                     <p>Tu navegador no soporta este video.</p>
                 </video>
             </div>
         </section>
+        <!--Sección de Footer del poryecto-->
         <section class="proyectos__section--footer">
             <h2 class="section__h2--proyectos">Porque el teatro no vive solo en el escenario, vive en quienes lo
                 habitan.</h2>
             <div class="section__footer--info">
+                <!--Información sobre el Teatro La Estación-->
                 <div>
                     <h3 class="section__h3--proyectos">Teatro La Estación</h3>
                     <p class="content__p">"Teatro La Estación es una propuesta de teatro de excelencia. Con sala propia,
@@ -131,12 +170,14 @@
                     <p class="content__p">La Estación está conformada por Thyrza Guerrero, Ricardo Dormoi, Stella Lauri,
                         Isabel Burgos y Enithzabel Castrellón."</p>
                 </div>
+                <!--Mapa en in iframe, se eliminan los atributos que venían con google, para controlarlas mejor con una clase en CSS-->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.846273885283!2d-79.52627918852578!3d8.98628979103612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8faddd5cc11%3A0xd5a547bd3d068b12!2sTeatro%20La%20Estaci%C3%B3n!5e0!3m2!1ses-419!2spa!4v1768349303763!5m2!1ses-419!2spa"
                     style="border:0;" allowfullscreen="" loading="lazy" class="mapa-iframe"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
+        <!--Sección para Ver Más Proyectos-->
         <section class="proyectos__section--otros">
             <h2 class="section__h2--proyectos">Ver más proyectos</h2>
             <article class="section__article--otros">
@@ -164,11 +205,17 @@
             </article>
         </section>
     </main>
+    <!--Sección de Footer
+    Descripción: Footer del proeycto con una etiqueta p y span para linkear el aviso legal de la página web
+    La etiqueta span vacía (<span id="year"></span>) para que el JS pueda rellenarlo con el año actual.
+    -->
     <footer class="footer">
         <p>&copy; <span id="year"></span> Juan Sebastián Burgos. <a href="legal.html" class="footer__a">Ver Aviso
                 Legal</a></p>
     </footer>
+    <!--Div OCULTO para el Lightbox -->
     <div id="lightbox" class="lightbox">
+        <!--Botón de Cierre-->
         <button id="lightboxCierre" class="lightbox__cierre">&times;</button>
         <div class="lightbox__contenido">
             <img id="lightboxImg" src="" alt="Imagen ampliada">

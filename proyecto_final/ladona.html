@@ -1,9 +1,17 @@
+<!--
+Descripción: Este archivo HTML contiene la página del Proyecto de La Doña.
+Estructura general: 
+-Encabezado con la barra de navegación
+-Contenido principal
+-Pie de página
+-Lightbox
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JB Portafolio</title>
+    <title>Indentidad Visual La Doña - JB Portafolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg" href="images/favicon.svg">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -11,11 +19,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Identidad Visual La Doña - Juan Burgos Design" />
+    <meta name="description" content="Proyecto de branding e identidad visual para marca panameña de especias y salsas La Doña. Diseño gráfico enfocado en creación de marca, sistema visual y packaging." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.juanburgosdesign.com/ladona.html" />
+    <meta property="og:title" content="Identidad Visual La Doña - Juan Burgos Design" />
+    <meta property="og:description" content="Proyecto de branding e identidad visual para marca panameña de especias y salsas La Doña. Diseño gráfico enfocado en creación de marca, sistema visual y packaging." />
+    <meta property="og:image" content="https://www.juanburgosdesign.com/images/proyectos/ladona-portada.jpg" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.juanburgosdesign.com/ladona.html" />
+    <meta property="twitter:title" content="Identidad Visual La Doña - Juan Burgos Design" />
+    <meta property="twitter:description" content="Proyecto de branding e identidad visual para marca panameña de especias y salsas La Doña. Diseño gráfico enfocado en creación de marca, sistema visual y packaging." />
+    <meta property="twitter:image" content="https://www.juanburgosdesign.com/images/proyectos/ladona-portada.jpg" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
 </head>
 <body>
+    <!--
+    Sección de Encabezado
+    Descripción: En el encabezado tendremos el ícono de la página web, y la barra de navegación que contiene 3 links. También está el menú hamburguesa que aparece en el breakpoint de los 600px
+    -->
     <header class="header">
         <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img"></a>
-        <nav class="header__nav">
+        <!--Menú tipo hamburguesa para móviles-->
+        <button id="navToggle" class="header__toggle" aria-label="Abrir menú">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <nav class="header__nav" id="navMenu">
             <ul class="header__ul">
                 <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a></li>
                 <li class="header__li"><a class="li__a" href="sobre_mi.html" title="Más información">sobre mí.</a></li>
@@ -23,32 +62,134 @@
             </ul>
         </nav>
     </header>
+    <!--
+    Sección Principal de contenido
+    Descripción: Contenido del proyecto, dividido en 4 secciones entre textos, imagenes, headers y footer. Al final una sección de ver más proyectos.
+    -->
     <main class="main--proyectos">
-        <div class="main__div--header">
-            <a href="index.html" aria-label="Regersar a Página de Inicio" title="Regresar" class="main__proyectos--return">&#10094; Inicio</a>
-            <h1 class="main__h1--proyectos">proyectos destacados</h1>
-        </div>
-        <section class="main__section--proyectos">
-            <h2 class="section__h2--proyectos">Product Design - Teatro La Estación</h2>
-            <picture class="section__picture--proyectos">
-                <source srcset="images/proyectos/estacion-portada.webp" type="image/webp">
-                <img src="images/proyectos/estacion-portada.jpg" alt="Portada de Proyecto Diseño de Producto Teatro La Estación" class="picture__img--proyectos" loading="lazy">
-            </picture>
+        <!--Sección de Cabecera de proyecto-->
+        <section class="proyectos__section--header">
+            <a href="proyectos.html" aria-label="Regersar a Página de Proyectos" title="Regresar"
+                class="main__proyectos--return">&#10094; Proyectos</a>
+            <h1 class="section__h1--proyectos">Identidad Visual - La Doña</h1>
+            <h2 class="section__h2--proyectos">Renovación del lenguaje visual de La Doña.</h2>
         </section>
-        <section class="main__section--proyectos">
-            <h2 class="section__h2--proyectos">Página Web - Isabel Burgos</h2>
-            <picture class="section__picture--proyectos">
-                <source srcset="images/proyectos/isabel-portada.webp" type="image/webp">
-                <img src="images/proyectos/isabel-portada.jpg" alt="Portada de Proyecto Landing Page Isabel Burgos" class="picture__img--proyectos" loading="lazy">
-            </picture>
+        <!--Sección de Categorías del proyecto-->
+        <section class="proyectos__section--categorias">
+            <div class="section__div--categoria">
+                <h5>categoría</h5>
+                <span>Identidad Visual</span>
+            </div>
+            <div class="section__div--categoria">
+                <h5>cliente</h5>
+                <span>Proyecto Personal</span>
+            </div>
+            <div class="section__div--categoria">
+                <h5>ubicación</h5>
+                <span>Panamá</span>
+            </div>
+            <div class="section__div--categoria">
+                <h5>fecha</h5>
+                <span>julio 2025</span>
+            </div>
         </section>
-        <section class="main__section--proyectos">
-            <h2 class="section__h2--proyectos">Identidad Visual - La Doña</h2>
-            <picture class="section__picture--proyectos">
-                <source srcset="images/proyectos/ladona-portada.webp" type="image/webp">
-                <img src="images/proyectos/ladona-portada.jpg" alt="Portada de Proyecto Identidad Visual de La Doña" class="picture__img--proyectos" loading="lazy">
+        <!--Sección de Contenido del proyecto-->
+        <section class="proyectos__section--content">
+            <picture class="section__picture--content">
+                <source srcset="images/proyectos/ladona/dona-principal.webp" type="image/webp">
+                <img src="images/proyectos/ladona/dona-principal.jpg"
+                    alt="Imagen Principal del Diseño de Identidad Visual de La Doña" class="picture__img--proyecto">
             </picture>
+            <p class="content__p">La Doña es una marca panameña de especias que nace desde la cocina, la memoria y el sabor cotidiano. Más que vender productos, la marca busca transmitir carácter, origen y una forma particular de entender la comida. El reto de la identidad visual fue capturar esa mezcla de tradición y presencia fuerte sin caer en clichés, construyendo un lenguaje gráfico auténtico, reconocible y con personalidad propia.</p>
+            <!--Contenedor de 3 imágenes en fila-->
+            <div class="section__div--images">
+                <picture>
+                    <source srcset="images/proyectos/ladona/ladona1.webp" type="image/webp">
+                    <img src="images/proyectos/ladona/ladona1.jpg"
+                        alt="Tipografías utilizadas para la construcción de la Identidad Visual de La Doña"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="images/proyectos/ladona/ladona2.webp" type="image/webp">
+                    <img src="images/proyectos/ladona/ladona2.jpg"
+                        alt="Logo Principal, construcción del logo y espacios de reserva para mantener la legibilidad" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="images/proyectos/ladona/ladona3.webp" type="image/webp">
+                    <img src="images/proyectos/ladona/ladona3.jpg"
+                        alt="Paleta de colores principales y secundarios para la Identidad Visual de la Doña" loading="lazy">
+                </picture>
+            </div>
+            <p class="content__p">El proceso se centró en traducir valores intangibles —calidez, fuerza, arraigo— en elementos visuales claros y consistentes. Tipografía, color y composición se trabajaron como un sistema, no como piezas aisladas, buscando una identidad flexible que pudiera adaptarse a empaques, comunicación y distintos puntos de contacto sin perder coherencia. Cada decisión respondió a la misma pregunta: cómo hacer que la marca se sienta tan honesta y potente como su producto.</p>
+            <picture>
+                <source srcset="images/proyectos/ladona/ladona-carteleria.webp" type="image/webp">
+                <img src="images/proyectos/ladona/ladona-carteleria.jpg"
+                    alt="Contenido, Mockup de cartelería con La Dona. Un toque de esto y listo, La Doña."
+                    loading="lazy" class="content__img">
+            </picture>
+            <picture>
+                <source srcset="images/proyectos/ladona/ladona-apron.webp" type="image/webp">
+                <img src="images/proyectos/ladona/ladona-apron.jpg"
+                    alt="Contenido, Mockup de merchandising, un delantal con el logo de La Doña" loading="lazy"
+                    class="content__img">
+            </picture>
+            <picture>
+                <source srcset="images/proyectos/ladona/ladona-mockup.webp" type="image/webp">
+                <img src="images/proyectos/ladona/ladona-mockup.jpg"
+                    alt="Contenido, Mockup de publicidad de La Doña, Ponle Vida, Ponle La Doña" loading="lazy"
+                    class="content__img">
+            </picture>
+            <picture>
+                <source srcset="images/proyectos/ladona/ladona-papeleria.webp" type="image/webp">
+                <img src="images/proyectos/ladona/ladona-papeleria.jpg"
+                    alt="Contenido, Mockup de la papelería corporativa de La Doña" loading="lazy"
+                    class="content__img">
+            </picture>
+            <p class="content__p">El resultado es una identidad visual sólida, expresiva y funcional, que acompaña a La Doña en su crecimiento y refuerza su presencia en el mercado. Una marca que no solo se reconoce, sino que se recuerda, y que logra contar una historia desde lo gráfico: cercana, directa y con sabor propio.</p>
+        </section>
+        <!--Sección para Ver Más Proyectos-->
+        <section class="proyectos__section--otros">
+            <h2 class="section__h2--proyectos">Ver más proyectos</h2>
+            <article class="section__article--otros">
+                <a href="teatrolaestacion.html" class="main__a--proyect-card">
+                    <section class="main__section--proyectos">
+                        <h3 class="section__h3--proyectos">UX/UI - Teatro La Estación</h3>
+                        <picture class="section__picture--proyectos">
+                            <source srcset="images/proyectos/estacion-portada.webp" type="image/webp">
+                            <img src="images/proyectos/estacion-portada.jpg"
+                                alt="Portada de Proyecto UX/UI Teatro La Estación" class="picture__img--proyectos" loading="lazy">
+                        </picture>
+                    </section>
+                </a>
+                <a href="isabelburgos.html" class="main__a--proyect-card">
+                    <section class="main__section--proyectos">
+                        <h3 class="section__h3--proyectos">Página Web - Isabel Burgos</h3>
+                        <picture class="section__picture--proyectos">
+                            <source srcset="images/proyectos/isabel-portada.webp" type="image/webp">
+                            <img src="images/proyectos/isabel-portada.jpg"
+                                alt="Portada de Proyecto Landing Page Isabel Burgos" class="picture__img--proyectos"
+                                loading="lazy">
+                        </picture>
+                    </section>
+                </a>
+            </article>
         </section>
     </main>
+    <!--Sección de Footer
+    Descripción: Footer del proeycto con una etiqueta p y span para linkear el aviso legal de la página web
+    La etiqueta span vacía (<span id="year"></span>) para que el JS pueda rellenarlo con el año actual.
+    -->
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Juan Sebastián Burgos. <a href="legal.html" class="footer__a">Ver Aviso
+                Legal</a></p>
+    </footer>
+    <!--Div OCULTO para el Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <!--Botón de Cierre del Lightbox-->
+        <button id="lightboxCierre" class="lightbox__cierre">&times;</button>
+        <div class="lightbox__contenido">
+            <img id="lightboxImg" src="" alt="Imagen ampliada">
+        </div>
+    </div>
 </body>
 </html>

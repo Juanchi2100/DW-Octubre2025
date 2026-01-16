@@ -1,47 +1,11 @@
-/*--------------------------------*\
-    main.css
-    - Variables
-    - Reset / Globales
-    - Header
-    - Main Layout (Bento Grid)
-    - Componentes Landing:
-        - Perfil
-        - Info General
-        - Carrusel (Slider)
-        - Contacto (Grid)
-        - Propuesta de Valor
-        - Toolkit (Grid & Corner Cut)
-    - Sobre Mí
-    - Contacto (Página)
-    - Proyectos (Lista)
-    - Detalle Proyecto
-    - Lightbox
-    - Legal
-    - Footer
-    - Animaciones
-    - Media Queries
-\*---------------------------------*/
-
-/*Variables*/
 :root{
-    /*--Colores Base--*/
-    --clr-bg:#242424;               /* Color de fondo oscuro principal */
-    --clr-bgopacity: #4b4b4ba4;     /* Fondo oscuro con transparencia para overlays */
-    /*--Branding--*/
-    --clr-main:#FF7262;             /* Color primario (Coral/Naranja) */
-    --clr-secondary:#bb4e41;        /* Color secundario (Tono más oscuro del main) */
-    --clr-hover:#ff9185;            /* Color para estados hover (Más claro) */
-    --clr-confirm: #4CAF50;         /* Color de éxito/confirmación (Verde) */
+    --clr-bg:#242424;
+    --clr-bgopacity: #4b4b4ba4;
+    --clr-main:#FF7262;
+    --clr-secondary:#bb4e41;
+    --clr-hover:#ff9185;
+    --clr-confirm: #4CAF50;
 }
-
-/* ---- Reset / Globales ---- */
-/* Descripción: Reseteo básico de márgenes y estilos base del documento.
- * Estructura: 
- * - Selector universal (*)
- * - html
- * - body
- * - .main (Contenedor general)
-*/
 
 *{
     margin: 0;
@@ -67,14 +31,6 @@ body{
     gap: 10rem;
 }
 
-/* ---- Header ---- */
-/* Descripción: Barra de navegación superior y botón toggle para móviles.
- * Estructura: 
- * - header__toggle (Botón móvil)
- * - header__nav (Contenedor enlaces)
- * - header__ul / li / a
-*/
-
 .header{
     display: flex;
     justify-content: space-between;
@@ -83,7 +39,7 @@ body{
 }
 
 .header__toggle {
-    display: none;              /* Default: Oculto en escritorio */
+    display: none;
     background: none;
     border: none;
     color: var(--clr-main);
@@ -119,7 +75,7 @@ body{
     color: white;
 }
 
-/* Pseudoelemento para el subrayado */
+
 .li__a::after{
     content: "";
     position: absolute;
@@ -128,25 +84,17 @@ body{
     width: 0;
     height: 2px;
     background-color: white;
-    transition: width 0.25s ease, left 0.25s ease;  /* Animación de expansión desde el centro */
+    transition: width 0.25s ease, left 0.25s ease; 
 }
 
-/* Pseudoelemento para el subrayado - Activado */
 .li__a:hover::after{
     width: 100%;
     left: 0;
 }
 
-/* ---- Landing Page (Layout) ---- */
-/* Descripción: Estructura de Bento Grid principal.
- * Estructura: 
- * - main--landing (Grid padre)
- * - div (Clase genérica de tarjeta)
-*/
 
 .main--landing{
     display: grid;
-    /* CALC: Altura total - Header - Márgenes - Footer */
     height: calc(100vh - 13rem);
     min-height: 37.5rem;
     gap: 1.25rem;
@@ -154,7 +102,6 @@ body{
     grid-template-rows: repeat(5, minmax(0, 1fr));
 }
 
-/*Propiedades generales para las casillas*/
 .div{
     background-color: white;
     border-radius: 1.5rem;
@@ -167,9 +114,6 @@ body{
     overflow: hidden;
 }
 
-/* ---- Componente: Perfil ---- */
-/* Descripción: Tarjeta con la imagen principal del usuario.
-*/
 .main__profile{ 
     grid-row: 1 / 3; 
     grid-column: 1 / 2;
@@ -183,7 +127,6 @@ body{
     object-position: center;
 }
 
-/* ---- Componente: Título ---- */
 .main__title{
     grid-row: 1 / 2; 
     grid-column: 2 / 6;
@@ -193,14 +136,6 @@ body{
     font-weight: 700;
 }
 
-/* ---- Componente: Info General ---- */
-/* Descripción: Sidebar con biografía corta, botón CV y redes sociales.
- * Estructura: 
- * - general__info (Texto)
- * - general__links (Contenedor botones)
- * - general__button (Descarga)
- * - general__links--icons (Redes)
-*/
 .main__general{ 
     grid-row: 3 / 6; 
     grid-column: 1 / 2; 
@@ -210,7 +145,7 @@ body{
     align-items: center;
     justify-content: space-between;
     background-color: var(--clr-main);
-    color: var(--clr-bg);
+    color: white;
     border-radius: 1.5rem;
     padding: clamp(1rem, 4vh, 2rem) 1.5rem;
     min-height: 0;
@@ -218,17 +153,14 @@ body{
     overflow-y: auto;
 }
 
-/* Descripción de perfil */
 .general__info{
     font-size: clamp(0.85rem, 2.2vh, 1.25rem);
 }
 
-/* clase general para textos en bold */
 .span__text--bold{
     font-weight: bolder;
 }
 
-/* Contenedor con los links externos + botón*/
 .general__links{
     display: flex;
     flex-direction: column;
@@ -237,7 +169,6 @@ body{
     gap: clamp(0.75rem, 3vh, 1.5rem);
 }
 
-/* Botón de Descargar CV */
 .general__button{
     width: 100%;
     padding: clamp(0.3rem, 1vh, 0.5rem);
@@ -256,7 +187,6 @@ body{
     text-decoration: underline;
 }
 
-/* Contenedor de los links externos */
 .general__links--icons{
     display: flex;
     flex-wrap: wrap;
@@ -264,7 +194,6 @@ body{
     gap: 0.75rem;
 }
 
-/* Contenedor de cada íncono individual */
 .links__icon--bg{
     background-color: white;
     color: var(--clr-main);
@@ -277,49 +206,29 @@ body{
     cursor: pointer;
 }
 
-/* ícono de links de redes */
 .links__icon--logo{
     width: 60%;
     aspect-ratio: 1 / 1;
     object-fit: contain;
 }
 
-/* --- Estado Normal --- */
-/*Por Defecto, el email es visible*/
 .icon-original{
     display: block;
 }
-/*Por defecto, el gancho está oculto*/
+
 .icon-success{
     display: none;
 }
 
-/* --- Estado COPIADO ---*/
-/*Ocultar icono de email*/
 .links__icon--bg.copiado .icon-original {
     display: none;
 }
 
-/*Mostrar el icono del gancho */
 .links__icon--bg.copiado .icon-success {
     display: block;
-    /* animación de entrada */
     animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* ---- Componente: Carrusel (Slider) ---- */
-/* Descripción: Slider horizontal con scroll-snap y soporte para drag.
- * Estructura: 
- * - main__featured (Contenedor Grid)
- * - bento__box--featured (Wrapper)
- * - bento__header (Cabecera)
- * - carousel__slider (Scrollable area)
- * - carousel__item -> figure -> picture -> img
- * - carousel__caption (Overlay texto)
- * - carousel__indicators (Dots)
-*/
-
-/* Casilla grid contenedora */
 .div.main__featured{ 
     grid-row: 2 / 5; 
     grid-column: 2 / 4;
@@ -329,7 +238,6 @@ body{
     overflow: hidden;
 }
 
-/* --- CONTENEDOR BENTO --- */
 .bento__box--featured {
     position: relative;
     overflow: hidden;
@@ -353,54 +261,43 @@ body{
 .swipe-hint {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--clr-bg);
+    color: var(--clr-main);
 }
 
-/* --- EL SLIDER --- */
 .carousel__slider {
     display: flex;
     width: 100%;
     height: 100%;
     overflow-x: auto;
-    
-    /* ESTADO NATURAL */
-    scroll-snap-type: x mandatory;  /* Efecto imán al soltar */
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    
-    /* Ocultar barras de scroll */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE */
-    cursor: grab; /* Manito abierta */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
 }
 
 .carousel__slider::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
 }
 
-/* --- ESTADO "ARRASTRANDO" (JS agrega esta clase) --- */
 .carousel__slider.active {
-    cursor: grabbing; /* Manito cerrada */
-    
-    /* Se apaga todo lo automático */
+    cursor: grabbing;
     scroll-snap-type: none;
     scroll-behavior: auto !important; 
 }
 
-/* --- LOS ITEMS --- */
 .carousel__item {
-    flex: 0 0 100%; /* FIX: Evita que flexbox aplaste los items */
+    flex: 0 0 100%; 
     height: 100%;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     position: relative;
     text-decoration: none;
     color: inherit;
-    /* Protege contra selección accidental al arrastrar */
     user-select: none;
     -webkit-user-select: none;
 }
 
-/* --- LA IMAGEN --- */
 .carousel__figure {
     margin: 0;
     width: 100%;
@@ -412,7 +309,6 @@ body{
     align-items: center;
 }
 
-/* FIX: Picture debe ser flex para centrar la img si es más angosta que el container */
 .carousel__figure picture {
     width: 100%;
     height: 100%;
@@ -424,16 +320,14 @@ body{
 .carousel__figure img {
     width: auto;
     height: 100%;
-    pointer-events: none; /* Evita arrastrar el archivo jpg */
+    pointer-events: none; 
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Zoom suave al pasar el mouse */
 .carousel__item:hover img {
     transform: scale(1.05);
 }
 
-/* --- CAPTION --- */
 .carousel__caption {
     position: absolute;
     bottom: 0;
@@ -443,7 +337,6 @@ body{
     padding: 3rem 1.5rem 1.5rem 1.5rem;
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     color: white;
-    
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -456,12 +349,11 @@ body{
 
 .carousel__caption h4 {
     font-size: 1.2rem;
-    font-weight: 600; /* Un poco más grueso para leerse mejor sobre fotos */
+    font-weight: 600;
     margin: 0;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra para legibilidad */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* --- DOTS --- */
 .carousel__indicators {
     position: absolute;
     bottom: 1rem;
@@ -486,8 +378,6 @@ body{
     transform: scale(1.2);
 }
 
-/* ---- Componente: Botones Bento ---- */
-/* Casilla de contacto */
 .main__contact{ 
     grid-row: 5 / 6; 
     grid-column: 2 / 4;
@@ -495,13 +385,6 @@ body{
     font-weight: 600;
 }
 
-/* ---- Componente: Propuesta de Valor ---- */
-/* Descripción: Tarjeta expandible con scroll interno personalizado.
- * Estructura: 
- * - main__value (Contenedor)
- * - value__h2 (Título)
- * - value__p (Texto oculto)
-*/
 .main__value{ 
     grid-row: 3 / 6; 
     grid-column: 4 / 5;
@@ -515,7 +398,7 @@ body{
 }
 
 .main__value::-webkit-scrollbar {
-    width: 6px; /* Muy delgadita */
+    width: 6px;
 }
 
 .main__value::-webkit-scrollbar-track {
@@ -550,7 +433,6 @@ body{
         transform 0.5s ease;
 }
 
-/* Interacción Hover: Expansión */
 .main__value:hover .value__p{
     max-height: 18.75rem;
     opacity: 1;
@@ -561,7 +443,6 @@ body{
     transform: translateY(-1rem);
 }
 
-/* Casilla Sobre Mí */
 .main__about{ 
     grid-row: 4 / 6; 
     grid-column: 5 / 6;
@@ -569,16 +450,6 @@ body{
     font-weight: 600;
 }
 
-/* ---- Componente: Toolkit ---- */
-/* Descripción: Grid de iconos en forma de L con efecto de corte de esquina.
- * Estructura: 
- * - main__toolkit--top (Parte superior L)
- * - main__toolkit--side (Lateral L)
- * - toolkit__grid (Grid iconos)
- * - main__corner-cut (Hack visual)
-*/
-
-/* Toolkit en L */
 .main__toolkit--top{ 
     grid-row: 2 / 3; 
     grid-column: 4 / 5;
@@ -593,7 +464,6 @@ body{
     z-index: 0;
 }
 
-/* --- EL CONTENEDOR GRID --- */
 .toolkit__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -608,39 +478,26 @@ body{
     padding: 2rem;
 }
 
-/* --- ESTILO BASE DE LOS ICONOS --- */
 .tool-icon {
     width: 3rem;
     height: 3rem;
-
-    /* ANIMACIÓN DE REBOTE */
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* --- ESTADO INICIAL --- */
+.tool-icon:nth-child(1) { transform: translate(-2rem, 10rem) rotate(-25deg); }
+.tool-icon:nth-child(2) { transform: translate(3rem, 10rem) rotate(15deg); } 
+.tool-icon:nth-child(3) { transform: translate(2rem, 8rem) rotate(60deg); } 
+.tool-icon:nth-child(4) { transform: translate(3.125rem, 5rem) rotate(140deg); }
+.tool-icon:nth-child(5) { transform: translate(0rem, 5rem) rotate(-10deg); } 
+.tool-icon:nth-child(6) { transform: translate(-3.125rem, 8.125rem) rotate(-55deg); } 
+.tool-icon:nth-child(7) { transform: translate(0.5rem, 3rem) rotate(100deg); }
+.tool-icon:nth-child(8) { transform: translate(-1.25rem, 3rem) rotate(-190deg); } 
+.tool-icon:nth-child(9) { transform: translate(.625rem, 2.25rem) rotate(45deg); } 
 
-/* Fila 1 */
-.tool-icon:nth-child(1) { transform: translate(-2rem, 10rem) rotate(-25deg); } /*FIGMA*/
-.tool-icon:nth-child(2) { transform: translate(3rem, 10rem) rotate(15deg); } /*FRAMER*/
-.tool-icon:nth-child(3) { transform: translate(2rem, 8rem) rotate(60deg); } /*NOTION*/
-
-/* Fila 2 */
-.tool-icon:nth-child(4) { transform: translate(3.125rem, 5rem) rotate(140deg); } /*HTML5*/
-.tool-icon:nth-child(5) { transform: translate(0rem, 5rem) rotate(-10deg); } /*CSS3*/
-.tool-icon:nth-child(6) { transform: translate(-3.125rem, 8.125rem) rotate(-55deg); } /*JAVASCRIPT*/
-
-/* Fila 3 */
-.tool-icon:nth-child(7) { transform: translate(0.5rem, 3rem) rotate(100deg); } /*PHOTOSHOP*/
-.tool-icon:nth-child(8) { transform: translate(-1.25rem, 3rem) rotate(-190deg); } /*ILLUSTRATOR*/
-.tool-icon:nth-child(9) { transform: translate(.625rem, 2.25rem) rotate(45deg); } /*INDESIGN*/
-
-
-/* --- ESTADO HOVER --- */
 .toolkit__grid:hover .tool-icon {
     transform: translate(0, 0) rotate(0deg);
 }
 
-/* Colocación del efecto del border radius invertido */
 .main__corner-cut {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
@@ -649,14 +506,11 @@ body{
     z-index: 3;
 }
 
-/* Pseudo-elemento para crear la curva invertida */
 .main__corner-cut::before {
     content: "";
     position: absolute;
     width: 1.5rem;
     height: 1.5rem;
-
-    /* esquina inferior izquierda de la celda */
     bottom: -1.5rem;
     left: -1.5rem;
     background: radial-gradient(
@@ -666,7 +520,6 @@ body{
     );
 }
 
-/* Estilos visibles */
 .main__toolkit {
     background: #fff;
     border-radius: 1.5rem;
@@ -675,7 +528,6 @@ body{
     justify-content: center;
 }
 
-/* Para que se lea como un solo bloque */
 .main__toolkit--top {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -684,17 +536,7 @@ body{
     border-top-left-radius: 0;
 }
 
-/* Anular gap visual entre las dos piezas */
 .main__toolkit--top  { margin-right: -1.25rem; } /* compensa el gap */
-
-/* ---- Sobre Mí ---- */
-/* Descripción: Página de biografía.
- * Estructura: 
- * - main__div--intro (Header bio)
- * - article__about (Texto)
- * - main__div--img (Galería 3 fotos)
- * - article__about--compound (Texto + Foto)
-*/
 
 .main__div--intro{
     display: flex;
@@ -727,7 +569,6 @@ body{
     flex-direction: column;
 }
 
-/* Subtítulo */
 .article__h3{
     color: white;
     font-size: 4rem;
@@ -735,7 +576,6 @@ body{
     margin: 0 0 3rem 0;
 }
 
-/* Contenido */
 .article__p{
     color: white;
     font-size: 3rem;
@@ -764,20 +604,17 @@ body{
     object-fit: cover;
 }
 
-/* Container */
 .main__section--content{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Contenido dentro del contenedor con margin centrado*/
 .main__section--content .article__p{
     margin: 0 auto;
     width: 75%;
 }
 
-/* Sección con párrafo e imágen side by side */
 .article__about--compound{
     display: flex;
     align-items: center;
@@ -788,14 +625,6 @@ body{
     aspect-ratio: 3 / 5;
     border-radius: 1.5rem;
 }
-
-/* ---- Contacto ---- */
-/* Descripción: Página de contacto con formulario y botón de copiar email.
- * Estructura: 
- * - main--contact
- * - main__section--contact (Info + Email)
- * - main__section--form (Formulario)
-*/
 
 .body--contact{
     min-height: 100vh;
@@ -835,7 +664,6 @@ body{
     font-weight: bolder;
 }
 
-/*ClassList para cambiar el color al copiar el email*/
 .div__span--email.copiado{
     color: var(--clr-confirm);
 }
@@ -853,7 +681,6 @@ body{
     gap: 0.75rem;
 }
 
-/* -- Sección de Formulario --*/
 .main__section--form{
     background-color: var(--clr-bgopacity);
     padding: 1.5rem;
@@ -907,7 +734,6 @@ body{
     min-height: 5rem;
 }
 
-/* -- Botón de Enviar -- */
 .form__submit{
     background-color: var(--clr-secondary);
     border: solid transparent;
@@ -948,10 +774,6 @@ body{
 .form__submit:hover:after {
     background-color: var(--clr-hover);
 }
-
-/* ---- Proyectos (Lista) ---- */
-/* Descripción: Página índice de proyectos.
-*/
 
 .main--proyectos{
     display: flex;
@@ -1021,9 +843,6 @@ body{
     transform: scale(1.02);
 }
 
-/* ---- Proyectos Detalle ---- */
-/* Descripción: Estilos para las páginas individuales de proyecto (Teatro La Estación, etc).
-*/
 .proyectos__section--header{
     margin: 0 0 1rem 0;
 }
@@ -1156,14 +975,6 @@ body{
     display: block;
 }
 
-/* ---- Lightbox (Galería Modal) ---- */
-/* Descripción: Modal pantalla completa para ampliar imágenes.
- * Estructura:
- * - lightbox (Overlay)
- * - lightbox__contenido (Wrapper imagen)
- * - lightbox__cierre (Botón X)
-*/
-
 .content__img, 
 .section__div--images img, 
 .picture__img--proyecto {
@@ -1177,7 +988,6 @@ body{
     filter: brightness(0.9);
 }
 
-/* Contenedor Principal */
 .lightbox {
     position: fixed;
     top: 0;
@@ -1186,37 +996,28 @@ body{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 99;
-    
-    /* Centrado Flexbox */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Estado inicial: Oculto */
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    
     transition: opacity 0.3s ease, visibility 0.3s ease;
     backdrop-filter: blur(.3125rem);
 }
 
-/* Estado Activo */
 .lightbox.active {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
 }
 
-/* La Imagen dentro del Lightbox */
 .lightbox__contenido img {
     max-width: 90vw;
     max-height: 90vh;
     object-fit: contain;
     border-radius: 0.5rem;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    
-    /* Animación de entrada */
     transform: scale(0.9);
     transition: transform 0.3s ease;
 }
@@ -1225,7 +1026,6 @@ body{
     transform: scale(1);
 }
 
-/* Botón Cerrar */
 .lightbox__cierre {
     position: absolute;
     top: 20px;
@@ -1243,10 +1043,6 @@ body{
 .lightbox__cierre:hover {
     color: var(--clr-main);
 }
-
-/* ---- Legal ---- */
-/* Descripción: Página de términos y condiciones.
-*/
 
 .main--legal{
     max-width: 800px;
@@ -1270,7 +1066,6 @@ body{
     padding: 0 0 0.5rem 0;
 }
 
-/* Secciones */
 .legal__section {
     margin: 0 0 2.5rem 0;
 }
@@ -1286,7 +1081,6 @@ body{
     font-size: 1rem;
 }
 
-/* Listas */
 .legal__list {
     padding: 0 0 0 1.25rem;
     margin: 0 0 .9375rem 0;
@@ -1296,21 +1090,16 @@ body{
     margin: 0 0 0.5rem 0;
 }
 
-/* Footer del bloque */
 .legal__footer {
     text-align: left;
     color: white;
     margin: .25rem 0 0 0;
 }
 
-/* Modificador para la lista de datos personales (sin bullets, gris) */
 .legal__list--data {
     padding: 1.25rem;
 }
 
-/* ---- Footer ---- */
-/* Descripción: Pie de página global.
-*/
 .footer{
     color: white;
     text-align: center;
@@ -1326,18 +1115,11 @@ body{
     text-decoration: underline;
 }
 
-/* --------- ANIMACIONES ---------*/
-/* Animación para el Gancho de la Página de Inicio*/
 @keyframes popIn {
     0% { transform: scale(0); }
     100% { transform: scale(1); }
 }
 
-/* =========================================
-    MEDIA QUERIES - INDEX
-========================================= */
-
-/*XL*/
 @media (max-width: 93.75rem) {
     
     body {
@@ -1355,16 +1137,14 @@ body{
     }
 
     .value__h2 {
-        font-size: 2rem; /* El título de Propuesta de Valor */
+        font-size: 2rem;
     }
 
-    /* Ajustar el texto del párrafo de valor para que no sea largo hacia abajo */
     .value__p {
         font-size: 0.9rem;
         line-height: 1.3;
     }
 
-    /* Ajuste del Toolkit lateral */
     .toolkit__grid {
         gap: 1rem;
         padding: 1rem;
@@ -1376,109 +1156,87 @@ body{
     }
 }
 
-/*L*/
 @media (max-width: 1200px) {
     body {
         padding: 2rem 3rem;
     }
     .header__nav {
-        gap: 2rem; /* Juntamos más los links del menú */
+        gap: 2rem;
     }
     .main__title {
         font-size: 3.5rem;
     }
 }
-/*M*/
+
 @media (max-width: 1000px) {
     
-    /* RESET EL GRID PRINCIPAL */
     .main--landing {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 columnas */
-        grid-template-rows: auto; /* La altura la define el contenido */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto; 
         height: auto; 
         gap: 1.5rem;
     }
 
-    /* REORDENAR EL BENTO */
-    
-    /* Perfil: Arriba izquierda */
     .main__profile {
         grid-row: 1 / 2;
         grid-column: 1 / 2;
         height: 20rem; 
     }
 
-    /* Título: Arriba derecha */
     .main__title {
         grid-row: 1 / 2;
         grid-column: 2 / 3;
         font-size: 2.5rem;
-        align-items: center; /* Centrar verticalmente */
+        align-items: center;
     }
 
-    /* Info General: Debajo del perfil */
     .main__general {
         grid-row: 2 / 3;
         grid-column: 1 / 2;
     }
 
-    /* Proyectos Destacados (Carousel): Ocupa todo el ancho */
     .div.main__featured {
         grid-row: 3 / 4;
-        grid-column: 1 / -1; /* De borde a borde */
-        height: 25rem; /* Altura suficiente para ver las fotos */
+        grid-column: 1 / -1; 
+        height: 25rem;
     }
 
-    /* Propuesta de Valor */
     .main__value {
         grid-row: 2 / 3;
         grid-column: 2 / 3;
     }
 
-    /* --- EL TOOLKIT EN L SE ROMPE AQUÍ --- */
-    /* Lo convertimos en bloques normales */
-    
-    /* Etiqueta "Toolkit" */
     .main__toolkit--top {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
-        
-        /* Reset los estilos de unión */
         border-radius: 1.5rem;
         margin-right: 0; 
     }
 
-    /* Iconos del Toolkit */
     .main__toolkit--side {
         grid-row: 4 / 5;
         grid-column: 2 / 3;
-        
-        /* Reseteamos los estilos de unión */
         border-radius: 1.5rem;
     }
 
-    /* OCULTAMOS EL CORNER CUT */
     .main__corner-cut {
         display: none;
     }
 
-    /* Botones pequeños */
     .main__contact { grid-row: 5 / 6; grid-column: 1 / 2; }
     .main__about { grid-row: 5 / 6; grid-column: 2 / 3; }
 
-    /* Ajuste Header */
     .header {
         flex-direction: column;
         gap: 1.5rem;
     }
 }
 
-/*S*/
 @media (max-width: 600px) {
 
     body {
-        padding: 1.5rem; /* Padding mínimo de celular */
+        padding: 1.5rem;
     }
 
     .header{
@@ -1504,16 +1262,14 @@ body{
         align-items: center;
         padding: 2rem 0;
         border-radius: 0 0 1rem 1rem;
-
-        /*estado inicial oculto*/
         transform: translateY(-100%);
-        visibility: hidden; /*FIX: para evitar el flasheo que da al cargar la página*/
+        visibility: hidden; 
         transition: transform 0.4s ease-in-out, visibility 0.4s;
         z-index: 99;
     }
 
     .header__nav.active{
-        transform: translateY(0); /*Vuelve a su posición original*/
+        transform: translateY(0); 
     }
 
     .header__ul{
@@ -1528,14 +1284,13 @@ body{
     }
 
     .main--landing {
-        display: flex; /* Flex es más fácil para apilar 1 columna */
+        display: flex;
         flex-direction: column;
         gap: 1.5rem;
     }
 
-    /* Ajustes específicos de bloques para móvil */
     .main__profile {
-        height: 20rem; /* Foto grande */
+        height: 20rem;
         width: 100%;
     }
 
@@ -1549,25 +1304,18 @@ body{
         padding: 1.5rem;
     }
 
-    /* Carousel en móvil */
     .div.main__featured {
-        height: 20rem; /* Un poco más compacto */
+        height: 20rem;
     }
     
     .bento__header {
-        padding: 1rem; /* Menos padding en cabecera de carrusel */
+        padding: 1rem; 
     }
 
-    /* Toolkit
-    .main__toolkit--top {
-        display: none;  Ocultar la palabra "Toolkit" para ahorrar espacio 
-    }*/
-    
     .main__toolkit--side {
-        height: 15rem; /* Altura para los iconos */
+        height: 15rem;
     }
 
-    /* Header Nav: Stack vertical o scroll horizontal */
     .header__nav {
         width: 100%;
         justify-content: center;
@@ -1580,12 +1328,11 @@ body{
     }
     
     .header__li {
-        padding: 0 10px; /* Menos espacio entre links */
+        padding: 0 10px;
         font-size: 1.2rem;
     }
 }
 
-/*XS*/
 @media (max-width: 360px) {
     .main__title {
         font-size: 2.5rem;
@@ -1595,7 +1342,6 @@ body{
         font-size: 1.2rem;
     }
     
-    /* Aseguramos que los iconos del toolkit no se corten */
     .toolkit__grid {
         gap: 0.5rem;
         padding: 1rem;
@@ -1607,11 +1353,6 @@ body{
     }
 }
 
-/* =========================================
-    MEDIA QUERIES - SOBRE MÍ
-========================================= */
-
-/* --- L (Max 1200px) --- */
 @media (max-width: 1200px) {
     
     .main {
@@ -1622,36 +1363,30 @@ body{
         gap: 4rem; 
     }
 
-    /* Ajuste de textos grandes */
     .article__h3 { font-size: 3rem; }
     .article__p { font-size: 1.8rem; line-height: 1.4; }
 
-    /* 3 imágenes horizontales */
     .picture__img--misc {
         width: 30vw;
         height: auto;
     }
 }
 
-/* --- MEDIUM / TABLETS (Max 900px) --- */
 @media (max-width: 900px) {
 
-    /* INTRODUCCIÓN */
     .main__div--intro {
-        flex-direction: column; /* Uno debajo del otro */
-        align-items: center; /* Centrados */
+        flex-direction: column; 
+        align-items: center; 
         gap: 2rem;
-        text-align: center; /* Texto centrado se ve mejor así */
+        text-align: center; 
     }
 
-    /* La foto de perfil */
     .picture__img--intro {
         min-width: 0;
-        width: 80%; /* Ocupa la mitad del ancho disponible */
+        width: 80%;
         max-width: 28.125rem;
     }
 
-    /* GALERÍA DE 3 FOTOS */
     .main__div--img {
         flex-direction: column;
         gap: 1rem;
@@ -1666,7 +1401,6 @@ body{
         border-radius: 1rem;
     }
 
-    /* SECCIÓN COMPUESTA (Texto + Foto final) */
     .article__about--compound {
         flex-direction: column-reverse;
         gap: 2rem;
@@ -1678,19 +1412,16 @@ body{
         aspect-ratio: auto;
     }
     
-    /* El párrafo centrado que tenía width 75% */
     .main__section--content .article__p {
         width: 90%;
     }
 }
 
-/* --- SMALL / MÓVILES (Max 600px) --- */
 @media (max-width: 600px) {
     .main {
         gap: 4rem;
     }
 
-    /* Títulos y Textos Móviles */
     .section__h2 {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
@@ -1706,82 +1437,65 @@ body{
         font-size: 1.125rem;
     }
     
-    /* Imágenes al 100% de ancho */
     .picture__img--intro,
     .picture__img--content {
         width: 100%;
         max-width: 21.875rem;
     }
 
-    /* Galería: Una foto debajo de otra */
     .main__div--img {
         flex-direction: column;
     }
     
     .picture__img--misc {
-        width: 100%; /* Foto ocupa todo el ancho */
+        width: 100%; 
     }
     
-    /* Ajuste del párrafo centrado */
     .main__section--content .article__p {
         width: 100%;
         text-align: left; 
     }
     
-    /* Flechita de scroll más chica */
     .main__div--icon {
         width: 2rem;
         margin: 2rem 0;
     }
 }
 
-/* =========================================
-    MEDIA QUERIES - CONTACTO
-========================================= */
-/* --- L (Max 1200px) --- */
 @media (max-width: 1200px) {
-    /* Formulario */
     .main__section--contact { width: 55%; }
     .main__section--form { width: 40%; }
     
-    /* Textos */
     .article__h3 { font-size: 3rem; }
     .article__p { font-size: 1.5rem; }
     
-    /* Inputs y Labels */
     .form__label { font-size: 1.5rem; }
     .form__input { font-size: 1.25rem; }
 }
 
-/* --- M (Max 900px) --- */
 @media (max-width: 900px) {
-    /* Formulario */
     .main--contact {
         flex-direction: column;
         gap: 3rem;
     }
 
-    /* SECCIÓN DE TEXTO */
     .main__section--contact {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centrar botón */
-        text-align: center; /* Centrar texto */
+        align-items: center; 
+        text-align: center;
     }
 
-    /* SECCIÓN DEL FORMULARIO */
     .main__section--form {
         width: 100%;
         max-width: 37.5rem; 
-        margin: 1rem auto; /* centrar el form */
+        margin: 1rem auto;
     }
 }
 
-/* --- S (Max 600px) --- */
 @media (max-width: 600px) {
 
-    /* Títulos */
     .article__h3 { font-size: 2.5rem; }
     .article__p { font-size: 1.1rem; }
 
@@ -1789,7 +1503,7 @@ body{
         font-size: .875rem; 
     }
 
-    .form__label { font-size: 1.1rem; } /* Tamaños de etiquetas*/
+    .form__label { font-size: 1.1rem; }
     
     .form__input, 
     .form__input--mensaje { 
@@ -1798,25 +1512,19 @@ body{
     }
 }
 
-/* =========================================
-    MEDIA QUERIES - PROYECTOS
-========================================= */
-
-/* --- S (Max 600px) --- */
 @media (max-width: 600px) {
 
     .main__div--header {
-        width: 100%; /* Cambio para ajustar ancho */
+        width: 100%;
         text-align: left;
         padding: 0 0 1rem 0;
         border-bottom: 1px solid var(--clr-bgopacity); 
     }
 
     .section__picture--proyectos {
-        width: 100%; /* La imagen se adapta al ancho del celular */
+        width: 100%;
     }
 
-    /* Tipografía */
     .main__h1--proyectos {
         font-size: 2rem;
     }
@@ -1826,16 +1534,11 @@ body{
         margin: 1rem 0 0.5rem 0;
     }
     
-    /* ESPACIADO ENTRE TARJETAS */
     .main__a--proyect-card {
         margin: 0 0 2rem 0;
     }
 }
 
-/* =========================================
-    MEDIA QUERIES - PROYECTOS INDIVIDUALES
-========================================= */
-/* --- L (Max 1200px) --- */
 @media (max-width: 1200px) {
 
     .proyectos__section--categorias,
@@ -1843,24 +1546,20 @@ body{
         width: 70vw; 
     }
 
-    /* Ajustamos el footer */
     .proyectos__section--footer {
         width: 80vw;
     }
 }
 
-/* --- M (Max 900px) --- */
 @media (max-width: 900px) {
 
-    /* TEXTO */
     .proyectos__section--categorias,
     .proyectos__section--content {
         width: 90vw;
     }
 
-    /* CATEGORÍAS */
     .proyectos__section--categorias {
-        flex-wrap: wrap; /* Si no caben, bajan */
+        flex-wrap: wrap;
         gap: 2rem;
         justify-content: center;
     }
@@ -1870,32 +1569,28 @@ body{
         text-align: center;
     }
 
-    /* EL GRID DE 3 IMÁGENES */
     .section__div--images {
         width: 100%;
         margin: 2rem 0; 
         gap: 1rem;
     }
 
-    /* FOOTER Y MAPA */
     .proyectos__section--footer {
         width: 90vw;
     }
 
     .section__footer--info {
-        flex-direction: column; /* Mapa debajo del texto */
+        flex-direction: column;
         gap: 2rem;
     }
 
     .mapa-iframe {
-        height: 300px; /* Mapa un poco más bajito */
+        height: 300px;
     }
 }
 
-/* --- S (Max 600px) --- */
 @media (max-width: 600px) {
 
-    /* TIPOGRAFÍA */
     .section__h1--proyectos {
         font-size: 2rem;
         text-align: center;
@@ -1925,7 +1620,6 @@ body{
         width: 100%;
     }
 
-    /* CATEGORÍAS EN GRID 2x2 */
     .proyectos__section--categorias {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1938,14 +1632,12 @@ body{
         margin: 0;
     }
 
-    /* 3 IMÁGENES APILADAS */
     .section__div--images {
         flex-direction: column;
     }
 
-    /* SECCIÓN "VER MÁS PROYECTOS" */
     .section__article--otros {
-        flex-direction: column; /* Tarjetas una debajo de otra */
+        flex-direction: column;
         gap: 0.5rem;
     }
 
@@ -1953,7 +1645,6 @@ body{
         width: 100%;
     }
     
-    /* Botón regresar */
     .main__proyectos--return {
         margin: 0 0 0 1rem;
     }

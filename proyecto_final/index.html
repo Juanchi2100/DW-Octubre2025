@@ -1,3 +1,11 @@
+<!--
+Descripción: Este archivo HTML contiene la página principal del sitio web.
+Estructura general: 
+-Encabezado con la barra de navegación
+-Contenido principal
+-Pie de página
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,40 +17,45 @@
     <link rel="icon" type="image/svg" href="images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="images/perfil.jpg" as="image">
+    <link rel="preload" href="images/perfil.webp" as="image">
     <link rel="preload" href="images/logo.svg" as="image" type="image/svg+xml">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/main.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
         rel="stylesheet">
     <!-- Primary Meta Tags -->
-    <title>JB Portafolio</title>
-    <meta name="title" content="JB Portafolio" />
+    <meta name="title" content="JB Portafolio">
     <meta name="description"
-        content="Diseño enfocado en lo esencial: claridad, funcionalidad y experiencia humana. Explora mi portafolio de proyectos y soluciones digitales intuitivas." />
+        content="Diseño enfocado en lo esencial: claridad, funcionalidad y experiencia humana. Explora mi portafolio de proyectos y soluciones digitales intuitivas.">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.juanburgosdesign.com/" />
-    <meta property="og:title" content="Juan Burgos Design Portafolio" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.juanburgosdesign.com/">
+    <meta property="og:title" content="Juan Burgos Design Portafolio">
     <meta property="og:description"
-        content="Diseño enfocado en lo esencial: claridad, funcionalidad y experiencia humana. Explora mi portafolio de proyectos y soluciones digitales intuitivas." />
-    <meta property="og:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg"/>
+        content="Diseño enfocado en lo esencial: claridad, funcionalidad y experiencia humana. Explora mi portafolio de proyectos y soluciones digitales intuitivas.">
+    <meta property="og:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg">
 
     <!-- X (Twitter) -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.juanburgosdesign.com/" />
-    <meta property="twitter:title" content="JB Portafolio" />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.juanburgosdesign.com/">
+    <meta property="twitter:title" content="JB Portafolio">
     <meta property="twitter:description"
-        content="Diseño enfocado en lo esencial: claridad, funcionalidad y experiencia humana. Explora mi portafolio de proyectos y soluciones digitales intuitivas." />
-    <meta property="twitter:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg" />
+        content="Diseño enfocado en lo esencial: claridad, funcionalidad y experiencia humana. Explora mi portafolio de proyectos y soluciones digitales intuitivas.">
+    <meta property="twitter:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg">
 
     <!-- Meta Tags Generated with https://metatags.io -->
 </head>
 
 <body>
+    <!--
+    Sección de Encabezado
+    Descripción: En el encabezado tendremos el ícono de la página web, y la barra de navegación que contiene 3 links. También está el menú hamburguesa que aparece en el breakpoint de los 600px
+    -->
     <header class="header">
+        <!--Link e ícono de la página principal / index-->
         <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img"></a>
+        <!--Menú tipo hamburguesa para móviles-->
         <button id="navToggle" class="header__toggle" aria-label="Abrir menú">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -50,22 +63,34 @@
                 <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
         </button>
+        <!--NavBar-->
         <nav class="header__nav" id="navMenu">
             <ul class="header__ul">
-                <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a>
-                </li>
+                <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a></li>
                 <li class="header__li"><a class="li__a" href="sobre_mi.html" title="Más información">sobre mí.</a></li>
                 <li class="header__li"><a class="li__a" href="contacto.html" title="Ponte en contacto">contacto.</a>
                 </li>
             </ul>
         </nav>
     </header>
+    <!--
+    Sección Principal de contenido
+    Descripción: Es la parte principal del contenido en estilo bento para pantallas grandes, que se compone por: 
+    -Imagen de Perfil
+    -Título y Nombre de Portafolio
+    -Información, descripción y links externos
+    -Carrusel de Proyectos Destacados
+    -Contacto
+    -Sobre Mí
+    -Propuesta de Valor
+    -Toolkit (dividido en 3 divs para hacer el efecto de L en pantallas grandes)
+    -->
     <main class="main--landing">
         <!-- Imagen de Perfil -->
         <div class="main__profile">
             <picture class="profile__picture">
                 <source srcset="images/perfil.webp" type="image/webp">
-                <img src="images/perfil.jpg" class="picture__img" alt="Foto de Perfil">
+                <img src="images/perfil.jpg" class="picture__img" alt="Foto de Perfil" fetchpriority=high>
             </picture>
         </div>
         <!-- Título y Nombre de Portafolio -->
@@ -76,7 +101,7 @@
                 esencial: claridad, funcionalidad y experiencia humana. Con una base arquitectónica, se combina
                 estructura y sensibilidad visual para crear productos intuitivos y elegantes.</p>
             <div class="general__links">
-                <a href="documents/CV_Juan Burgos_2025.pdf" download="CV_Juan_Burgos_2025.pdf" class="general__button"
+                <a href="documents/cv_juan-burgos_2025.pdf" download="CV_Juan_Burgos_2025.pdf" class="general__button"
                     title="Descargar Currículum Vitae">Descargar CV</a>
                 <div class="general__links--icons">
                     <div data-email="juanburgos.design@gmail.com" class="links__icon--bg" id="btnCopyEmail"
@@ -105,15 +130,20 @@
         <!-- Carrusel de Proyectos Destacados -->
         <div class="div main__featured">
             <article class="bento__box bento__box--featured">
+                <!--Títutlo del Bento con un span de hint para que el usuario sepa que hay que deslizar-->
                 <header class="bento__header">
                     <h3>Proyectos Destacados</h3>
                     <span class="swipe-hint">Desliza →</span>
                 </header>
+                <!--Contenedor del Carrusel-->
                 <div class="carousel__slider" id="featuredSlider">
+                    <!--Contenido de Carrusel-->
                     <a href="teatrolaestacion.html" class="carousel__item">
                         <figure class="carousel__figure">
-                            <img src="images/proyectos/estacion-portada.jpg" alt="Teatro La Estación" loading="lazy"
-                                draggable="false">
+                            <picture>
+                                <source srcset="images/proyectos/estacion-portada.webp" type="image/webp">
+                                <img src="images/proyectos/estacion-portada.jpg" alt="Teatro La Estación" draggable="false" fetchpriority=high>
+                            </picture>
                             <figcaption class="carousel__caption">
                                 <h4>Teatro La Estación</h4>
                             </figcaption>
@@ -121,8 +151,11 @@
                     </a>
                     <a href="ladona.html" class="carousel__item">
                         <figure class="carousel__figure">
-                            <img src="images/proyectos/ladona-portada.jpg" alt="La Doña" loading="lazy"
+                            <picture>
+                                <source srcset="images/proyectos/ladona-portada.webp" type="image/webp">
+                                <img src="images/proyectos/ladona-portada.jpg" alt="La Doña" loading="lazy"
                                 draggable="false">
+                            </picture>
                             <figcaption class="carousel__caption">
                                 <h4>Identidad Visual - La Doña</h4>
                             </figcaption>
@@ -130,8 +163,10 @@
                     </a>
                     <a href="isabelburgos.html" class="carousel__item">
                         <figure class="carousel__figure">
-                            <img src="images/proyectos/isabel-portada.jpg" alt="Isabel Burgos" loading="lazy"
-                                draggable="false">
+                            <picture>
+                                <source srcset="images/proyectos/isabel-portada.webp" type="image/webp">
+                                <img src="images/proyectos/isabel-portada.jpg" alt="Isabel Burgos" loading="lazy" draggable="false">
+                            </picture>
                             <figcaption class="carousel__caption">
                                 <h4>Página Web - Isabel Burgos</h4>
                             </figcaption>
@@ -161,6 +196,7 @@
         <div class="main__toolkit main__toolkit--top">toolkit.</div>
         <!-- div toolkit con los íconos-->
         <div class="main__toolkit main__toolkit--side">
+            <!--Contenedor de Íconos-->
             <div class="toolkit__grid">
                 <img src="images/icons/Figma.svg" alt="Figma Logo" class="tool-icon" draggable="false" title="Figma">
                 <img src="images/icons/Framer.svg" alt="Framer Logo" class="tool-icon" draggable="false" title="Framer">
@@ -176,9 +212,12 @@
         <!-- corte de bordeado interno-->
         <div class="main__corner-cut"></div>
     </main>
+    <!--Sección de Footer
+    Descripción: Footer del proeycto con una etiqueta p y span para linkear el aviso legal de la página web
+    La etiqueta span vacía (<span id="year"></span>) para que el JS pueda rellenarlo con el año actual.
+    -->
     <footer class="legal__footer">
         <p>&copy; <span id="year"></span> Juan Sebastián Burgos. <a href="legal.html" class="footer__a">Ver Aviso Legal</a></p>
     </footer>
 </body>
-
 </html>

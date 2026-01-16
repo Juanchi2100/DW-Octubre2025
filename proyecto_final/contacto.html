@@ -1,9 +1,18 @@
+<!--
+Descripción: Este archivo HTML contiene la página de contacto del sitio web.
+Estructura general: 
+-Encabezado con la barra de navegación
+-Sección de Información
+-Sección de Formulario
+-Pie de página
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JB Portafolio</title>
+    <title>Contacto - JB Portafolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg" href="images/favicon.svg">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -11,8 +20,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <!-- Primary Meta Tags -->
+    <title>Contacto - Juan Burgos Design</title>
+    <meta name="title" content="Contacto - Juan Burgos Design" />
+    <meta name="description" content="Si tienes un proyecto en mente o una idea que todavía está en proceso, este es el punto de partida. ¡Hablemos!" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.juanburgosdesign.com/contacto.html" />
+    <meta property="og:title" content="Contacto - Juan Burgos Design" />
+    <meta property="og:description" content="Si tienes un proyecto en mente o una idea que todavía está en proceso, este es el punto de partida. ¡Hablemos!" />
+    <meta property="og:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.juanburgosdesign.com/contacto.html" />
+    <meta property="twitter:title" content="Contacto - Juan Burgos Design" />
+    <meta property="twitter:description" content="Si tienes un proyecto en mente o una idea que todavía está en proceso, este es el punto de partida. ¡Hablemos!" />
+    <meta property="twitter:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
 </head>
 <body class="body--contact">
+    <!--
+    Sección de Encabezado
+    Descripción: En el encabezado tendremos el ícono de la página web, y la barra de navegación que contiene 3 links. También está el menú hamburguesa que aparece en el breakpoint de los 600px
+    -->
     <header class="header">
         <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img"></a>
         <button id="navToggle" class="header__toggle" aria-label="Abrir menú">
@@ -30,13 +63,20 @@
             </ul>
         </nav>
     </header>
+    <!--
+    Sección Principal de contenido
+    Descripción: Es la parte principal del contenido, donde tiene una sección de información y otra de un formulario de contacto
+    -->
     <main class="main--contact">
+        <!--Sección de Título, información y links adicionales-->
         <section class="main__section--contact">
             <h3 class="article__h3">¡hablemos!</h3>
             <p class="article__p">Si tienes un proyecto en mente o una idea que todavía está en proceso, este es el punto de partida. Hablemos de cómo convertir esa semilla en una experiencia clara, funcional y con sentido.</p>
+            <!--el div contiene un span con el correo. Este me permite copiar el correo en el portapapeles al hacer click en el div, trabajado en JS -->
             <div class="section__div--email-container" title="Haz click para copiar" id="emailCopyContainer">
                 <span class="div__span--email" id="emailCopy">juanburgos.design@gmail.com</span>
             </div>
+            <!--Links a Redes Sociales-->
             <div class="contact__links">
                 <a href="https://www.instagram.com/juanburgos.design?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" class="links__icon--bg">
                     <img src="images/icons/logo_instagram.svg" alt="Instagram Logo" class="links__icon--logo" loading="lazy">
@@ -49,6 +89,7 @@
                 </a>
             </div>
         </section>
+        <!--Sección de Formulario-->
         <div class="main__section--form">
             <form method="post" action="url/de/envío" enctype="multipart/form-data" class="main__form">
                 <div class="form__div">
@@ -67,11 +108,16 @@
                     <label for="label__mensaje" class="form__label">Mensaje</label>
                     <textarea name="mensaje" id="label__mensaje" class="form__input--mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
                 </div>
+                <!--Se agrega un input hidden para cuando se ponga a funcionar correctamente el portafolio, saber de donde me vino el correo, por eso el value="Contacto Portafolio"-->
                 <input type="hidden" name="origen" value="Contacto Portafolio">
-                <button type="submit" class="form__submit">Enviar</button>
+                <button type="submit" class="form__submit">ENVIAR</button>
             </form>
         </div>
     </main>
+    <!--Sección de Footer
+    Descripción: Footer del proeycto con una etiqueta p y span para linkear el aviso legal de la página web
+    La etiqueta span vacía (<span id="year"></span>) para que el JS pueda rellenarlo con el año actual.
+    -->
     <footer class="footer">
         <p>&copy; <span id="year"></span> Juan Sebastián Burgos. <a href="legal.html" class="footer__a">Ver Aviso Legal</a></p>
     </footer>

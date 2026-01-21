@@ -1,0 +1,118 @@
+<!--
+Descripción: Este archivo HTML contiene la página de Aviso Legal y Términos de Uso del sitio web.
+Estructura general: 
+-Encabezado con la barra de navegación
+-Contenido principal
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Legal - JB Portafolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg" href="images/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Términos de Uso - Juan Burgos Design">
+    <meta name="description" content="Aviso Legal y Términos de Uso. Juan Sebastián Burgos, Portafolio de Diseño. ">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.juanburgosdesign.com/legal.html">
+    <meta property="og:title" content="Términos de Uso - Juan Burgos Design">
+    <meta property="og:description" content="Aviso Legal y Términos de Uso. Juan Sebastián Burgos, Portafolio de Diseño. ">
+    <meta property="og:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg">
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.juanburgosdesign.com/legal.html">
+    <meta property="twitter:title" content="Términos de Uso - Juan Burgos Design">
+    <meta property="twitter:description" content="Aviso Legal y Términos de Uso. Juan Sebastián Burgos, Portafolio de Diseño. ">
+    <meta property="twitter:image" content="https://www.juanburgosdesign.com/images/meta-picture.jpg">
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+<body>
+    <!--
+    Sección de Encabezado
+    Descripción: En el encabezado tendremos el ícono de la página web, y la barra de navegación que contiene 3 links. También está el menú hamburguesa que aparece en el breakpoint de los 600px
+    -->
+    <header class="header">
+        <a href="index.html" title="Juan Burgos Design" aria-label="Regersar a Página de Inicio"><img src="images/logo.svg" alt="Logo de JuanBurgosDesign" class="header__img" loading="lazy"></a>
+        <!--Menú tipo hamburguesa para móviles-->
+        <button id="navToggle" class="header__toggle" aria-label="Abrir menú">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <nav class="header__nav" id="navMenu">
+            <ul class="header__ul">
+                <li class="header__li"><a class="li__a" href="proyectos.html" title="Ver más proyectos">proyectos.</a></li>
+                <li class="header__li"><a class="li__a" href="sobre_mi.html" title="Más información">sobre mí.</a></li>
+                <li class="header__li"><a class="li__a" href="contacto.html" title="Ponte en contacto">contacto.</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--
+    Sección Principal de contenido
+    Descripción: Un solo bloque con toda la información legal y terminos de uso
+    -->
+    <main class="main--legal">
+        <!--Botón para Volver al Portafolio-->
+        <a href="index.html" class="general__button" aria-label="Regersar a Página de Inicio" title="Regresar a la página principal">← Volver al Portafolio</a>
+        <h1 class="legal__h1">Aviso Legal y Términos de Uso</h1>
+        <p class="legal__date">Última actualización: <span id="year"></span></p>
+        <!--Sección 1 Datos Identificativos-->
+        <section class="legal__section">
+            <h2 class="legal__h2">1. Datos Identificativos</h2>
+            <p class="legal__p">En cumplimiento con el deber de información recogido en la legislación vigente, se informa que la titularidad de este sitio web, <strong>juanburgosdesign.com</strong> (en adelante, "el Sitio Web"), corresponde a:</p>
+            <ul class="legal__list legal__list--data">
+                <li class="legal__item"><strong>Titular:</strong> Juan Sebastián Burgos</li>
+                <li class="legal__item"><strong>Documento de Identidad:</strong> 8-952-1461</li>
+                <li class="legal__item"><strong>Domicilio:</strong> Ciudad de Panamá, Panamá</li>
+                <li class="legal__item"><strong>Contacto:</strong> juanburgos.design@gmail.com</li>
+            </ul>
+        </section>
+        <!--Sección 2 Propiedad Intelectual-->
+        <section class="legal__section">
+            <h2 class="legal__h2">2. Propiedad Intelectual e Industrial</h2>
+            <p class="legal__p">El usuario reconoce y acepta que todos los contenidos mostrados en el Sitio Web y, en especial, <strong>diseños, ilustraciones, logotipos, textos, gráficos, fotografías, animaciones y videos</strong>, están sujetos a derechos de Propiedad Intelectual e Industrial cuya titularidad exclusiva pertenece a <strong>Juan Sebastián Burgos</strong>.</p>
+            <p class="legal__p"><strong>Reserva de Derechos:</strong> Queda terminantemente prohibida la reproducción, distribución, comunicación pública, transformación o cualquier otra forma de explotación, ya sea con fines comerciales o no, de todo o parte de los contenidos de este portafolio sin la autorización previa, expresa y por escrito del titular.</p>
+            <p class="legal__p"><strong>Derecho de Cita:</strong> El uso de imágenes o contenidos de este sitio en blogs, redes sociales o medios de comunicación solo está permitido si se respeta la integridad de la obra (sin modificaciones) y se cita expresamente la autoría y la fuente con un enlace directo a este Sitio Web.</p>
+            <p class="legal__p">Cualquier uso no autorizado previamente por Juan Sebastián Burgos será considerado un incumplimiento grave de los derechos de propiedad intelectual o industrial del autor y dará lugar a las responsabilidades legalmente establecidas.</p>
+        </section>
+        <!--Sección 3 Condiciones de Uso-->
+        <section class="legal__section">
+            <h2 class="legal__h2">3. Condiciones de Uso del Sitio Web</h2>
+            <p class="legal__p">El acceso a este Sitio Web otorga la condición de "Usuario". El Usuario se compromete a hacer un uso adecuado de los contenidos que se ofrecen y a no emplearlos para incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público.</p>
+        </section>
+        <!--Sección 4 Exclusión de Responsabilidad-->
+        <section class="legal__section">
+            <h2 class="legal__h2">4. Exclusión de Garantías y Responsabilidad</h2>
+            <p class="legal__p">Juan Sebastián Burgos declara que ha adoptado las medidas necesarias para garantizar el funcionamiento del Sitio Web. Sin embargo, no se hace responsable de:</p>
+            <ul class="legal__list legal__list--data">
+                <li class="legal__item">La continuidad y disponibilidad de los contenidos.</li>
+                <li class="legal__item">La ausencia de errores en dichos contenidos ni la corrección de cualquier defecto que pudiera ocurrir.</li>
+                <li class="legal__item">Los daños o perjuicios que cause cualquier persona que vulnere los sistemas de seguridad del Sitio Web.</li>
+            </ul>
+        </section>
+        <!--Sección 5 Enlaces a Terceros-->
+        <section class="legal__section">
+            <h2 class="legal__h2">5. Enlaces a Terceros</h2>
+            <p class="legal__p">En el caso de que en el Sitio Web se dispusiesen enlaces o hipervínculos hacía otros sitios de Internet (por ejemplo, enlaces a perfiles de redes sociales o proyectos colaborativos), Juan Sebastián Burgos no ejercerá ningún tipo de control sobre dichos sitios y contenidos, declinando toda responsabilidad por la información contenida en ellos.</p>
+        </section>
+        <!--Sección 6 Ley aplicable y jurisdicción-->
+        <section class="legal__section">
+            <h2 class="legal__h2">6. Ley Aplicable y Jurisdicción</h2>
+            <p class="legal__p">Para la resolución de todas las controversias o cuestiones relacionadas con el presente sitio web o de las actividades en él desarrolladas, será de aplicación la legislación de <strong>Panamá</strong>, a la que se someten expresamente las partes.</p>
+        </section>
+    </main>
+</body>
+</html>
